@@ -1,0 +1,2590 @@
+
+               I S S A     D i c t i o n a r y     R e p o r t
+
+
+                  IIIIIIIIII     SSSSSSS       SSSSSSS            A
+                 IIIIIIIIII    SSSSSSSSSS    SSSSSSSSSS          AA
+                   IIII       SSSS          SSSS               AAAA
+                  IIII       SSSS          SSSS              AAAAAA
+                 IIII       SSSS          SSSS             AAA  AAA
+                IIII       SSSSSSSS      SSSSSSSS         AAA  AAA 
+               IIII         SSSSSSSS      SSSSSSSS      AAA    AAA 
+              IIII             SSSS          SSSS      AAAAAAAAAA  
+             IIII             SSSS          SSSS     AAAAAAAAAAAA  
+            IIII             SSSS          SSSS     AAA      AAA   
+        IIIIIIIIII    SSSSSSSSSS    SSSSSSSSSS    AAAA      AAAA   
+       IIIIIIIIII      SSSSSSS       SSSSSSS     AAAA      AAAA    
+
+  I n t e g r a t e d   S y s t e m   f o r    S u r v e y   A n a l y s i s
+
+--------------------------------------------------------------------------------
+
+Dictionary Name   : GHHR41   (file 'GHHR41.DIC', 18016 bytes)
+
+Dictionary Label  : Standard Recode         1.4.0 
+
+Owner             : DHS III                       
+
+Country           : Ghana 1998                    
+
+Creation Date     : Jan 1, 1993 
+
+Last Update       : Oct 30, 1996      * 2 hierarchical levels
+
+* Main index: not defined
+
+* No secondary indexes defined
+
+* Index summary: no index key lengths measured
+
+* Estimated case-data-area size: 1092 bytes (5 sections, 98 variables)
+
+Report date & time: 07-20-2001 at 11:55:44 hrs.
+
+                             SECTION DESCRIPTION                       
+                                                                      07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Section     Length      Occurs   ---  Group  ---  
+ name   Loc.     Class  Min Max    Max Loc Len    Section Label
+--------------------------------------------------------------------------------
+
+RECH0      1  109  S     1   1   -without group-  Household's basic data
+
+RECH2    110   34  S     0   1   -without group-  Household characteristics
+
+RECH1    144  598  M     0  23   -without group-  Household schedule
+
+RECH3    742   24  S     0   1   -without group-  Household country-specific
+
+RECH4    766  322  M     0  23   -without group-  Household schedule CS
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH0                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HHID         1   12    0     A      S    Case Identification           
+
+HV000       13    3    0     A      S    Country code and phase        
+
+HV001       16    8    0     N      S    Cluster number                
+
+HV002       24    4    0     N      S    Household number              
+
+HV003       28    3    0     N      S    Respondent's line number      
+
+HV004       31    4    0     N      S    Ultimate area unit            
+
+HV005       35    8    0     N      S    Sample weight                 
+
+HV006       43    2    0     N      S    Month of interview            
+                                         ranges:   lower   upper
+                                                       1      12
+
+HV007       45    2    0     N      S    Year of interview             
+                                         ranges:   lower   upper
+                                                      94      99
+
+HV008       47    4    0     N      S    Date of interview (CMC)       
+
+HV009       51    2    0     N      S    Number of household members   
+                                         ranges:   lower   upper
+                                                       0      90
+
+HV010       53    2    0     N      S    Number of eligible women in HH
+                                         ranges:   lower   upper
+                                                       0      20
+
+HV011       55    2    0     N      S    Number of eligible men in HH  
+                                         ranges:   lower   upper
+                                                       0      20
+
+HV012       57    2    0     N      S    Number of de jure members     
+                                         ranges:   lower   upper
+                                                       0      90
+
+HV013       59    2    0     N      S    Number of de facto members    
+                                         ranges:   lower   upper
+                                                       0      90
+
+HV014       61    2    0     N      S    Number of children 5 and under
+                                         ranges:   lower   upper
+                                                       0      20
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH0                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HV015       63    1    0     N      S    Result of household interview 
+                                         values:   value  label
+                                                       1  Completed                                                   
+                                                       2  HH present, no resp                                         
+                                                       3  HH absent                                                   
+                                                       4  Postponed                                                   
+                                                       5  Refused                                                     
+                                                       6  Dwelling vacant                                             
+                                                       7  Dwelling destroyed                                          
+                                                       8  Dwelling not found                                          
+                                                       9  Other                                                       
+                                         ranges:   lower   upper
+                                                       1       9
+
+HV016       64    2    0     N      S    Day of interview              
+                                         ranges:   lower   upper
+                                                       1      31
+
+HV017       66    1    0     N      S    Number of visits              
+                                         ranges:   lower   upper
+                                                       1       5
+
+HV018       67    3    0     N      S    Interviewer identification    
+                                         values:   value  label
+                                                     999  Missing value
+
+HV019       70    2    0     N      S    Keyer identification          
+                                         values:   value  label
+                                                      99  Missing value
+
+HV020       72    1    0     N      S    Ever-married sample           
+                                         values:   value  label
+                                                       0  All woman sample                                            
+                                                       1  Ever married sample                                         
+                                         ranges:   lower   upper
+                                                       0       1
+
+HV021       73    4    0     N      S    Primary sampling unit         
+
+HV022       77    4    0     N      S    Sample stratum number         
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH0                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HV023       81    2    0     N      S    Sample domain                 
+                                         values:   value  label
+                                                       1  Western Region - Urban                                      
+                                                       2  Wester Region - Rural                                       
+                                                       3  Central Region - Urban                                      
+                                                       4  Central Region - Rural                                      
+                                                       5  Greater Accra Region - Urban                                
+                                                       6  Greater Accra Region - Rural                                
+                                                       7  Volta Region - Urban                                        
+                                                       8  Volta Region - Rural                                        
+                                                       9  Eastern Region - Urban                                      
+                                                      10  Eastern Region - Rural                                      
+                                                      11  Ashanti Region - Urban                                      
+                                                      12  Ashanti Region - Rural                                      
+                                                      13  Brong Ahafo Region - Urban                                  
+                                                      14  Brong Ahafo Region - Rural                                  
+                                                      15  Northern Region - Urban                                     
+                                                      16  Northern Region - Rural                                     
+                                                      17  Upper West Region - Urban                                   
+                                                      18  Upper West Region - Rural                                   
+                                                      19  Upper East region - Urban                                   
+                                                      20  Upper East Region - Rural                                   
+                                         ranges:   lower   upper
+                                                       1      20
+
+HV024       83    2    0     N      S    Region                        
+                                         values:   value  label
+                                                       1  Western Region                                              
+                                                       2  Central Region                                              
+                                                       3  Greater Accra Region                                        
+                                                       4  Volta Region                                                
+                                                       5  Eastern Region                                              
+                                                       6  Ashanti Region                                              
+                                                       7  Brong Ahafo Region                                          
+                                                       8  Northern Region                                             
+                                                       9  Upper West Region                                           
+                                                      10  Upper East region                                           
+                                         ranges:   lower   upper
+                                                       0      10
+
+HV025       85    1    0     N      S    Type of place of residence    
+                                         values:   value  label
+                                                       1  Urban                                                       
+                                                       2  Rural                                                       
+                                         ranges:   lower   upper
+                                                       1       2
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH0                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HV026       86    1    0     N      S    Place of residence            
+                                         values:   value  label
+                                                       0  Capital, large city                                         
+                                                       1  Small city                                                  
+                                                       2  Town                                                        
+                                                       3  Countryside                                                 
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       3
+
+HV027       87    1    0     N      S    Selection for male/husb. int. 
+                                         values:   value  label
+                                                       0  Not selected                                                
+                                                       1  Men's survey                                                
+                                                       2  Husband's survey                                            
+                                         ranges:   lower   upper
+                                                       0       2
+
+HV028       88    8    0     N      S    Sample weight for male subsamp
+
+HV030       96    2    0     N      S    Field supervisor           -NA
+                                         values:   value  label
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+
+HV031       98    2    0     N      S    Field editor               -NA
+                                         values:   value  label
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+
+HV032      100    2    0     N      S    Office editor                 
+                                         values:   value  label
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+
+HV033      102    8    0     N      S    Ultimate area selection prob. 
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH2                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HV201      110    2    0     N      S    Source of drinking water      
+                                         values:   value  label
+                                                      11  Piped into residence                                        
+                                                      12  Public tap/Neighbours house                                 
+                                                      21  Well in residence                                           
+                                                      22  Public well                                                 
+                                                      23  Borehole                                                    
+                                                      31  Spring water                                                
+                                                      32  River/Stream                                                
+                                                      33  Pond/Lake                                                   
+                                                      34  Dam                                                         
+                                                      35  Dugout                                                      
+                                                      41  Rainwater                                                   
+                                                      51  Tanker Truck                                                
+                                                      61  Bottled water                                               
+                                                      96  Other                                                       
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                      10      61
+                                                      96      96
+
+HV202      112    2    0     N      S    Source of non-drinking water  
+                                         values:   value  label
+                                                      11  Piped into residence                                        
+                                                      12  Public tap/Neighbours house                                 
+                                                      21  Well in residence                                           
+                                                      22  Public well                                                 
+                                                      23  Borehole                                                    
+                                                      31  Spring water                                                
+                                                      32  River/Stream                                                
+                                                      33  Pond/Lake                                                   
+                                                      34  Dam                                                         
+                                                      35  Dugout                                                      
+                                                      41  Rainwater                                                   
+                                                      51  Tanker Truck                                                
+                                                      61  Bottled water                                               
+                                                      96  Other                                                       
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                      10      61
+                                                      96      96
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH2                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HV203      114    1    0     N      S    Same source of water          
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+HV204      115    3    0     N      S    Time to get to water source   
+                                         values:   value  label
+                                                     996  On premises                                                 
+                                                     999  Missing value
+                                                   BLANK  Not applicable value
+
+HV205      118    2    0     N      S    Type of toilet facility       
+                                         values:   value  label
+                                                      10  FLUSH TOILET                                                
+                                                      11  Own flush toilet                                            
+                                                      12  Shared flush toilet                                         
+                                                      20  PIT TOILET LATRINE                                          
+                                                      21  Traditional pit latrine                                     
+                                                      22  Ventilated/improved pit latrine                             
+                                                      23  Bucket/pan                                                  
+                                                      30  NO FACILITY                                                 
+                                                      31  No facility/bush/field                                      
+                                                      96  OTHER                                                       
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                      10      31
+                                                      96      96
+
+HV206      120    1    0     N      S    Has electricity               
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+HV207      121    1    0     N      S    Has radio                     
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH2                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HV208      122    1    0     N      S    Has television                
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+HV209      123    1    0     N      S    Has refrigerator              
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+HV210      124    1    0     N      S    Has bicycle                   
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+HV211      125    1    0     N      S    Has motorcycle                
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+HV212      126    1    0     N      S    Has car                       
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH2                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HV213      127    2    0     N      S    Main floor material           
+                                         values:   value  label
+                                                      10  NATURAL                                                     
+                                                      11  Earth/mud                                                   
+                                                      12  Mud mixed with dung                                         
+                                                      20  RUDIMENTARY                                                 
+                                                      21  Wood planks                                                 
+                                                      22  Palm/Bamboo                                                 
+                                                      30  FINISHED                                                    
+                                                      31  Parquet of polished wood                                    
+                                                      32  Linoleum                                                    
+                                                      33  Ceramic tiles                                               
+                                                      34  Cement                                                      
+                                                      35  Carpet                                                      
+                                                      36  Terrazo                                                     
+                                                      96  OTHER                                                       
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                      10      36
+                                                      96      96
+
+HV214      129    2    0     N      S    Main wall material         -NA
+                                         values:   value  label
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                      10      31
+                                                      96      96
+
+HV215      131    2    0     N      S    Main roof material         -NA
+                                         values:   value  label
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                      10      31
+                                                      96      96
+
+HV216      133    2    0     N      S    Rooms for sleeping            
+                                         values:   value  label
+                                                      99  Missing value
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH2                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HV217      135    1    0     N      S    Relationship structure        
+                                         values:   value  label
+                                                       0  No adults                                                   
+                                                       1  One adult                                                   
+                                                       2  Two adults, opp. sex                                        
+                                                       3  Two adults, same sex                                        
+                                                       4  Three+ related adult                                        
+                                                       5  Unrelated adults                                            
+                                         ranges:   lower   upper
+                                                       0       5
+
+HV218      136    2    0     N      S    Line number of head of househ.
+                                         ranges:   lower   upper
+                                                       1      90
+
+HV219      138    1    0     N      S    Sex of head of household      
+                                         values:   value  label
+                                                       1  Male                                                        
+                                                       2  Female                                                      
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       1       2
+
+HV220      139    2    0     N      S    Age of head of household      
+                                         values:   value  label
+                                                      97  97+                                                         
+                                                      98  DK                                                          
+                                                      99  Missing value
+                                         ranges:   lower   upper
+                                                       0      98
+
+HV221      141    1    0     N      S    Has telephone                 
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH2                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HV222      142    2    0     N      S    Type of salt used for cooking 
+                                         values:   value  label
+                                                       0  No salt available                                           
+                                                       1  Local salt                                                  
+                                                       2  Pkgd salt-iodized                                           
+                                                       3  Pkgd salt-noniodized                                        
+                                                       4  Salt for animals                                            
+                                                       5  Loose salt                                                  
+                                                      96  Other                                                       
+                                                      98  Don't know                                                  
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       5
+                                                      96      96
+                                                      98      98
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HVIDX      144    2    0     N      M    Line number                   
+                                         ranges:   lower   upper
+                                                       1      90
+
+HV101      146    2    0     N      M    Relationship to head          
+                                         values:   value  label
+                                                       1  Head                                                        
+                                                       2  Wife or husband                                             
+                                                       3  Son/daughter                                                
+                                                       4  Son/daughter-in-law                                         
+                                                       5  Grandchild                                                  
+                                                       6  Parent                                                      
+                                                       7  Parent-in-law                                               
+                                                       8  Brother/sister                                              
+                                                       9  Co-spouse                                                   
+                                                      10  Other relative                                              
+                                                      11  Adopted/foster child                                        
+                                                      12  Not related                                                 
+                                                      98  DK                                                          
+                                                      99  Missing value
+                                         ranges:   lower   upper
+                                                       1      12
+                                                      98      98
+
+HV102      148    1    0     N      M    Usual resident                
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       1
+
+HV103      149    1    0     N      M    Slept last night              
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       1
+
+HV104      150    1    0     N      M    Sex of household member       
+                                         values:   value  label
+                                                       1  Male                                                        
+                                                       2  Female                                                      
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       1       2
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HV105      151    2    0     N      M    Age of household members      
+                                         values:   value  label
+                                                      97  97+                                                         
+                                                      98  DK                                                          
+                                                      99  Missing value
+                                         ranges:   lower   upper
+                                                       0      98
+
+HV106      153    1    0     N      M    Highest educational level     
+                                         values:   value  label
+                                                       0  No education                                                
+                                                       1  Primary                                                     
+                                                       2  Secondary                                                   
+                                                       3  Higher                                                      
+                                                       8  DK                                                          
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       3
+                                                       8       8
+
+HV107      154    2    0     N      M    Highest year of education     
+                                         values:   value  label
+                                                      98  DK                                                          
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+
+HV108      156    2    0     N      M    Education in single years     
+                                         values:   value  label
+                                                      97  Inconsistent                                                
+                                                      98  DK                                                          
+                                                      99  Missing value
+                                         ranges:   lower   upper
+                                                       0      23
+                                                      97      98
+
+HV109      158    1    0     N      M    Educational attainment        
+                                         values:   value  label
+                                                       0  No education                                                
+                                                       1  Incomplete primary                                          
+                                                       2  Complete primary                                            
+                                                       3  Incomplete secondary                                        
+                                                       4  Complete secondary                                          
+                                                       5  Higher                                                      
+                                                       8  DK                                                          
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       5
+                                                       8       8
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HV110      159    1    0     N      M    Member still in school        
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       1
+
+HV111      160    1    0     N      M    Mother alive                  
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       8  DK                                                          
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+                                                       8       8
+
+HV112      161    2    0     N      M    Mother's line number          
+                                         values:   value  label
+                                                       0  Mother not in HH                                            
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0      90
+
+HV113      163    1    0     N      M    Father alive                  
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       8  DK                                                          
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+                                                       8       8
+
+HV114      164    2    0     N      M    Father's line number          
+                                         values:   value  label
+                                                       0  Father not in HH                                            
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0      90
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+HV115      166    1    0     N      M    Current marital status        
+                                         values:   value  label
+                                                       0  Never married                                               
+                                                       1  Married                                                     
+                                                       2  Living together                                             
+                                                       3  Widowed                                                     
+                                                       4  Divorced                                                    
+                                                       5  Not living together                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       5
+
+HV116      167    1    0     N      M    Currently, formerly, never    
+                                         values:   value  label
+                                                       0  Never married                                               
+                                                       1  Currently married                                           
+                                                       2  Formerly/ever marr.                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       2
+
+HV117      168    1    0     N      M    Eligibility for female intview
+                                         values:   value  label
+                                                       0  Not eligible                                                
+                                                       1  Eligible                                                    
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+HV118      169    1    0     N      M    Eligibility for male interview
+                                         values:   value  label
+                                                       0  Not eligible                                                
+                                                       1  Eligible                                                    
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH3                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+SHSTRUC    742    4    0     N      S    Structure Number              
+
+SHSUPERV   746    3    0     N      S    Supervisor number             
+                                         ranges:   lower   upper
+                                                      11      99
+                                                     101     159
+
+SHFEDIT    749    3    0     N      S    Field editor number           
+                                         ranges:   lower   upper
+                                                      11      99
+                                                     101     159
+
+SH26       752    2    0     N      S    Water for laundry and dishwashing
+                                         values:   value  label
+                                                      11  Piped into residence                                        
+                                                      12  Public tap/Neighbours house                                 
+                                                      21  Well in residence                                           
+                                                      22  Public well                                                 
+                                                      23  Borehole                                                    
+                                                      31  Spring water                                                
+                                                      32  River/Stream                                                
+                                                      33  Pond/Lake                                                   
+                                                      34  Dam                                                         
+                                                      35  Dugout                                                      
+                                                      41  Rainwater                                                   
+                                                      51  Tanker Truck                                                
+                                                      61  Bottled water                                               
+                                                      96  Other                                                       
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                      11      61
+                                                      96      96
+
+SH27       754    3    0     N      S    Time to get water             
+                                         values:   value  label
+                                                     999  Missing value
+                                                   BLANK  Not applicable value
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH3                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+SH31       757    1    0     N      S    Person fetching water         
+                                         values:   value  label
+                                                       1  Respondent                                                  
+                                                       2  Spouse/Partner                                              
+                                                       3  Son                                                         
+                                                       4  Daughter                                                    
+                                                       5  Both son and daughter                                       
+                                                       6  Other male member                                           
+                                                       7  Other female member                                         
+                                                       8  Other                                                       
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       1       8
+
+SH33D      758    1    0     N      S    Video Deck                    
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+SH36D      759    1    0     N      S    Tractor                       
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+SH36E      760    1    0     N      S    Horse/cart                    
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH3                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+SH37       761    2    0     N      S    Type of salt used for cooking 
+                                         values:   value  label
+                                                       1  Mkt packaged iodated salt                                   
+                                                       2  Mkt pkgd salt  non-iodized                                  
+                                                       3  Factory Pkgd salt-iodized                                   
+                                                       4  Factory pkgd non-iodated                                    
+                                                       5  Salt not tested                                             
+                                                      96  Other                                                       
+                                                      98  Don't know                                                  
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       1       5
+                                                      96      96
+                                                      98      98
+
+SH38       763    3    0     N      S    Iodine reading (PPM)          
+                                         values:   value  label
+                                                   BLANK  Not applicable value
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+IDXH4      766    2    0     N      M    Index to household schedule   
+                                         ranges:   lower   upper
+                                                       1      90
+
+SH08       768    1    0     N      M    Loss of limbs or paralysed    
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       1
+
+SH09       769    1    0     N      M    Blind                         
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       1
+
+SH10       770    1    0     N      M    Deaf                          
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       1
+
+SH11       771    1    0     N      M    Mentally Retarded             
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       1
+
+SH12       772    1    0     N      M    Leprosy                       
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       1
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+SH13       773    1    0     N      M    Fits/epilepsy                 
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       1
+
+SH14       774    1    0     N      M    Mental problems               
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                         ranges:   lower   upper
+                                                       0       1
+
+SH16       775    1    0     N      M    Ever been to school           
+                                         values:   value  label
+                                                       0  No                                                          
+                                                       1  Yes                                                         
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       1
+
+SH17A      776    1    0     N      M    Level of Education            
+                                         values:   value  label
+                                                       1  Primary                                                     
+                                                       2  Middle/JSS                                                  
+                                                       3  Secondary/SSS                                               
+                                                       4  Higher                                                      
+                                                       8  DK                                                          
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       1       4
+                                                       8       8
+
+SH17B      777    2    0     N      M    Highest grade completed       
+                                         values:   value  label
+                                                       0  < 1 year completed                                          
+                                                      98  DK                                                          
+                                                      99  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       0       8
+                                                      98      98
+
+
+                             VARIABLE  DESCRIPTION                     
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Variable  Loca  Len   Deci  For   Class  Variable Label
+Name      tion  gth   mals  mat          Value   Label
+--------------------------------------------------------------------------------
+
+SH19       779    1    0     N      M    Reasons for not attending school
+                                         values:   value  label
+                                                       1  Financial constraint                                        
+                                                       2  School too far                                              
+                                                       3  Lack of interest                                            
+                                                       4  Disability                                                  
+                                                       5  Needed to help in family business                           
+                                                       6  Graduated                                                   
+                                                       7  Other                                                       
+                                                       9  Missing value
+                                                   BLANK  Not applicable value
+                                         ranges:   lower   upper
+                                                       1       7
+
+
+                             SECTION MAP                               
+Section   : RECH0                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+   1| A |  HHID          Case Identification                                    
+    | A |
+    | A |
+    | A |
+    | A |
+    | A |
+    | A |
+    | A |
+    | A |
+    | A |
+    | A |
+    | A |     ___
+  13| A |  HV000         Country code and phase                                 
+    | A |
+    | A |     ___
+  16| N |  HV001         Cluster number                                         
+    | N |
+    | N |
+    | N |
+    | N |
+    | N |
+    | N |
+    | N |     ___
+  24| N |  HV002         Household number                                       
+    | N |
+    | N |
+    | N |     ___
+  28| N |  HV003         Respondent's line number                               
+    | N |
+    | N |     ___
+  31| N |  HV004         Ultimate area unit                                     
+    | N |
+    | N |
+    | N |     ___
+  35| N |  HV005         Sample weight                                          
+    | N |
+    | N |
+    | N |
+    | N |
+    | N |
+    | N |
+    | N |     ___
+  43| N |  HV006         Month of interview                                     
+    | N |     ___
+  45| N |  HV007         Year of interview                                      
+    | N |     ___
+  47| N |  HV008         Date of interview (CMC)                                
+    | N |
+    | N |
+    | N |     ___
+
+                             SECTION MAP                               
+Section   : RECH0                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+  51| N |  HV009         Number of household members                            
+    | N |     ___
+  53| N |  HV010         Number of eligible women in HH                         
+    | N |     ___
+  55| N |  HV011         Number of eligible men in HH                           
+    | N |     ___
+  57| N |  HV012         Number of de jure members                              
+    | N |     ___
+  59| N |  HV013         Number of de facto members                             
+    | N |     ___
+  61| N |  HV014         Number of children 5 and under                         
+    | N |     ___
+  63| N |  HV015         Result of household interview                               ___
+  64| N |  HV016         Day of interview                                       
+    | N |     ___
+  66| N |  HV017         Number of visits                                            ___
+  67| N |  HV018         Interviewer identification          999                
+    | N |
+    | N |     ___
+  70| N |  HV019         Keyer identification                 99                
+    | N |     ___
+  72| N |  HV020         Ever-married sample                                         ___
+  73| N |  HV021         Primary sampling unit                                  
+    | N |
+    | N |
+    | N |     ___
+  77| N |  HV022         Sample stratum number                                  
+    | N |
+    | N |
+    | N |     ___
+  81| N |  HV023         Sample domain                                          
+    | N |     ___
+  83| N |  HV024         Region                                                 
+    | N |     ___
+  85| N |  HV025         Type of place of residence                                  ___
+  86| N |  HV026         Place of residence                    9                     ___
+  87| N |  HV027         Selection for male/husb. int.                               ___
+  88| N |  HV028         Sample weight for male subsamp                         
+    | N |
+    | N |
+    | N |
+    | N |
+    | N |
+    | N |
+    | N |     ___
+  96| N |  HV030         Field supervisor           -NA       99   BLANK        
+    | N |     ___
+  98| N |  HV031         Field editor               -NA       99   BLANK        
+    | N |     ___
+ 100| N |  HV032         Office editor                        99   BLANK        
+    | N |     ___
+
+                             SECTION MAP                               
+Section   : RECH0                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 102| N |  HV033         Ultimate area selection prob.                          
+    | N |
+    | N |
+    | N |
+    | N |
+    | N |
+    | N |
+    | N |     ___
+
+                             SECTION MAP                               
+Section   : RECH2                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 110| N |  HV201         Source of drinking water             99   BLANK        
+    | N |     ___
+ 112| N |  HV202         Source of non-drinking water         99   BLANK        
+    | N |     ___
+ 114| N |  HV203         Same source of water                  9   BLANK             ___
+ 115| N |  HV204         Time to get to water source         999   BLANK        
+    | N |
+    | N |     ___
+ 118| N |  HV205         Type of toilet facility              99   BLANK        
+    | N |     ___
+ 120| N |  HV206         Has electricity                       9   BLANK             ___
+ 121| N |  HV207         Has radio                             9   BLANK             ___
+ 122| N |  HV208         Has television                        9   BLANK             ___
+ 123| N |  HV209         Has refrigerator                      9   BLANK             ___
+ 124| N |  HV210         Has bicycle                           9   BLANK             ___
+ 125| N |  HV211         Has motorcycle                        9   BLANK             ___
+ 126| N |  HV212         Has car                               9   BLANK             ___
+ 127| N |  HV213         Main floor material                  99   BLANK        
+    | N |     ___
+ 129| N |  HV214         Main wall material         -NA       99   BLANK        
+    | N |     ___
+ 131| N |  HV215         Main roof material         -NA       99   BLANK        
+    | N |     ___
+ 133| N |  HV216         Rooms for sleeping                   99                
+    | N |     ___
+ 135| N |  HV217         Relationship structure                                      ___
+ 136| N |  HV218         Line number of head of househ.                         
+    | N |     ___
+ 138| N |  HV219         Sex of head of household              9                     ___
+ 139| N |  HV220         Age of head of household             99                
+    | N |     ___
+ 141| N |  HV221         Has telephone                         9   BLANK             ___
+ 142| N |  HV222         Type of salt used for cooking        99   BLANK        
+    | N |     ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 144| N |  HVIDX     (1) Line number                                            
+    | N |     ___
+ 146| N |  HV101     (1) Relationship to head                 99                
+    | N |     ___
+ 148| N |  HV102     (1) Usual resident                        9                     ___
+ 149| N |  HV103     (1) Slept last night                      9                     ___
+ 150| N |  HV104     (1) Sex of household member               9                     ___
+ 151| N |  HV105     (1) Age of household members             99                
+    | N |     ___
+ 153| N |  HV106     (1) Highest educational level             9                     ___
+ 154| N |  HV107     (1) Highest year of education            99   BLANK        
+    | N |     ___
+ 156| N |  HV108     (1) Education in single years            99                
+    | N |     ___
+ 158| N |  HV109     (1) Educational attainment                9                     ___
+ 159| N |  HV110     (1) Member still in school                9                     ___
+ 160| N |  HV111     (1) Mother alive                          9   BLANK             ___
+ 161| N |  HV112     (1) Mother's line number                 99   BLANK        
+    | N |     ___
+ 163| N |  HV113     (1) Father alive                          9   BLANK             ___
+ 164| N |  HV114     (1) Father's line number                 99   BLANK        
+    | N |     ___
+ 166| N |  HV115     (1) Current marital status                9   BLANK             ___
+ 167| N |  HV116     (1) Currently, formerly, never            9   BLANK             ___
+ 168| N |  HV117     (1) Eligibility for female intview            BLANK             ___
+ 169| N |  HV118     (1) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 170| N |  HVIDX     (2) Line number                                            
+    | N |     ___
+ 172| N |  HV101     (2) Relationship to head                 99                
+    | N |     ___
+ 174| N |  HV102     (2) Usual resident                        9                     ___
+ 175| N |  HV103     (2) Slept last night                      9                     ___
+ 176| N |  HV104     (2) Sex of household member               9                     ___
+ 177| N |  HV105     (2) Age of household members             99                
+    | N |     ___
+ 179| N |  HV106     (2) Highest educational level             9                     ___
+ 180| N |  HV107     (2) Highest year of education            99   BLANK        
+    | N |     ___
+ 182| N |  HV108     (2) Education in single years            99                
+    | N |     ___
+ 184| N |  HV109     (2) Educational attainment                9                     ___
+ 185| N |  HV110     (2) Member still in school                9                     ___
+ 186| N |  HV111     (2) Mother alive                          9   BLANK             ___
+ 187| N |  HV112     (2) Mother's line number                 99   BLANK        
+    | N |     ___
+ 189| N |  HV113     (2) Father alive                          9   BLANK             ___
+ 190| N |  HV114     (2) Father's line number                 99   BLANK        
+    | N |     ___
+ 192| N |  HV115     (2) Current marital status                9   BLANK             ___
+ 193| N |  HV116     (2) Currently, formerly, never            9   BLANK             ___
+ 194| N |  HV117     (2) Eligibility for female intview            BLANK             ___
+ 195| N |  HV118     (2) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 196| N |  HVIDX     (3) Line number                                            
+    | N |     ___
+ 198| N |  HV101     (3) Relationship to head                 99                
+    | N |     ___
+ 200| N |  HV102     (3) Usual resident                        9                     ___
+ 201| N |  HV103     (3) Slept last night                      9                     ___
+ 202| N |  HV104     (3) Sex of household member               9                     ___
+ 203| N |  HV105     (3) Age of household members             99                
+    | N |     ___
+ 205| N |  HV106     (3) Highest educational level             9                     ___
+ 206| N |  HV107     (3) Highest year of education            99   BLANK        
+    | N |     ___
+ 208| N |  HV108     (3) Education in single years            99                
+    | N |     ___
+ 210| N |  HV109     (3) Educational attainment                9                     ___
+ 211| N |  HV110     (3) Member still in school                9                     ___
+ 212| N |  HV111     (3) Mother alive                          9   BLANK             ___
+ 213| N |  HV112     (3) Mother's line number                 99   BLANK        
+    | N |     ___
+ 215| N |  HV113     (3) Father alive                          9   BLANK             ___
+ 216| N |  HV114     (3) Father's line number                 99   BLANK        
+    | N |     ___
+ 218| N |  HV115     (3) Current marital status                9   BLANK             ___
+ 219| N |  HV116     (3) Currently, formerly, never            9   BLANK             ___
+ 220| N |  HV117     (3) Eligibility for female intview            BLANK             ___
+ 221| N |  HV118     (3) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 222| N |  HVIDX     (4) Line number                                            
+    | N |     ___
+ 224| N |  HV101     (4) Relationship to head                 99                
+    | N |     ___
+ 226| N |  HV102     (4) Usual resident                        9                     ___
+ 227| N |  HV103     (4) Slept last night                      9                     ___
+ 228| N |  HV104     (4) Sex of household member               9                     ___
+ 229| N |  HV105     (4) Age of household members             99                
+    | N |     ___
+ 231| N |  HV106     (4) Highest educational level             9                     ___
+ 232| N |  HV107     (4) Highest year of education            99   BLANK        
+    | N |     ___
+ 234| N |  HV108     (4) Education in single years            99                
+    | N |     ___
+ 236| N |  HV109     (4) Educational attainment                9                     ___
+ 237| N |  HV110     (4) Member still in school                9                     ___
+ 238| N |  HV111     (4) Mother alive                          9   BLANK             ___
+ 239| N |  HV112     (4) Mother's line number                 99   BLANK        
+    | N |     ___
+ 241| N |  HV113     (4) Father alive                          9   BLANK             ___
+ 242| N |  HV114     (4) Father's line number                 99   BLANK        
+    | N |     ___
+ 244| N |  HV115     (4) Current marital status                9   BLANK             ___
+ 245| N |  HV116     (4) Currently, formerly, never            9   BLANK             ___
+ 246| N |  HV117     (4) Eligibility for female intview            BLANK             ___
+ 247| N |  HV118     (4) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 248| N |  HVIDX     (5) Line number                                            
+    | N |     ___
+ 250| N |  HV101     (5) Relationship to head                 99                
+    | N |     ___
+ 252| N |  HV102     (5) Usual resident                        9                     ___
+ 253| N |  HV103     (5) Slept last night                      9                     ___
+ 254| N |  HV104     (5) Sex of household member               9                     ___
+ 255| N |  HV105     (5) Age of household members             99                
+    | N |     ___
+ 257| N |  HV106     (5) Highest educational level             9                     ___
+ 258| N |  HV107     (5) Highest year of education            99   BLANK        
+    | N |     ___
+ 260| N |  HV108     (5) Education in single years            99                
+    | N |     ___
+ 262| N |  HV109     (5) Educational attainment                9                     ___
+ 263| N |  HV110     (5) Member still in school                9                     ___
+ 264| N |  HV111     (5) Mother alive                          9   BLANK             ___
+ 265| N |  HV112     (5) Mother's line number                 99   BLANK        
+    | N |     ___
+ 267| N |  HV113     (5) Father alive                          9   BLANK             ___
+ 268| N |  HV114     (5) Father's line number                 99   BLANK        
+    | N |     ___
+ 270| N |  HV115     (5) Current marital status                9   BLANK             ___
+ 271| N |  HV116     (5) Currently, formerly, never            9   BLANK             ___
+ 272| N |  HV117     (5) Eligibility for female intview            BLANK             ___
+ 273| N |  HV118     (5) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 274| N |  HVIDX     (6) Line number                                            
+    | N |     ___
+ 276| N |  HV101     (6) Relationship to head                 99                
+    | N |     ___
+ 278| N |  HV102     (6) Usual resident                        9                     ___
+ 279| N |  HV103     (6) Slept last night                      9                     ___
+ 280| N |  HV104     (6) Sex of household member               9                     ___
+ 281| N |  HV105     (6) Age of household members             99                
+    | N |     ___
+ 283| N |  HV106     (6) Highest educational level             9                     ___
+ 284| N |  HV107     (6) Highest year of education            99   BLANK        
+    | N |     ___
+ 286| N |  HV108     (6) Education in single years            99                
+    | N |     ___
+ 288| N |  HV109     (6) Educational attainment                9                     ___
+ 289| N |  HV110     (6) Member still in school                9                     ___
+ 290| N |  HV111     (6) Mother alive                          9   BLANK             ___
+ 291| N |  HV112     (6) Mother's line number                 99   BLANK        
+    | N |     ___
+ 293| N |  HV113     (6) Father alive                          9   BLANK             ___
+ 294| N |  HV114     (6) Father's line number                 99   BLANK        
+    | N |     ___
+ 296| N |  HV115     (6) Current marital status                9   BLANK             ___
+ 297| N |  HV116     (6) Currently, formerly, never            9   BLANK             ___
+ 298| N |  HV117     (6) Eligibility for female intview            BLANK             ___
+ 299| N |  HV118     (6) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 300| N |  HVIDX     (7) Line number                                            
+    | N |     ___
+ 302| N |  HV101     (7) Relationship to head                 99                
+    | N |     ___
+ 304| N |  HV102     (7) Usual resident                        9                     ___
+ 305| N |  HV103     (7) Slept last night                      9                     ___
+ 306| N |  HV104     (7) Sex of household member               9                     ___
+ 307| N |  HV105     (7) Age of household members             99                
+    | N |     ___
+ 309| N |  HV106     (7) Highest educational level             9                     ___
+ 310| N |  HV107     (7) Highest year of education            99   BLANK        
+    | N |     ___
+ 312| N |  HV108     (7) Education in single years            99                
+    | N |     ___
+ 314| N |  HV109     (7) Educational attainment                9                     ___
+ 315| N |  HV110     (7) Member still in school                9                     ___
+ 316| N |  HV111     (7) Mother alive                          9   BLANK             ___
+ 317| N |  HV112     (7) Mother's line number                 99   BLANK        
+    | N |     ___
+ 319| N |  HV113     (7) Father alive                          9   BLANK             ___
+ 320| N |  HV114     (7) Father's line number                 99   BLANK        
+    | N |     ___
+ 322| N |  HV115     (7) Current marital status                9   BLANK             ___
+ 323| N |  HV116     (7) Currently, formerly, never            9   BLANK             ___
+ 324| N |  HV117     (7) Eligibility for female intview            BLANK             ___
+ 325| N |  HV118     (7) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 326| N |  HVIDX     (8) Line number                                            
+    | N |     ___
+ 328| N |  HV101     (8) Relationship to head                 99                
+    | N |     ___
+ 330| N |  HV102     (8) Usual resident                        9                     ___
+ 331| N |  HV103     (8) Slept last night                      9                     ___
+ 332| N |  HV104     (8) Sex of household member               9                     ___
+ 333| N |  HV105     (8) Age of household members             99                
+    | N |     ___
+ 335| N |  HV106     (8) Highest educational level             9                     ___
+ 336| N |  HV107     (8) Highest year of education            99   BLANK        
+    | N |     ___
+ 338| N |  HV108     (8) Education in single years            99                
+    | N |     ___
+ 340| N |  HV109     (8) Educational attainment                9                     ___
+ 341| N |  HV110     (8) Member still in school                9                     ___
+ 342| N |  HV111     (8) Mother alive                          9   BLANK             ___
+ 343| N |  HV112     (8) Mother's line number                 99   BLANK        
+    | N |     ___
+ 345| N |  HV113     (8) Father alive                          9   BLANK             ___
+ 346| N |  HV114     (8) Father's line number                 99   BLANK        
+    | N |     ___
+ 348| N |  HV115     (8) Current marital status                9   BLANK             ___
+ 349| N |  HV116     (8) Currently, formerly, never            9   BLANK             ___
+ 350| N |  HV117     (8) Eligibility for female intview            BLANK             ___
+ 351| N |  HV118     (8) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 352| N |  HVIDX     (9) Line number                                            
+    | N |     ___
+ 354| N |  HV101     (9) Relationship to head                 99                
+    | N |     ___
+ 356| N |  HV102     (9) Usual resident                        9                     ___
+ 357| N |  HV103     (9) Slept last night                      9                     ___
+ 358| N |  HV104     (9) Sex of household member               9                     ___
+ 359| N |  HV105     (9) Age of household members             99                
+    | N |     ___
+ 361| N |  HV106     (9) Highest educational level             9                     ___
+ 362| N |  HV107     (9) Highest year of education            99   BLANK        
+    | N |     ___
+ 364| N |  HV108     (9) Education in single years            99                
+    | N |     ___
+ 366| N |  HV109     (9) Educational attainment                9                     ___
+ 367| N |  HV110     (9) Member still in school                9                     ___
+ 368| N |  HV111     (9) Mother alive                          9   BLANK             ___
+ 369| N |  HV112     (9) Mother's line number                 99   BLANK        
+    | N |     ___
+ 371| N |  HV113     (9) Father alive                          9   BLANK             ___
+ 372| N |  HV114     (9) Father's line number                 99   BLANK        
+    | N |     ___
+ 374| N |  HV115     (9) Current marital status                9   BLANK             ___
+ 375| N |  HV116     (9) Currently, formerly, never            9   BLANK             ___
+ 376| N |  HV117     (9) Eligibility for female intview            BLANK             ___
+ 377| N |  HV118     (9) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 378| N |  HVIDX    (10) Line number                                            
+    | N |     ___
+ 380| N |  HV101    (10) Relationship to head                 99                
+    | N |     ___
+ 382| N |  HV102    (10) Usual resident                        9                     ___
+ 383| N |  HV103    (10) Slept last night                      9                     ___
+ 384| N |  HV104    (10) Sex of household member               9                     ___
+ 385| N |  HV105    (10) Age of household members             99                
+    | N |     ___
+ 387| N |  HV106    (10) Highest educational level             9                     ___
+ 388| N |  HV107    (10) Highest year of education            99   BLANK        
+    | N |     ___
+ 390| N |  HV108    (10) Education in single years            99                
+    | N |     ___
+ 392| N |  HV109    (10) Educational attainment                9                     ___
+ 393| N |  HV110    (10) Member still in school                9                     ___
+ 394| N |  HV111    (10) Mother alive                          9   BLANK             ___
+ 395| N |  HV112    (10) Mother's line number                 99   BLANK        
+    | N |     ___
+ 397| N |  HV113    (10) Father alive                          9   BLANK             ___
+ 398| N |  HV114    (10) Father's line number                 99   BLANK        
+    | N |     ___
+ 400| N |  HV115    (10) Current marital status                9   BLANK             ___
+ 401| N |  HV116    (10) Currently, formerly, never            9   BLANK             ___
+ 402| N |  HV117    (10) Eligibility for female intview            BLANK             ___
+ 403| N |  HV118    (10) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 404| N |  HVIDX    (11) Line number                                            
+    | N |     ___
+ 406| N |  HV101    (11) Relationship to head                 99                
+    | N |     ___
+ 408| N |  HV102    (11) Usual resident                        9                     ___
+ 409| N |  HV103    (11) Slept last night                      9                     ___
+ 410| N |  HV104    (11) Sex of household member               9                     ___
+ 411| N |  HV105    (11) Age of household members             99                
+    | N |     ___
+ 413| N |  HV106    (11) Highest educational level             9                     ___
+ 414| N |  HV107    (11) Highest year of education            99   BLANK        
+    | N |     ___
+ 416| N |  HV108    (11) Education in single years            99                
+    | N |     ___
+ 418| N |  HV109    (11) Educational attainment                9                     ___
+ 419| N |  HV110    (11) Member still in school                9                     ___
+ 420| N |  HV111    (11) Mother alive                          9   BLANK             ___
+ 421| N |  HV112    (11) Mother's line number                 99   BLANK        
+    | N |     ___
+ 423| N |  HV113    (11) Father alive                          9   BLANK             ___
+ 424| N |  HV114    (11) Father's line number                 99   BLANK        
+    | N |     ___
+ 426| N |  HV115    (11) Current marital status                9   BLANK             ___
+ 427| N |  HV116    (11) Currently, formerly, never            9   BLANK             ___
+ 428| N |  HV117    (11) Eligibility for female intview            BLANK             ___
+ 429| N |  HV118    (11) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 430| N |  HVIDX    (12) Line number                                            
+    | N |     ___
+ 432| N |  HV101    (12) Relationship to head                 99                
+    | N |     ___
+ 434| N |  HV102    (12) Usual resident                        9                     ___
+ 435| N |  HV103    (12) Slept last night                      9                     ___
+ 436| N |  HV104    (12) Sex of household member               9                     ___
+ 437| N |  HV105    (12) Age of household members             99                
+    | N |     ___
+ 439| N |  HV106    (12) Highest educational level             9                     ___
+ 440| N |  HV107    (12) Highest year of education            99   BLANK        
+    | N |     ___
+ 442| N |  HV108    (12) Education in single years            99                
+    | N |     ___
+ 444| N |  HV109    (12) Educational attainment                9                     ___
+ 445| N |  HV110    (12) Member still in school                9                     ___
+ 446| N |  HV111    (12) Mother alive                          9   BLANK             ___
+ 447| N |  HV112    (12) Mother's line number                 99   BLANK        
+    | N |     ___
+ 449| N |  HV113    (12) Father alive                          9   BLANK             ___
+ 450| N |  HV114    (12) Father's line number                 99   BLANK        
+    | N |     ___
+ 452| N |  HV115    (12) Current marital status                9   BLANK             ___
+ 453| N |  HV116    (12) Currently, formerly, never            9   BLANK             ___
+ 454| N |  HV117    (12) Eligibility for female intview            BLANK             ___
+ 455| N |  HV118    (12) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 456| N |  HVIDX    (13) Line number                                            
+    | N |     ___
+ 458| N |  HV101    (13) Relationship to head                 99                
+    | N |     ___
+ 460| N |  HV102    (13) Usual resident                        9                     ___
+ 461| N |  HV103    (13) Slept last night                      9                     ___
+ 462| N |  HV104    (13) Sex of household member               9                     ___
+ 463| N |  HV105    (13) Age of household members             99                
+    | N |     ___
+ 465| N |  HV106    (13) Highest educational level             9                     ___
+ 466| N |  HV107    (13) Highest year of education            99   BLANK        
+    | N |     ___
+ 468| N |  HV108    (13) Education in single years            99                
+    | N |     ___
+ 470| N |  HV109    (13) Educational attainment                9                     ___
+ 471| N |  HV110    (13) Member still in school                9                     ___
+ 472| N |  HV111    (13) Mother alive                          9   BLANK             ___
+ 473| N |  HV112    (13) Mother's line number                 99   BLANK        
+    | N |     ___
+ 475| N |  HV113    (13) Father alive                          9   BLANK             ___
+ 476| N |  HV114    (13) Father's line number                 99   BLANK        
+    | N |     ___
+ 478| N |  HV115    (13) Current marital status                9   BLANK             ___
+ 479| N |  HV116    (13) Currently, formerly, never            9   BLANK             ___
+ 480| N |  HV117    (13) Eligibility for female intview            BLANK             ___
+ 481| N |  HV118    (13) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 482| N |  HVIDX    (14) Line number                                            
+    | N |     ___
+ 484| N |  HV101    (14) Relationship to head                 99                
+    | N |     ___
+ 486| N |  HV102    (14) Usual resident                        9                     ___
+ 487| N |  HV103    (14) Slept last night                      9                     ___
+ 488| N |  HV104    (14) Sex of household member               9                     ___
+ 489| N |  HV105    (14) Age of household members             99                
+    | N |     ___
+ 491| N |  HV106    (14) Highest educational level             9                     ___
+ 492| N |  HV107    (14) Highest year of education            99   BLANK        
+    | N |     ___
+ 494| N |  HV108    (14) Education in single years            99                
+    | N |     ___
+ 496| N |  HV109    (14) Educational attainment                9                     ___
+ 497| N |  HV110    (14) Member still in school                9                     ___
+ 498| N |  HV111    (14) Mother alive                          9   BLANK             ___
+ 499| N |  HV112    (14) Mother's line number                 99   BLANK        
+    | N |     ___
+ 501| N |  HV113    (14) Father alive                          9   BLANK             ___
+ 502| N |  HV114    (14) Father's line number                 99   BLANK        
+    | N |     ___
+ 504| N |  HV115    (14) Current marital status                9   BLANK             ___
+ 505| N |  HV116    (14) Currently, formerly, never            9   BLANK             ___
+ 506| N |  HV117    (14) Eligibility for female intview            BLANK             ___
+ 507| N |  HV118    (14) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 508| N |  HVIDX    (15) Line number                                            
+    | N |     ___
+ 510| N |  HV101    (15) Relationship to head                 99                
+    | N |     ___
+ 512| N |  HV102    (15) Usual resident                        9                     ___
+ 513| N |  HV103    (15) Slept last night                      9                     ___
+ 514| N |  HV104    (15) Sex of household member               9                     ___
+ 515| N |  HV105    (15) Age of household members             99                
+    | N |     ___
+ 517| N |  HV106    (15) Highest educational level             9                     ___
+ 518| N |  HV107    (15) Highest year of education            99   BLANK        
+    | N |     ___
+ 520| N |  HV108    (15) Education in single years            99                
+    | N |     ___
+ 522| N |  HV109    (15) Educational attainment                9                     ___
+ 523| N |  HV110    (15) Member still in school                9                     ___
+ 524| N |  HV111    (15) Mother alive                          9   BLANK             ___
+ 525| N |  HV112    (15) Mother's line number                 99   BLANK        
+    | N |     ___
+ 527| N |  HV113    (15) Father alive                          9   BLANK             ___
+ 528| N |  HV114    (15) Father's line number                 99   BLANK        
+    | N |     ___
+ 530| N |  HV115    (15) Current marital status                9   BLANK             ___
+ 531| N |  HV116    (15) Currently, formerly, never            9   BLANK             ___
+ 532| N |  HV117    (15) Eligibility for female intview            BLANK             ___
+ 533| N |  HV118    (15) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 534| N |  HVIDX    (16) Line number                                            
+    | N |     ___
+ 536| N |  HV101    (16) Relationship to head                 99                
+    | N |     ___
+ 538| N |  HV102    (16) Usual resident                        9                     ___
+ 539| N |  HV103    (16) Slept last night                      9                     ___
+ 540| N |  HV104    (16) Sex of household member               9                     ___
+ 541| N |  HV105    (16) Age of household members             99                
+    | N |     ___
+ 543| N |  HV106    (16) Highest educational level             9                     ___
+ 544| N |  HV107    (16) Highest year of education            99   BLANK        
+    | N |     ___
+ 546| N |  HV108    (16) Education in single years            99                
+    | N |     ___
+ 548| N |  HV109    (16) Educational attainment                9                     ___
+ 549| N |  HV110    (16) Member still in school                9                     ___
+ 550| N |  HV111    (16) Mother alive                          9   BLANK             ___
+ 551| N |  HV112    (16) Mother's line number                 99   BLANK        
+    | N |     ___
+ 553| N |  HV113    (16) Father alive                          9   BLANK             ___
+ 554| N |  HV114    (16) Father's line number                 99   BLANK        
+    | N |     ___
+ 556| N |  HV115    (16) Current marital status                9   BLANK             ___
+ 557| N |  HV116    (16) Currently, formerly, never            9   BLANK             ___
+ 558| N |  HV117    (16) Eligibility for female intview            BLANK             ___
+ 559| N |  HV118    (16) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 560| N |  HVIDX    (17) Line number                                            
+    | N |     ___
+ 562| N |  HV101    (17) Relationship to head                 99                
+    | N |     ___
+ 564| N |  HV102    (17) Usual resident                        9                     ___
+ 565| N |  HV103    (17) Slept last night                      9                     ___
+ 566| N |  HV104    (17) Sex of household member               9                     ___
+ 567| N |  HV105    (17) Age of household members             99                
+    | N |     ___
+ 569| N |  HV106    (17) Highest educational level             9                     ___
+ 570| N |  HV107    (17) Highest year of education            99   BLANK        
+    | N |     ___
+ 572| N |  HV108    (17) Education in single years            99                
+    | N |     ___
+ 574| N |  HV109    (17) Educational attainment                9                     ___
+ 575| N |  HV110    (17) Member still in school                9                     ___
+ 576| N |  HV111    (17) Mother alive                          9   BLANK             ___
+ 577| N |  HV112    (17) Mother's line number                 99   BLANK        
+    | N |     ___
+ 579| N |  HV113    (17) Father alive                          9   BLANK             ___
+ 580| N |  HV114    (17) Father's line number                 99   BLANK        
+    | N |     ___
+ 582| N |  HV115    (17) Current marital status                9   BLANK             ___
+ 583| N |  HV116    (17) Currently, formerly, never            9   BLANK             ___
+ 584| N |  HV117    (17) Eligibility for female intview            BLANK             ___
+ 585| N |  HV118    (17) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 586| N |  HVIDX    (18) Line number                                            
+    | N |     ___
+ 588| N |  HV101    (18) Relationship to head                 99                
+    | N |     ___
+ 590| N |  HV102    (18) Usual resident                        9                     ___
+ 591| N |  HV103    (18) Slept last night                      9                     ___
+ 592| N |  HV104    (18) Sex of household member               9                     ___
+ 593| N |  HV105    (18) Age of household members             99                
+    | N |     ___
+ 595| N |  HV106    (18) Highest educational level             9                     ___
+ 596| N |  HV107    (18) Highest year of education            99   BLANK        
+    | N |     ___
+ 598| N |  HV108    (18) Education in single years            99                
+    | N |     ___
+ 600| N |  HV109    (18) Educational attainment                9                     ___
+ 601| N |  HV110    (18) Member still in school                9                     ___
+ 602| N |  HV111    (18) Mother alive                          9   BLANK             ___
+ 603| N |  HV112    (18) Mother's line number                 99   BLANK        
+    | N |     ___
+ 605| N |  HV113    (18) Father alive                          9   BLANK             ___
+ 606| N |  HV114    (18) Father's line number                 99   BLANK        
+    | N |     ___
+ 608| N |  HV115    (18) Current marital status                9   BLANK             ___
+ 609| N |  HV116    (18) Currently, formerly, never            9   BLANK             ___
+ 610| N |  HV117    (18) Eligibility for female intview            BLANK             ___
+ 611| N |  HV118    (18) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 612| N |  HVIDX    (19) Line number                                            
+    | N |     ___
+ 614| N |  HV101    (19) Relationship to head                 99                
+    | N |     ___
+ 616| N |  HV102    (19) Usual resident                        9                     ___
+ 617| N |  HV103    (19) Slept last night                      9                     ___
+ 618| N |  HV104    (19) Sex of household member               9                     ___
+ 619| N |  HV105    (19) Age of household members             99                
+    | N |     ___
+ 621| N |  HV106    (19) Highest educational level             9                     ___
+ 622| N |  HV107    (19) Highest year of education            99   BLANK        
+    | N |     ___
+ 624| N |  HV108    (19) Education in single years            99                
+    | N |     ___
+ 626| N |  HV109    (19) Educational attainment                9                     ___
+ 627| N |  HV110    (19) Member still in school                9                     ___
+ 628| N |  HV111    (19) Mother alive                          9   BLANK             ___
+ 629| N |  HV112    (19) Mother's line number                 99   BLANK        
+    | N |     ___
+ 631| N |  HV113    (19) Father alive                          9   BLANK             ___
+ 632| N |  HV114    (19) Father's line number                 99   BLANK        
+    | N |     ___
+ 634| N |  HV115    (19) Current marital status                9   BLANK             ___
+ 635| N |  HV116    (19) Currently, formerly, never            9   BLANK             ___
+ 636| N |  HV117    (19) Eligibility for female intview            BLANK             ___
+ 637| N |  HV118    (19) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 638| N |  HVIDX    (20) Line number                                            
+    | N |     ___
+ 640| N |  HV101    (20) Relationship to head                 99                
+    | N |     ___
+ 642| N |  HV102    (20) Usual resident                        9                     ___
+ 643| N |  HV103    (20) Slept last night                      9                     ___
+ 644| N |  HV104    (20) Sex of household member               9                     ___
+ 645| N |  HV105    (20) Age of household members             99                
+    | N |     ___
+ 647| N |  HV106    (20) Highest educational level             9                     ___
+ 648| N |  HV107    (20) Highest year of education            99   BLANK        
+    | N |     ___
+ 650| N |  HV108    (20) Education in single years            99                
+    | N |     ___
+ 652| N |  HV109    (20) Educational attainment                9                     ___
+ 653| N |  HV110    (20) Member still in school                9                     ___
+ 654| N |  HV111    (20) Mother alive                          9   BLANK             ___
+ 655| N |  HV112    (20) Mother's line number                 99   BLANK        
+    | N |     ___
+ 657| N |  HV113    (20) Father alive                          9   BLANK             ___
+ 658| N |  HV114    (20) Father's line number                 99   BLANK        
+    | N |     ___
+ 660| N |  HV115    (20) Current marital status                9   BLANK             ___
+ 661| N |  HV116    (20) Currently, formerly, never            9   BLANK             ___
+ 662| N |  HV117    (20) Eligibility for female intview            BLANK             ___
+ 663| N |  HV118    (20) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 664| N |  HVIDX    (21) Line number                                            
+    | N |     ___
+ 666| N |  HV101    (21) Relationship to head                 99                
+    | N |     ___
+ 668| N |  HV102    (21) Usual resident                        9                     ___
+ 669| N |  HV103    (21) Slept last night                      9                     ___
+ 670| N |  HV104    (21) Sex of household member               9                     ___
+ 671| N |  HV105    (21) Age of household members             99                
+    | N |     ___
+ 673| N |  HV106    (21) Highest educational level             9                     ___
+ 674| N |  HV107    (21) Highest year of education            99   BLANK        
+    | N |     ___
+ 676| N |  HV108    (21) Education in single years            99                
+    | N |     ___
+ 678| N |  HV109    (21) Educational attainment                9                     ___
+ 679| N |  HV110    (21) Member still in school                9                     ___
+ 680| N |  HV111    (21) Mother alive                          9   BLANK             ___
+ 681| N |  HV112    (21) Mother's line number                 99   BLANK        
+    | N |     ___
+ 683| N |  HV113    (21) Father alive                          9   BLANK             ___
+ 684| N |  HV114    (21) Father's line number                 99   BLANK        
+    | N |     ___
+ 686| N |  HV115    (21) Current marital status                9   BLANK             ___
+ 687| N |  HV116    (21) Currently, formerly, never            9   BLANK             ___
+ 688| N |  HV117    (21) Eligibility for female intview            BLANK             ___
+ 689| N |  HV118    (21) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 690| N |  HVIDX    (22) Line number                                            
+    | N |     ___
+ 692| N |  HV101    (22) Relationship to head                 99                
+    | N |     ___
+ 694| N |  HV102    (22) Usual resident                        9                     ___
+ 695| N |  HV103    (22) Slept last night                      9                     ___
+ 696| N |  HV104    (22) Sex of household member               9                     ___
+ 697| N |  HV105    (22) Age of household members             99                
+    | N |     ___
+ 699| N |  HV106    (22) Highest educational level             9                     ___
+ 700| N |  HV107    (22) Highest year of education            99   BLANK        
+    | N |     ___
+ 702| N |  HV108    (22) Education in single years            99                
+    | N |     ___
+ 704| N |  HV109    (22) Educational attainment                9                     ___
+ 705| N |  HV110    (22) Member still in school                9                     ___
+ 706| N |  HV111    (22) Mother alive                          9   BLANK             ___
+ 707| N |  HV112    (22) Mother's line number                 99   BLANK        
+    | N |     ___
+ 709| N |  HV113    (22) Father alive                          9   BLANK             ___
+ 710| N |  HV114    (22) Father's line number                 99   BLANK        
+    | N |     ___
+ 712| N |  HV115    (22) Current marital status                9   BLANK             ___
+ 713| N |  HV116    (22) Currently, formerly, never            9   BLANK             ___
+ 714| N |  HV117    (22) Eligibility for female intview            BLANK             ___
+ 715| N |  HV118    (22) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH1                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 716| N |  HVIDX    (23) Line number                                            
+    | N |     ___
+ 718| N |  HV101    (23) Relationship to head                 99                
+    | N |     ___
+ 720| N |  HV102    (23) Usual resident                        9                     ___
+ 721| N |  HV103    (23) Slept last night                      9                     ___
+ 722| N |  HV104    (23) Sex of household member               9                     ___
+ 723| N |  HV105    (23) Age of household members             99                
+    | N |     ___
+ 725| N |  HV106    (23) Highest educational level             9                     ___
+ 726| N |  HV107    (23) Highest year of education            99   BLANK        
+    | N |     ___
+ 728| N |  HV108    (23) Education in single years            99                
+    | N |     ___
+ 730| N |  HV109    (23) Educational attainment                9                     ___
+ 731| N |  HV110    (23) Member still in school                9                     ___
+ 732| N |  HV111    (23) Mother alive                          9   BLANK             ___
+ 733| N |  HV112    (23) Mother's line number                 99   BLANK        
+    | N |     ___
+ 735| N |  HV113    (23) Father alive                          9   BLANK             ___
+ 736| N |  HV114    (23) Father's line number                 99   BLANK        
+    | N |     ___
+ 738| N |  HV115    (23) Current marital status                9   BLANK             ___
+ 739| N |  HV116    (23) Currently, formerly, never            9   BLANK             ___
+ 740| N |  HV117    (23) Eligibility for female intview            BLANK             ___
+ 741| N |  HV118    (23) Eligibility for male interview            BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH3                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 742| N |  SHSTRUC       Structure Number                                       
+    | N |
+    | N |
+    | N |     ___
+ 746| N |  SHSUPERV      Supervisor number                                      
+    | N |
+    | N |     ___
+ 749| N |  SHFEDIT       Field editor number                                    
+    | N |
+    | N |     ___
+ 752| N |  SH26          Water for laundry and dishwashing       99   BLANK        
+    | N |     ___
+ 754| N |  SH27          Time to get water                   999   BLANK        
+    | N |
+    | N |     ___
+ 757| N |  SH31          Person fetching water                 9   BLANK             ___
+ 758| N |  SH33D         Video Deck                            9   BLANK             ___
+ 759| N |  SH36D         Tractor                               9   BLANK             ___
+ 760| N |  SH36E         Horse/cart                            9   BLANK             ___
+ 761| N |  SH37          Type of salt used for cooking        99   BLANK        
+    | N |     ___
+ 763| N |  SH38          Iodine reading (PPM)                      BLANK        
+    | N |
+    | N |     ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 766| N |  IDXH4     (1) Index to household schedule                            
+    | N |     ___
+ 768| N |  SH08      (1) Loss of limbs or paralysed            9                     ___
+ 769| N |  SH09      (1) Blind                                 9                     ___
+ 770| N |  SH10      (1) Deaf                                  9                     ___
+ 771| N |  SH11      (1) Mentally Retarded                     9                     ___
+ 772| N |  SH12      (1) Leprosy                               9                     ___
+ 773| N |  SH13      (1) Fits/epilepsy                         9                     ___
+ 774| N |  SH14      (1) Mental problems                       9                     ___
+ 775| N |  SH16      (1) Ever been to school                   9   BLANK             ___
+ 776| N |  SH17A     (1) Level of Education                    9   BLANK             ___
+ 777| N |  SH17B     (1) Highest grade completed              99   BLANK        
+    | N |     ___
+ 779| N |  SH19      (1) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 780| N |  IDXH4     (2) Index to household schedule                            
+    | N |     ___
+ 782| N |  SH08      (2) Loss of limbs or paralysed            9                     ___
+ 783| N |  SH09      (2) Blind                                 9                     ___
+ 784| N |  SH10      (2) Deaf                                  9                     ___
+ 785| N |  SH11      (2) Mentally Retarded                     9                     ___
+ 786| N |  SH12      (2) Leprosy                               9                     ___
+ 787| N |  SH13      (2) Fits/epilepsy                         9                     ___
+ 788| N |  SH14      (2) Mental problems                       9                     ___
+ 789| N |  SH16      (2) Ever been to school                   9   BLANK             ___
+ 790| N |  SH17A     (2) Level of Education                    9   BLANK             ___
+ 791| N |  SH17B     (2) Highest grade completed              99   BLANK        
+    | N |     ___
+ 793| N |  SH19      (2) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 794| N |  IDXH4     (3) Index to household schedule                            
+    | N |     ___
+ 796| N |  SH08      (3) Loss of limbs or paralysed            9                     ___
+ 797| N |  SH09      (3) Blind                                 9                     ___
+ 798| N |  SH10      (3) Deaf                                  9                     ___
+ 799| N |  SH11      (3) Mentally Retarded                     9                     ___
+ 800| N |  SH12      (3) Leprosy                               9                     ___
+ 801| N |  SH13      (3) Fits/epilepsy                         9                     ___
+ 802| N |  SH14      (3) Mental problems                       9                     ___
+ 803| N |  SH16      (3) Ever been to school                   9   BLANK             ___
+ 804| N |  SH17A     (3) Level of Education                    9   BLANK             ___
+ 805| N |  SH17B     (3) Highest grade completed              99   BLANK        
+    | N |     ___
+ 807| N |  SH19      (3) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 808| N |  IDXH4     (4) Index to household schedule                            
+    | N |     ___
+ 810| N |  SH08      (4) Loss of limbs or paralysed            9                     ___
+ 811| N |  SH09      (4) Blind                                 9                     ___
+ 812| N |  SH10      (4) Deaf                                  9                     ___
+ 813| N |  SH11      (4) Mentally Retarded                     9                     ___
+ 814| N |  SH12      (4) Leprosy                               9                     ___
+ 815| N |  SH13      (4) Fits/epilepsy                         9                     ___
+ 816| N |  SH14      (4) Mental problems                       9                     ___
+ 817| N |  SH16      (4) Ever been to school                   9   BLANK             ___
+ 818| N |  SH17A     (4) Level of Education                    9   BLANK             ___
+ 819| N |  SH17B     (4) Highest grade completed              99   BLANK        
+    | N |     ___
+ 821| N |  SH19      (4) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 822| N |  IDXH4     (5) Index to household schedule                            
+    | N |     ___
+ 824| N |  SH08      (5) Loss of limbs or paralysed            9                     ___
+ 825| N |  SH09      (5) Blind                                 9                     ___
+ 826| N |  SH10      (5) Deaf                                  9                     ___
+ 827| N |  SH11      (5) Mentally Retarded                     9                     ___
+ 828| N |  SH12      (5) Leprosy                               9                     ___
+ 829| N |  SH13      (5) Fits/epilepsy                         9                     ___
+ 830| N |  SH14      (5) Mental problems                       9                     ___
+ 831| N |  SH16      (5) Ever been to school                   9   BLANK             ___
+ 832| N |  SH17A     (5) Level of Education                    9   BLANK             ___
+ 833| N |  SH17B     (5) Highest grade completed              99   BLANK        
+    | N |     ___
+ 835| N |  SH19      (5) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 836| N |  IDXH4     (6) Index to household schedule                            
+    | N |     ___
+ 838| N |  SH08      (6) Loss of limbs or paralysed            9                     ___
+ 839| N |  SH09      (6) Blind                                 9                     ___
+ 840| N |  SH10      (6) Deaf                                  9                     ___
+ 841| N |  SH11      (6) Mentally Retarded                     9                     ___
+ 842| N |  SH12      (6) Leprosy                               9                     ___
+ 843| N |  SH13      (6) Fits/epilepsy                         9                     ___
+ 844| N |  SH14      (6) Mental problems                       9                     ___
+ 845| N |  SH16      (6) Ever been to school                   9   BLANK             ___
+ 846| N |  SH17A     (6) Level of Education                    9   BLANK             ___
+ 847| N |  SH17B     (6) Highest grade completed              99   BLANK        
+    | N |     ___
+ 849| N |  SH19      (6) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 850| N |  IDXH4     (7) Index to household schedule                            
+    | N |     ___
+ 852| N |  SH08      (7) Loss of limbs or paralysed            9                     ___
+ 853| N |  SH09      (7) Blind                                 9                     ___
+ 854| N |  SH10      (7) Deaf                                  9                     ___
+ 855| N |  SH11      (7) Mentally Retarded                     9                     ___
+ 856| N |  SH12      (7) Leprosy                               9                     ___
+ 857| N |  SH13      (7) Fits/epilepsy                         9                     ___
+ 858| N |  SH14      (7) Mental problems                       9                     ___
+ 859| N |  SH16      (7) Ever been to school                   9   BLANK             ___
+ 860| N |  SH17A     (7) Level of Education                    9   BLANK             ___
+ 861| N |  SH17B     (7) Highest grade completed              99   BLANK        
+    | N |     ___
+ 863| N |  SH19      (7) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 864| N |  IDXH4     (8) Index to household schedule                            
+    | N |     ___
+ 866| N |  SH08      (8) Loss of limbs or paralysed            9                     ___
+ 867| N |  SH09      (8) Blind                                 9                     ___
+ 868| N |  SH10      (8) Deaf                                  9                     ___
+ 869| N |  SH11      (8) Mentally Retarded                     9                     ___
+ 870| N |  SH12      (8) Leprosy                               9                     ___
+ 871| N |  SH13      (8) Fits/epilepsy                         9                     ___
+ 872| N |  SH14      (8) Mental problems                       9                     ___
+ 873| N |  SH16      (8) Ever been to school                   9   BLANK             ___
+ 874| N |  SH17A     (8) Level of Education                    9   BLANK             ___
+ 875| N |  SH17B     (8) Highest grade completed              99   BLANK        
+    | N |     ___
+ 877| N |  SH19      (8) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 878| N |  IDXH4     (9) Index to household schedule                            
+    | N |     ___
+ 880| N |  SH08      (9) Loss of limbs or paralysed            9                     ___
+ 881| N |  SH09      (9) Blind                                 9                     ___
+ 882| N |  SH10      (9) Deaf                                  9                     ___
+ 883| N |  SH11      (9) Mentally Retarded                     9                     ___
+ 884| N |  SH12      (9) Leprosy                               9                     ___
+ 885| N |  SH13      (9) Fits/epilepsy                         9                     ___
+ 886| N |  SH14      (9) Mental problems                       9                     ___
+ 887| N |  SH16      (9) Ever been to school                   9   BLANK             ___
+ 888| N |  SH17A     (9) Level of Education                    9   BLANK             ___
+ 889| N |  SH17B     (9) Highest grade completed              99   BLANK        
+    | N |     ___
+ 891| N |  SH19      (9) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 892| N |  IDXH4    (10) Index to household schedule                            
+    | N |     ___
+ 894| N |  SH08     (10) Loss of limbs or paralysed            9                     ___
+ 895| N |  SH09     (10) Blind                                 9                     ___
+ 896| N |  SH10     (10) Deaf                                  9                     ___
+ 897| N |  SH11     (10) Mentally Retarded                     9                     ___
+ 898| N |  SH12     (10) Leprosy                               9                     ___
+ 899| N |  SH13     (10) Fits/epilepsy                         9                     ___
+ 900| N |  SH14     (10) Mental problems                       9                     ___
+ 901| N |  SH16     (10) Ever been to school                   9   BLANK             ___
+ 902| N |  SH17A    (10) Level of Education                    9   BLANK             ___
+ 903| N |  SH17B    (10) Highest grade completed              99   BLANK        
+    | N |     ___
+ 905| N |  SH19     (10) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 906| N |  IDXH4    (11) Index to household schedule                            
+    | N |     ___
+ 908| N |  SH08     (11) Loss of limbs or paralysed            9                     ___
+ 909| N |  SH09     (11) Blind                                 9                     ___
+ 910| N |  SH10     (11) Deaf                                  9                     ___
+ 911| N |  SH11     (11) Mentally Retarded                     9                     ___
+ 912| N |  SH12     (11) Leprosy                               9                     ___
+ 913| N |  SH13     (11) Fits/epilepsy                         9                     ___
+ 914| N |  SH14     (11) Mental problems                       9                     ___
+ 915| N |  SH16     (11) Ever been to school                   9   BLANK             ___
+ 916| N |  SH17A    (11) Level of Education                    9   BLANK             ___
+ 917| N |  SH17B    (11) Highest grade completed              99   BLANK        
+    | N |     ___
+ 919| N |  SH19     (11) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 920| N |  IDXH4    (12) Index to household schedule                            
+    | N |     ___
+ 922| N |  SH08     (12) Loss of limbs or paralysed            9                     ___
+ 923| N |  SH09     (12) Blind                                 9                     ___
+ 924| N |  SH10     (12) Deaf                                  9                     ___
+ 925| N |  SH11     (12) Mentally Retarded                     9                     ___
+ 926| N |  SH12     (12) Leprosy                               9                     ___
+ 927| N |  SH13     (12) Fits/epilepsy                         9                     ___
+ 928| N |  SH14     (12) Mental problems                       9                     ___
+ 929| N |  SH16     (12) Ever been to school                   9   BLANK             ___
+ 930| N |  SH17A    (12) Level of Education                    9   BLANK             ___
+ 931| N |  SH17B    (12) Highest grade completed              99   BLANK        
+    | N |     ___
+ 933| N |  SH19     (12) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 934| N |  IDXH4    (13) Index to household schedule                            
+    | N |     ___
+ 936| N |  SH08     (13) Loss of limbs or paralysed            9                     ___
+ 937| N |  SH09     (13) Blind                                 9                     ___
+ 938| N |  SH10     (13) Deaf                                  9                     ___
+ 939| N |  SH11     (13) Mentally Retarded                     9                     ___
+ 940| N |  SH12     (13) Leprosy                               9                     ___
+ 941| N |  SH13     (13) Fits/epilepsy                         9                     ___
+ 942| N |  SH14     (13) Mental problems                       9                     ___
+ 943| N |  SH16     (13) Ever been to school                   9   BLANK             ___
+ 944| N |  SH17A    (13) Level of Education                    9   BLANK             ___
+ 945| N |  SH17B    (13) Highest grade completed              99   BLANK        
+    | N |     ___
+ 947| N |  SH19     (13) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 948| N |  IDXH4    (14) Index to household schedule                            
+    | N |     ___
+ 950| N |  SH08     (14) Loss of limbs or paralysed            9                     ___
+ 951| N |  SH09     (14) Blind                                 9                     ___
+ 952| N |  SH10     (14) Deaf                                  9                     ___
+ 953| N |  SH11     (14) Mentally Retarded                     9                     ___
+ 954| N |  SH12     (14) Leprosy                               9                     ___
+ 955| N |  SH13     (14) Fits/epilepsy                         9                     ___
+ 956| N |  SH14     (14) Mental problems                       9                     ___
+ 957| N |  SH16     (14) Ever been to school                   9   BLANK             ___
+ 958| N |  SH17A    (14) Level of Education                    9   BLANK             ___
+ 959| N |  SH17B    (14) Highest grade completed              99   BLANK        
+    | N |     ___
+ 961| N |  SH19     (14) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 962| N |  IDXH4    (15) Index to household schedule                            
+    | N |     ___
+ 964| N |  SH08     (15) Loss of limbs or paralysed            9                     ___
+ 965| N |  SH09     (15) Blind                                 9                     ___
+ 966| N |  SH10     (15) Deaf                                  9                     ___
+ 967| N |  SH11     (15) Mentally Retarded                     9                     ___
+ 968| N |  SH12     (15) Leprosy                               9                     ___
+ 969| N |  SH13     (15) Fits/epilepsy                         9                     ___
+ 970| N |  SH14     (15) Mental problems                       9                     ___
+ 971| N |  SH16     (15) Ever been to school                   9   BLANK             ___
+ 972| N |  SH17A    (15) Level of Education                    9   BLANK             ___
+ 973| N |  SH17B    (15) Highest grade completed              99   BLANK        
+    | N |     ___
+ 975| N |  SH19     (15) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 976| N |  IDXH4    (16) Index to household schedule                            
+    | N |     ___
+ 978| N |  SH08     (16) Loss of limbs or paralysed            9                     ___
+ 979| N |  SH09     (16) Blind                                 9                     ___
+ 980| N |  SH10     (16) Deaf                                  9                     ___
+ 981| N |  SH11     (16) Mentally Retarded                     9                     ___
+ 982| N |  SH12     (16) Leprosy                               9                     ___
+ 983| N |  SH13     (16) Fits/epilepsy                         9                     ___
+ 984| N |  SH14     (16) Mental problems                       9                     ___
+ 985| N |  SH16     (16) Ever been to school                   9   BLANK             ___
+ 986| N |  SH17A    (16) Level of Education                    9   BLANK             ___
+ 987| N |  SH17B    (16) Highest grade completed              99   BLANK        
+    | N |     ___
+ 989| N |  SH19     (16) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+ 990| N |  IDXH4    (17) Index to household schedule                            
+    | N |     ___
+ 992| N |  SH08     (17) Loss of limbs or paralysed            9                     ___
+ 993| N |  SH09     (17) Blind                                 9                     ___
+ 994| N |  SH10     (17) Deaf                                  9                     ___
+ 995| N |  SH11     (17) Mentally Retarded                     9                     ___
+ 996| N |  SH12     (17) Leprosy                               9                     ___
+ 997| N |  SH13     (17) Fits/epilepsy                         9                     ___
+ 998| N |  SH14     (17) Mental problems                       9                     ___
+ 999| N |  SH16     (17) Ever been to school                   9   BLANK             ___
+1000| N |  SH17A    (17) Level of Education                    9   BLANK             ___
+1001| N |  SH17B    (17) Highest grade completed              99   BLANK        
+    | N |     ___
+1003| N |  SH19     (17) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+1004| N |  IDXH4    (18) Index to household schedule                            
+    | N |     ___
+1006| N |  SH08     (18) Loss of limbs or paralysed            9                     ___
+1007| N |  SH09     (18) Blind                                 9                     ___
+1008| N |  SH10     (18) Deaf                                  9                     ___
+1009| N |  SH11     (18) Mentally Retarded                     9                     ___
+1010| N |  SH12     (18) Leprosy                               9                     ___
+1011| N |  SH13     (18) Fits/epilepsy                         9                     ___
+1012| N |  SH14     (18) Mental problems                       9                     ___
+1013| N |  SH16     (18) Ever been to school                   9   BLANK             ___
+1014| N |  SH17A    (18) Level of Education                    9   BLANK             ___
+1015| N |  SH17B    (18) Highest grade completed              99   BLANK        
+    | N |     ___
+1017| N |  SH19     (18) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+1018| N |  IDXH4    (19) Index to household schedule                            
+    | N |     ___
+1020| N |  SH08     (19) Loss of limbs or paralysed            9                     ___
+1021| N |  SH09     (19) Blind                                 9                     ___
+1022| N |  SH10     (19) Deaf                                  9                     ___
+1023| N |  SH11     (19) Mentally Retarded                     9                     ___
+1024| N |  SH12     (19) Leprosy                               9                     ___
+1025| N |  SH13     (19) Fits/epilepsy                         9                     ___
+1026| N |  SH14     (19) Mental problems                       9                     ___
+1027| N |  SH16     (19) Ever been to school                   9   BLANK             ___
+1028| N |  SH17A    (19) Level of Education                    9   BLANK             ___
+1029| N |  SH17B    (19) Highest grade completed              99   BLANK        
+    | N |     ___
+1031| N |  SH19     (19) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+1032| N |  IDXH4    (20) Index to household schedule                            
+    | N |     ___
+1034| N |  SH08     (20) Loss of limbs or paralysed            9                     ___
+1035| N |  SH09     (20) Blind                                 9                     ___
+1036| N |  SH10     (20) Deaf                                  9                     ___
+1037| N |  SH11     (20) Mentally Retarded                     9                     ___
+1038| N |  SH12     (20) Leprosy                               9                     ___
+1039| N |  SH13     (20) Fits/epilepsy                         9                     ___
+1040| N |  SH14     (20) Mental problems                       9                     ___
+1041| N |  SH16     (20) Ever been to school                   9   BLANK             ___
+1042| N |  SH17A    (20) Level of Education                    9   BLANK             ___
+1043| N |  SH17B    (20) Highest grade completed              99   BLANK        
+    | N |     ___
+1045| N |  SH19     (20) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+1046| N |  IDXH4    (21) Index to household schedule                            
+    | N |     ___
+1048| N |  SH08     (21) Loss of limbs or paralysed            9                     ___
+1049| N |  SH09     (21) Blind                                 9                     ___
+1050| N |  SH10     (21) Deaf                                  9                     ___
+1051| N |  SH11     (21) Mentally Retarded                     9                     ___
+1052| N |  SH12     (21) Leprosy                               9                     ___
+1053| N |  SH13     (21) Fits/epilepsy                         9                     ___
+1054| N |  SH14     (21) Mental problems                       9                     ___
+1055| N |  SH16     (21) Ever been to school                   9   BLANK             ___
+1056| N |  SH17A    (21) Level of Education                    9   BLANK             ___
+1057| N |  SH17B    (21) Highest grade completed              99   BLANK        
+    | N |     ___
+1059| N |  SH19     (21) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+1060| N |  IDXH4    (22) Index to household schedule                            
+    | N |     ___
+1062| N |  SH08     (22) Loss of limbs or paralysed            9                     ___
+1063| N |  SH09     (22) Blind                                 9                     ___
+1064| N |  SH10     (22) Deaf                                  9                     ___
+1065| N |  SH11     (22) Mentally Retarded                     9                     ___
+1066| N |  SH12     (22) Leprosy                               9                     ___
+1067| N |  SH13     (22) Fits/epilepsy                         9                     ___
+1068| N |  SH14     (22) Mental problems                       9                     ___
+1069| N |  SH16     (22) Ever been to school                   9   BLANK             ___
+1070| N |  SH17A    (22) Level of Education                    9   BLANK             ___
+1071| N |  SH17B    (22) Highest grade completed              99   BLANK        
+    | N |     ___
+1073| N |  SH19     (22) Reasons for not attending school        9   BLANK             ___
+
+                             SECTION MAP                               
+Section   : RECH4                                                     07-20-2001
+                                                                        11:55:44
+--------------------------------------------------------------------------------
+Loc  Fmt   Variable      Variable Label                  Missing NotAppl Default
+--------------------------------------------------------------------------------
+
+     ___
+1074| N |  IDXH4    (23) Index to household schedule                            
+    | N |     ___
+1076| N |  SH08     (23) Loss of limbs or paralysed            9                     ___
+1077| N |  SH09     (23) Blind                                 9                     ___
+1078| N |  SH10     (23) Deaf                                  9                     ___
+1079| N |  SH11     (23) Mentally Retarded                     9                     ___
+1080| N |  SH12     (23) Leprosy                               9                     ___
+1081| N |  SH13     (23) Fits/epilepsy                         9                     ___
+1082| N |  SH14     (23) Mental problems                       9                     ___
+1083| N |  SH16     (23) Ever been to school                   9   BLANK             ___
+1084| N |  SH17A    (23) Level of Education                    9   BLANK             ___
+1085| N |  SH17B    (23) Highest grade completed              99   BLANK        
+    | N |     ___
+1087| N |  SH19     (23) Reasons for not attending school        9   BLANK             ___
+
+... Report of Dictionary GHHR41 normally ended

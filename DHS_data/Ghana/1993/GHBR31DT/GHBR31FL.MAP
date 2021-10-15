@@ -1,0 +1,3443 @@
+                                                   GHBR31FL
+                                                GHBR31FL_DICT
+
+                                        C:\COUNTRIES\GH31\GHBR31FL.DCF
+                                    Last Modified:  5/17/2007  12:25:16 PM
+
+--------------------------------------------------------------------------------------------------------------
+Level Name                    Level Label                                                  Type            Rec
+  Record Name                   Record Label                                              Value  Req  Max  Len
+--------------------------------------------------------------------------------------------------------------
+HOUSEHOLD                     HOUSEHOLD
+  RECORD1                       RECORD1                                                          Yes    1 1065
+Level: HOUSEHOLD                                       Record: RECORD1
+--------------------------------------------------------------------------------------------------------------
+                                                                                 Data Item            Dec Zero
+Item Name              Item Label                                     Start  Len Type Type  Occ  Dec Char Fill
+--------------------------------------------------------------------------------------------------------------
+                         (record type)                                    0    0   AN    I    1    0   No   No
+CASEID            (id) Case Identification                                1   15   AN    I    1    0   No   No
+BIDX              (id) Birth column number                               16    2    N    I    1    0   No   No
+                               1:20  
+V000                   Country code and phase                            18    3   AN    I    1    0   No   No
+V001                   Cluster number                                    21    8    N    I    1    0   No   No
+V002                   Household number                                  29    4    N    I    1    0   No   No
+V003                   Respondent's line number                          33    3    N    I    1    0   No   No
+V004                   Ultimate area unit                                36    4    N    I    1    0   No   No
+V005                   Sample weight                                     40    8    N    I    1    0   No   No
+V006                   Month of interview                                48    2    N    I    1    0   No   No
+                               1:12  
+V007                   Year of interview                                 50    2    N    I    1    0   No   No
+                               90:94  
+V008                   Date of interview (CMC)                           52    4    N    I    1    0   No   No
+V009                   Respondent's month of birth                       56    2    N    I    1    0   No   No
+                               1:12  
+                          (na)       NotAppl
+V010                   Respondent's year of birth                        58    2    N    I    1    0   No   No
+                               40:79  
+                          (na)        NotAppl
+V011                   Date of birth (CMC)                               60    4    N    I    1    0   No   No
+                          (na)       NotAppl
+V012                   Current age - respondent                          64    2    N    I    1    0   No   No
+                               15:49  
+                          (na)        NotAppl
+V013                   Age 5-year groups                                 66    1    N    I    1    0   No   No
+                               1  15-19
+                               2  20-24
+                               3  25-29
+                               4  30-34
+                               5  35-39
+                               6  40-44
+                               7  45-49
+                          (na)    NotAppl
+V014                   Completeness of information                       67    1    N    I    1    0   No   No
+                               1  Month and year
+                               2  Month and age -y imp
+                               3  Year and age - m imp
+                               4  Y & age - y ignored
+                               5  Year - a, m imp
+                               6  Age - y, m imp
+                               7  Month - a, y imp
+                               8  None - all imp
+                          (na)    NotAppl
+V015                   Result of individual interview                    68    1    N    I    1    0   No   No
+                               1  Completed
+                               2  Not at home
+                               3  Postponed
+                               4  Refused
+                               5  Partly completed
+                               6  Incapacitated
+                               7  Other
+                           (m) 9  Missing
+V016                   Day of interview                                  69    2    N    I    1    0   No   No
+                               1:31  
+V017                   CMC start of calendar/health                      71    4    N    I    1    0   No   No
+                          (na)       NotAppl
+V018                   Row of month of interview                         75    2    N    I    1    0   No   No
+                               0     No calendar
+                               1:20  
+V019                   Length of calendar                                77    2    N    I    1    0   No   No
+                               0      No calendar
+                               61:80  
+V020                   Ever-married sample                               79    1    N    I    1    0   No   No
+                               0  All woman sample
+                               1  Ever married sample
+V021                   Primary sampling unit                             80    4    N    I    1    0   No   No
+V022                   Sample stratum number                             84    4    N    I    1    0   No   No
+V023                   Sample domain                                     88    2    N    I    1    0   No   No
+                               0  National
+                               1  Country specific
+V024                   Region                                            90    2    N    I    1    0   No   No
+                               1   Western
+                               2   Central
+                               3   Greater Accra
+                               4   Volta
+                               5   Eastern
+                               6   Ashanti
+                               7   Brong-Ahafo
+                               8   Northern
+                               9   Upper West
+                               10  Upper East
+V025                   Type of place of residence                        92    1    N    I    1    0   No   No
+                               1  Urban
+                               2  Rural
+V026                   De facto place of residence                       93    1    N    I    1    0   No   No
+                               1  City
+                               2  Town
+                               3  Countryside
+                           (m) 9  Missing
+V027                   Number of visits                                  94    1    N    I    1    0   No   No
+                               1:5  
+                          (na)      NotAppl
+V028                   Interviewer identification                        95    3    N    I    1    0   No   No
+                           (m) 999  Missing
+                          (na)      NotAppl
+V029                   Keyer identification                              98    2    N    I    1    0   No   No
+                           (m) 99  Missing
+                          (na)     NotAppl
+V101                   Region                                           100    2    N    I    1    0   No   No
+                               1   Western
+                               2   Central
+                               3   Greater Accra
+                               4   Volta
+                               5   Eastern
+                               6   Ashanti
+                               7   Brong-Ahafo
+                               8   Northern
+                               9   Upper West
+                               10  Upper East
+V102                   Type of place of residence                       102    1    N    I    1    0   No   No
+                               1  Urban
+                               2  Rural
+V103                   Childhood place of residence                     103    1    N    I    1    0   No   No
+                               1  City
+                               2  Town
+                               3  Countryside
+                               4  Abroad
+                           (m) 9  Missing
+V104                   Years lived in place of res.                     104    2    N    I    1    0   No   No
+                               0:90  
+                               95    Always
+                               96    Visitor
+                               97    Inconsistent
+                               98    Don't know
+                           (m) 99    Missing
+V105                   Type of place of previous res.                   106    1    N    I    1    0   No   No
+                               0  NOT USED
+                               1  City
+                               2  Town
+                               3  Countryside
+                               4  Abroad
+                           (m) 9  Missing
+                          (na)    NotAppl
+V106                   Highest educational level                        107    1    N    I    1    0   No   No
+                               0  No education
+                               1  Primary
+                               2  Secondary
+                               3  Higher
+                           (m) 9  Missing
+V107                   Highest year of education                        108    2    N    I    1    0   No   No
+                           (m) 99  Missing
+                          (na)     NotAppl
+V108                   Literacy                                         110    1    N    I    1    0   No   No
+                               1  Reads easily
+                               2  Reads with difficult
+                               3  Cannot read
+                           (m) 9  Missing
+V109                   Reads newspaper once a week                      111    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V110                   Watches TV every week                            112    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V111                   Listens to radio every da - NA                   113    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V112                   Listens to radio every week                      114    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V113                   Source of drinking water                         115    2    N    I    1    0   No   No
+                               10     PIPED WATER
+                               11     Piped into residence
+                               12     Public tap
+                               13:19  
+                               20     WELL WATER
+                               21     Well in residence
+                               22     Public well
+                               23     Borehole
+                               24:29  
+                               30     SURFACE WATER
+                               31     Spring
+                               32     River,stream
+                               33     Pond,lake
+                               34     Dam
+                               35     Dugout
+                               36:40  
+                               41     Rainwater
+                               42:50  
+                               51     Tanker truck
+                               52:60  
+                               61     Bottled water
+                               62:70  
+                               71     Other
+                           (m) 99     Missing
+                          (na)        NotAppl
+V114                   Source of non-drinking water                     117    2    N    I    1    0   No   No
+                               10     PIPED WATER
+                               11     Piped into residence
+                               12     Public tap
+                               13:19  
+                               20     WELL WATER
+                               21     Well in residence
+                               22     Public well
+                               23     Borehole
+                               24:29  
+                               30     SURFACE WATER
+                               31     Spring
+                               32     River,stream
+                               33     Pond,lake
+                               34     Dam
+                               35     Dugout
+                               36:40  
+                               41     Rainwater
+                               42:50  
+                               51     Tanker truck
+                               52:60  
+                               61     Bottled water
+                               62:70  
+                               71     Other
+                           (m) 99     Missing
+                          (na)        NotAppl
+V115                   Time to get to water source                      119    3    N    I    1    0   No   No
+                               996  On premises
+                           (m) 999  Missing
+                          (na)      NotAppl
+V116                   Type of toilet facility                          122    2    N    I    1    0   No   No
+                               10     FLUSH TOILET
+                               11     Own flush toilet
+                               12     Shared flush toilet
+                               13:19  
+                               20     PIT TOILET LATRINE
+                               21     Trad. pit toilet
+                               22     Vent.imp.pit latrine
+                               23:29  
+                               30     NO FACILITY
+                               31     No facility,bush
+                               32:39  
+                               40     OTHER
+                               41     
+                               42     Bucket, pan
+                           (m) 99     Missing
+                          (na)        NotAppl
+V119                   Has electricity                                  124    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V120                   Has radio                                        125    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V121                   Has television                                   126    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V122                   Has refrigerator                                 127    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V123                   Has bicycle                                      128    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V124                   Has motorcycle                                   129    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V125                   Has car                                          130    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V127                   Main floor material                              131    2    N    I    1    0   No   No
+                               10     NATURAL
+                               11     Earth, sand
+                               12     Mud mixed with dung
+                               13:19  
+                               20     RUDIMENTARY
+                               21     Wood planks
+                               22     Palm, bamboo
+                               23:29  
+                               30     FINISHED
+                               31     Parquet,polished wd
+                               32     Vinyl,asphalt strips
+                               33     Ceramic tiles
+                               34     Cement
+                               35     Carpet
+                               36     Terrazo
+                               37:39  
+                               40     OTHER
+                               41     Other
+                           (m) 99     Missing
+                          (na)        NotAppl
+V128                   Main wall material        - NA                   133    2    N    I    1    0   No   No
+                               10:41  
+                          (na)        NotAppl
+V129                   Main roof material        - NA                   135    2    N    I    1    0   No   No
+                               10:41  
+                          (na)        NotAppl
+V130                   Religion                                         137    1    N    I    1    0   No   No
+                               0  No religion
+                               1  Protestant
+                               2  Catholic
+                               3  Other Christian
+                               4  Muslim
+                               5  Traditional
+                               6  Other
+                           (m) 9  Missing
+                          (na)    NotAppl
+V131                   Ethnicity                                        138    2    N    I    1    0   No   No
+                               1   Asante
+                               2   Akwapim
+                               3   Fanti
+                               4   Other Akan
+                               5   Ga.Adangbe
+                               6   Ewe
+                               7   Guan
+                               8   Mole-Dagbani
+                               9   Grussi
+                               10  Gruma
+                               11  Hausa
+                               12  Other
+                           (m) 99  Missing
+                          (na)     NotAppl
+V133                   Education in single years                        140    2    N    I    1    0   No   No
+                               0:21  
+                               97    Inconsistent
+                           (m) 99    Missing
+                          (na)       NotAppl
+V134                   De facto place of residence                      142    1    N    I    1    0   No   No
+                               1  City
+                               2  Town
+                               3  Countryside
+                           (m) 9  Missing
+V135                   Usual resident or visitor                        143    1    N    I    1    0   No   No
+                               1  Usual resident
+                               2  Visitor
+                           (m) 9  Missing
+V136                   Number of household members                      144    2    N    I    1    0   No   No
+V137                   Number of children 5 and under                   146    2    N    I    1    0   No   No
+V138                   Number of eligible women in HH                   148    2    N    I    1    0   No   No
+V139                   De jure region of residence                      150    2    N    I    1    0   No   No
+                               0   Abroad
+                               1   Western
+                               2   Central
+                               3   Greater Accra
+                               4   Volta
+                               5   Eastern
+                               6   Ashanti
+                               7   Brong-Ahafo
+                               8   Northern
+                               9   Upper West
+                               10  Upper East
+                               98  Don't know
+                           (m) 99  Missing
+V140                   De jure type of place of res.                    152    1    N    I    1    0   No   No
+                               0  Abroad
+                               1  Urban
+                               2  Rural
+                           (m) 9  Missing
+V141                   De jure place of residence                       153    1    N    I    1    0   No   No
+                               1  City
+                               2  Town
+                               3  Countryside
+                               4  Abroad
+                           (m) 9  Missing
+V142                   Same source of water                             154    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+V143                   Rooms for sleeping                               155    2    N    I    1    0   No   No
+                           (m) 99  Missing
+V144                   Communities lived in >Jan - NA                   157    1    N    I    1    0   No   No
+                               1:2  
+                          (na)      NotAppl
+V145                   Month moved to res. of Ja - NA                   158    2    N    I    1    0   No   No
+                               0   
+                          (na)     NotAppl
+V146                   Year moved to res. of Jan - NA                   160    2    N    I    1    0   No   No
+                               0   
+                          (na)     NotAppl
+V147                   Residence before Jan.8?   - NA                   162    1    N    I    1    0   No   No
+                               0  
+                          (na)    NotAppl
+V148                   Respondent still in school                       163    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+V149                   Educational attainment                           164    1    N    I    1    0   No   No
+                               0  No education
+                               1  Incomplete primary
+                               2  Complete primary
+                               3  Incomplete secondary
+                               4  Complete secondary
+                               5  Higher
+                           (m) 9  Missing
+V150                   Relationship to household head                   165    2    N    I    1    0   No   No
+                               1   Head
+                               2   Wife
+                               3   Son/daughter
+                               4   Son/daughter-in-law
+                               5   Grandchild
+                               6   Parent
+                               7   Parent-in-law
+                               8   Brother/sister
+                               9   Co-spouse
+                               10  Other relative
+                               11  Adopted/foster child
+                               12  Not related
+                               98  DK
+                           (m) 99  Missing
+V151                   Sex of household head                            167    1    N    I    1    0   No   No
+                               1  Male
+                               2  Female
+V152                   Age of household head                            168    2    N    I    1    0   No   No
+                               0:98  
+                           (m) 99    Missing
+AWFACTT                All woman factor - total                         170    5    N    I    1    0   No   No
+                          (na)        NotAppl
+AWFACTU                All woman factor - urban/rural                   175    5    N    I    1    0   No   No
+                          (na)        NotAppl
+AWFACTR                All woman factor - regional                      180    5    N    I    1    0   No   No
+                          (na)        NotAppl
+AWFACTE                All woman factor - educational                   185    5    N    I    1    0   No   No
+                          (na)        NotAppl
+V201                   Total children ever born                         190    2    N    I    1    0   No   No
+                               0:20  
+V202                   Sons at home                                     192    2    N    I    1    0   No   No
+                               0:20  
+V203                   Daughters at home                                194    2    N    I    1    0   No   No
+                               0:20  
+V204                   Sons elsewhere                                   196    2    N    I    1    0   No   No
+                               0:20  
+V205                   Daughters elsewhere                              198    2    N    I    1    0   No   No
+                               0:20  
+V206                   Sons who have died                               200    2    N    I    1    0   No   No
+                               0:20  
+V207                   Daughters who have died                          202    2    N    I    1    0   No   No
+                               0:20  
+V208                   Births in last five years                        204    1    N    I    1    0   No   No
+                               0:6  
+V209                   Births in past year                              205    1    N    I    1    0   No   No
+                               0:4  
+V210                   Births in month of interview                     206    1    N    I    1    0   No   No
+                               0:4  
+V211                   Date of first birth (CMC)                        207    4    N    I    1    0   No   No
+                          (na)       NotAppl
+V212                   Age of respondent at 1st birth                   211    2    N    I    1    0   No   No
+                               10:49  
+                          (na)        NotAppl
+V213                   Currently pregnant                               213    1    N    I    1    0   No   No
+                               0  No or unsure
+                               1  Yes
+V214                   Duration of current pregnancy                    214    2    N    I    1    0   No   No
+                               1:10  
+                          (na)       NotAppl
+V215                   Time since last menstrual perd                   216    3    N    I    1    0   No   No
+                               1:900  
+                               994    In menopause
+                               995    Before last birth
+                               996    Never menstruated
+                               997    Inconsistent
+                               998    Don't know
+                           (m) 999    Missing
+                          (na)        NotAppl
+V216                   Menstruated in last six weeks                    219    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                          (na)    NotAppl
+V217                   Knowledge of ovulatory cycle                     220    1    N    I    1    0   No   No
+                               1  During her period
+                               2  After period ended
+                               3  Middle of the cycle
+                               4  Before period begins
+                               5  At any time
+                               6  Other
+                               8  Don't know
+                           (m) 9  Missing
+V218                   Number of living children                        221    2    N    I    1    0   No   No
+                               0:20  
+V219                   Living children + current preg                   223    2    N    I    1    0   No   No
+                               0:20  
+V220                   Living children + curr preg 6+                   225    1    N    I    1    0   No   No
+                               0:5  
+                               6    6+
+V221                   Marriage to first birth int.                     226    3    N    I    1    0   No   No
+                               996  Negative interval
+                          (na)      NotAppl
+V222                   Last birth to interview                          229    3    N    I    1    0   No   No
+                          (na)      NotAppl
+V223                   Completeness of curr preg. inf                   232    1    N    I    1    0   No   No
+                               7  Month - exact date
+                               8  None - date placed
+                          (na)    NotAppl
+V224                   Entries in birth history                         233    2    N    I    1    0   No   No
+                               0:20  
+V225                   Current pregnancy wanted                         235    1    N    I    1    0   No   No
+                               1  Then
+                               2  Later
+                               3  Not at all
+                           (m) 9  Missing
+                          (na)    NotAppl
+V226                   Time since last period (comp)                    236    3    N    I    1    0   No   No
+                               994  In menopause
+                               995  Before last birth
+                               996  Never menstruated
+                               997  Inconsistent
+                               998  Don't know
+                           (m) 999  Missing
+                          (na)      NotAppl
+V227                   Flag for last period                             239    1    N    I    1    0   No   No
+                               0  No flag
+                               1  N > int. since birth
+                               2  N + amen. > interval
+                               3  N, but per. not ret.
+                               4  95, but no birth
+                               5  96, but per.returned
+                               6  95, but per.returned
+                               7  N, last per. in preg
+                               8  96, had children
+                               9  N, per.bef.last birt
+                          (na)    NotAppl
+V228                   Ever had a terminated pre - NA                   240    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V229                   Month pregnancy ended     - NA                   241    2    N    I    1    0   No   No
+                               1:12   
+                               97:98  
+                          (na)        NotAppl
+V230                   Year pregnancy ended      - NA                   243    2    N    I    1    0   No   No
+                               40:93  
+                               97:98  
+                          (na)        NotAppl
+V231                   CMC pregnancy ended       - NA                   245    4    N    I    1    0   No   No
+                          (na)       NotAppl
+V232                   Completeness of last term.- NA                   249    1    N    I    1    0   No   No
+                               1:8  
+                          (na)      NotAppl
+V233                   Months when pregnancy end - NA                   250    2    N    I    1    0   No   No
+                               0:9  
+                          (na)      NotAppl
+V234                   Other such pregnancies    - NA                   252    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V235                   Index last child prior to  -NA                   253    2    N    I    1    0   No   No
+                               0   
+                          (na)     NotAppl
+V310                   Living children at first use                     255    2    N    I    1    0   No   No
+                               0:20  
+                           (m) 99    Missing
+                          (na)       NotAppl
+V311                   Children at first use (grpd)                     257    1    N    I    1    0   No   No
+                               0:3  
+                               4    4+
+                               5    Never used
+                           (m) 9    Missing
+V312                   Current contraceptive method                     258    2    N    I    1    0   No   No
+                               0   Not using
+                               1   Pill
+                               2   IUD
+                               3   Injections
+                               4   Diaphragm/Foam/Jelly
+                               5   Condom
+                               6   Female Sterilization
+                               7   Male Sterilization
+                               8   Periodic Abstinence
+                               9   Withdrawal
+                               10  Other
+                               11  Norplant
+                               12  Abstinence
+                               13  Specific method 1
+                               14  Specific method 2
+                               15  Specific method 3
+                           (m) 99  Missing
+V313                   Current use by method type                       260    1    N    I    1    0   No   No
+                               0  No method
+                               1  Folkloric method
+                               2  Traditional method
+                               3  Modern method
+                           (m) 9  Missing
+V315                   Month of sterilization                           261    2    N    I    1    0   No   No
+                               1:12  
+                          (na)       NotAppl
+V316                   Year of sterilization                            263    2    N    I    1    0   No   No
+                               44:93  
+                          (na)        NotAppl
+V317                   Date of sterilization (CMC)                      265    4    N    I    1    0   No   No
+                          (na)       NotAppl
+V318                   Completeness of information                      269    1    N    I    1    0   No   No
+                               1    Month and year
+                               2:4  
+                               5    Year - m imp, a calc
+                               6    
+                               7    Month - date placed
+                               8    None - date placed
+                          (na)      NotAppl
+V319                   Years since sterilization                        270    1    N    I    1    0   No   No
+                               1  <2
+                               2  2-3
+                               3  4-5
+                               4  6-7
+                               5  8-9
+                               6  10+
+                          (na)    NotAppl
+V320                   Age at sterilization                             271    1    N    I    1    0   No   No
+                               1  <25
+                               2  25-29
+                               3  30-34
+                               4  35-39
+                               5  40-44
+                               6  45-49
+                          (na)    NotAppl
+V321                   Marital duration at steriliz.                    272    1    N    I    1    0   No   No
+                               0  Single,before marr.
+                               1  0-4
+                               2  5-9
+                               3  10-14
+                               4  15-19
+                               5  20-24
+                               6  25+
+                          (na)    NotAppl
+V322                   Parity at sterilization                          273    1    N    I    1    0   No   No
+                               0:4  
+                               5    5+
+                          (na)      NotAppl
+V323                   Brand of pill used                               274    2    N    I    1    0   No   No
+                               1   Secure
+                               2   Micromovum
+                               3   Overette
+                               4   Microgynon
+                               5   Lo-Femenal
+                               6   Micronon
+                               96  Not able to show
+                               98  Don't know
+                           (m) 99  Missing
+                          (na)     NotAppl
+V325                   Cost of pills                                    276    6    N    I    1    0   No   No
+                           (m) 999999  Missing
+                          (na)         NotAppl
+V326                   Last source for current users                    282    2    N    I    1    0   No   No
+                               10     PUBLIC
+                               11     Govt.hosp/polyclinic
+                               12     Gvt.health.center
+                               13     Family plng.clinic
+                               14     Mobile clinic
+                               15     Field worker
+                               16:19  
+                               20     PRIVATE MEDICAL
+                               21     Private hospital
+                               22     Phmcy/chm'st/drg.st
+                               23     Private doctor/clini
+                               24     Mobile clinic
+                               25     Field worker
+                               26     Private FP/PPAG cl.
+                               27     Maternity home
+                               28:29  
+                               30     PRIVATE OTHER
+                               31     Shop
+                               32     Church
+                               33     Friends/relatives
+                               34:39  
+                               40     OTHERS
+                               41     Other source
+                               42:49  
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+V327                   Last source for users by type                    284    1    N    I    1    0   No   No
+                               1  Govt Clinical/Pharm
+                               2  Govt Home/Comm deliv
+                               3  NGO
+                               4  Private Clin/Deliv
+                               5  Private Pharmacy
+                               6  Shop,Friends,books
+                               7  Other
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+V337                   Months of use of current meth                    285    3    N    I    1    0   No   No
+                               0:95    
+                               96      96+
+                               97:420  
+                               997     Inconsistent
+                               998     Don't know
+                           (m) 999     Missing
+                          (na)         NotAppl
+V338                   Problem with current meth - NA                   288    2    N    I    1    0   No   No
+                          (na)     NotAppl
+V339                   Problem with current method-NA                   290    2    N    I    1    0   No   No
+                               0:11  
+                               98    
+                          (na)       NotAppl
+V359                   Last method disc. last 5 y- NA                   292    2    N    I    1    0   No   No
+                               1:15  
+                          (na)       NotAppl
+V360                   Reason of last discontinu-  NA                   294    2    N    I    1    0   No   No
+                               1:14  
+                               98    
+                          (na)       NotAppl
+V361                   Pattern of use                                   296    1    N    I    1    0   No   No
+                               1  Currently using
+                               2  Used since last brth
+                               3  Used before last brt
+                               4  Never used
+V362                   Intention to use                                 297    1    N    I    1    0   No   No
+                               1  In next 12 months
+                               2  Use later
+                               3  Unsure about timing
+                               4  Unsure about use
+                               5  Does not intend
+                           (m) 9  Missing
+                          (na)    NotAppl
+V363                   Preferred future method                          298    2    N    I    1    0   No   No
+                               1   Pill
+                               2   IUD
+                               3   Injections
+                               4   Diaphragm/Foam/Jelly
+                               5   Condom
+                               6   Female Sterilization
+                               7   Male Sterilization
+                               8   Periodic Abstinence
+                               9   Withdrawal
+                               10  Other
+                               11  Norplant
+                               12  Abstinence
+                               13  Specific method 1
+                               14  Specific method 2
+                               15  Specific method 3
+                               98  Don't know
+                           (m) 99  Missing
+                          (na)     NotAppl
+V364                   Contraceptive use & intention                    300    1    N    I    1    0   No   No
+                               1  Using modern method
+                               2  Using tradit. method
+                               3  Non-user intend to
+                               4  Does not intend to
+V365                   Heard FP message on radio                        301    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V366                   Acceptability of media message                   302    1    N    I    1    0   No   No
+                               0  Not acceptable
+                               1  Acceptable
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+V367                   Wanted last child                                303    1    N    I    1    0   No   No
+                               1  Wanted then
+                               2  Wanted later
+                               3  Wanted no more
+                           (m) 9  Missing
+                          (na)    NotAppl
+V369                   First method used        -  NA                   304    2    N    I    1    0   No   No
+                               0:15  
+                          (na)       NotAppl
+V370                   Source of first method    - NA                   306    2    N    I    1    0   No   No
+                               10:49  
+                               98     
+                          (na)        NotAppl
+V371                   Source of first method    - NA                   308    1    N    I    1    0   No   No
+                               1:7  
+                               8    
+                          (na)      NotAppl
+V372                   Shown pill package                               309    1    N    I    1    0   No   No
+                               0  Package not seen
+                               1  Package seen
+                           (m) 9  Missing
+                          (na)    NotAppl
+V373                   Doctor/nurse for first pills                     310    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+V374                   Doctor/nurse for last pills                      311    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V375                   Reason for current method  -NA                   312    2    N    I    1    0   No   No
+                               1   Recomm. FP worker
+                               2   Recomm. friend, rel.
+                               3   Side effects others
+                               4   Convenience
+                               5   Access, availability
+                               6   Cost
+                               7   Wanted permanent m.
+                               8   Husband preferred
+                               9   Wanted more effect.
+                               10  Other
+                               98  DK
+                          (na)     NotAppl
+V376                   Main reason not to use a meth.                   314    2    N    I    1    0   No   No
+                               1   Wants children
+                               2   Lack of knowledge
+                               3   Partner opposed
+                               4   Cost too much
+                               5   Side effects
+                               6   Health concerns
+                               7   Hard to get methods
+                               8   Religion
+                               9   Opposed to FP
+                               10  Fatalistic
+                               11  Other people opposed
+                               12  Infrequent sex
+                               13  Difficult to be preg
+                               14  Menopausal, had hyst
+                               15  Inconvenient
+                               16  Not married
+                               17  Other
+                               98  DK
+                           (m) 99  Missing
+                          (na)     NotAppl
+V377                   Source for future method                         316    2    N    I    1    0   No   No
+                               10     PUBLIC
+                               11     Govt.hosp/polyclinic
+                               12     Gvt.health.center
+                               13     Family plng.clinic
+                               14     Mobile clinic
+                               15     Field worker
+                               16:19  
+                               20     PRIVATE MEDICAL
+                               21     Private hospital
+                               22     Phmcy/chm'st/drg.st
+                               23     Private doctor/clini
+                               24     Mobile clinic
+                               25     Field worker
+                               26     Private FP/PPAG cl.
+                               27     Maternity home
+                               28:29  
+                               30     PRIVATE OTHER
+                               31     Shop
+                               32     Church
+                               33     Friends/relatives
+                               34:39  
+                               40     OTHERS
+                               41     Other source
+                               42:49  
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+V378                   Source for future method                         318    1    N    I    1    0   No   No
+                               1  Govt Clinical/Pharm
+                               2  Govt Home/Comm deliv
+                               3  NGO
+                               4  Private Clin/Deliv
+                               5  Private Pharmacy
+                               6  Church,friends,books
+                               7  Other
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+V379                   Source known for any method                      319    2    N    I    1    0   No   No
+                               10     PUBLIC
+                               11     Govt.hosp/polyclinic
+                               12     Gvt.health.center
+                               13     Family plng.clinic
+                               14     Mobile clinic
+                               15     Field worker
+                               16:19  
+                               20     PRIVATE MEDICAL
+                               21     Private hospital
+                               22     Phmcy/chm'st/drg.st
+                               23     Private doctor/clini
+                               24     Mobile clinic
+                               25     Field worker
+                               26     Private FP/PPAG cl.
+                               27     Maternity home
+                               28:29  
+                               30     PRIVATE OTHER
+                               31     Shop
+                               32     Church
+                               33     Friends/relatives
+                               34     Drug pedlars
+                               35:39  
+                               40     OTHERS
+                               41     Other source
+                               42:49  
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+V380                   Source known for any method                      321    1    N    I    1    0   No   No
+                               1  Govt Clinical/Pharm
+                               2  Govt Home/Comm deliv
+                               3  NGO
+                               4  Private Clin/Deliv
+                               5  Private Pharmacy
+                               6  Church,friends,books
+                               7  Other
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+V381                   Time to get to source                            322    4    N    I    1    0   No   No
+                               1001  Minutes, 1
+                               1999  Minutes, missing
+                               2002  Hours, 2
+                               2999  Hours, missing
+                               9995  Source comes to Resp
+                               9996  No source known
+                               9998  DK
+                           (m) 9999  Missing
+                          (na)       NotAppl
+V382                   Time to get to source(grouped)                   326    1    N    I    1    0   No   No
+                               0  Mobile source
+                               1  0-14
+                               2  15-29
+                               3  30-59
+                               4  60-89
+                               5  90-119
+                               6  120+
+                               7  Don't know time
+                               8  Don't know source
+                           (m) 9  Missing
+                          (na)    NotAppl
+V383                   Easy/difficult to get to place                   327    1    N    I    1    0   No   No
+                               1  Easy
+                               2  Difficult
+                           (m) 9  Missing
+                          (na)    NotAppl
+V384                   Heard about FP on Television                     328    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V385                   Contraceptive use before c- NA                   329    1    N    I    1    0   No   No
+                               1:5  
+                          (na)      NotAppl
+V386                   Month started method pre  - NA                   330    2    N    I    1    0   No   No
+                               1:12   
+                               97:98  
+                          (na)        NotAppl
+V387                   Year started method pre 8 - NA                   332    2    N    I    1    0   No   No
+                               60:88  
+                               97:98  
+                          (na)        NotAppl
+V388                   Date started method pre 8 - NA                   334    4    N    I    1    0   No   No
+                          (na)       NotAppl
+V389                   Months use prior to calen - NA                   338    4    N    I    1    0   No   No
+                          (na)       NotAppl
+V390                   Month stopped method pre  - NA                   342    2    N    I    1    0   No   No
+                               1:12   
+                               97:98  
+                          (na)        NotAppl
+V391                   Year stopped method pre 8 - NA                   344    2    N    I    1    0   No   No
+                               60:88  
+                               97:98  
+                          (na)        NotAppl
+V392                   Date stopped method pre 8 - NA                   346    4    N    I    1    0   No   No
+                          (na)       NotAppl
+V401                   Last birth ceasarean section                     350    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V404                   Currently breastfeeding                          351    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+V405                   Currently amenorrheic                            352    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+V406                   Currently abstaining                             353    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+V407                   Times breastfed during night                     354    2    N    I    1    0   No   No
+                               30  30+
+                           (m) 99  Missing
+                          (na)     NotAppl
+V408                   Times breastfed during day                       356    2    N    I    1    0   No   No
+                               30  30+
+                           (m) 99  Missing
+                          (na)     NotAppl
+V409                   Gave child plain water                           358    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V409A                  Gave child sugar water                           359    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V410                   Gave child juice                                 360    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V410A                  Gave child herbal tea                            361    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V411                   Gave child powder/tinned milk                    362    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V411A                  Gave child baby formula                          363    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V412                   Gave child fresh milk                            364    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V413A                  Country specific other li - NA                   365    1    N    I    1    0   No   No
+                          (na)    NotAppl
+V413B                  Country specific other li - NA                   366    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V413C                  Country specific other li - NA                   367    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V413D                  Country specific other li - NA                   368    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V413                   Gave child other liquid                          369    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V414A                  Country specific other fo - NA                   370    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V414B                  Country specific other fo - NA                   371    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V414C                  Country specific other fo - NA                   372    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V414D                  Country specific other fo - NA                   373    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V414                   Gave child solid or mushy food                   374    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V415                   Fed food in bottle with nipple                   375    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+V416                   Heard of oral rehydration                        376    1    N    I    1    0   No   No
+                               0  Never heard of, seen
+                               1  Used ORS
+                               2  Heard of ORS
+                               3  Recognized packet
+                           (m) 9  Missing
+                          (na)    NotAppl
+V417                   Entries in maternity table                       377    1    N    I    1    0   No   No
+                               0:6  
+V418                   Entries in health table                          378    1    N    I    1    0   No   No
+                               0:6  
+V419                   Entries in height/weight table                   379    1    N    I    1    0   No   No
+                               0:6  
+V420                   Measurer's code                                  380    2    N    I    1    0   No   No
+                               98  DK
+                           (m) 99  Missing
+                          (na)     NotAppl
+V421                   Assistant measurer's code                        382    2    N    I    1    0   No   No
+                               98  DK
+                           (m) 99  Missing
+                          (na)     NotAppl
+V422                   Ever prepared ORS solution                       384    1    N    I    1    0   No   No
+                               0  No
+                               1  Used last two weeks
+                               2  Used previously
+                           (m) 9  Missing
+                          (na)    NotAppl
+V423                   Quantity of water for ORS                        385    4    N    I    1    0   No   No
+                               0:9990  
+                               9993    Whole packet not use
+                               9994    Followed instruction
+                               9995    Unknown quantity
+                               9996    Other uncoded sizes
+                               9998    DK
+                           (m) 9999    Missing
+                          (na)         NotAppl
+V424A                  ORS source: government hosp.                     389    1    N    I    1    0   No   No
+                               0  No
+                               1  Government hospital
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424B                  ORS source: govt health center                   390    1    N    I    1    0   No   No
+                               0  No
+                               1  Govt. health center
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424C                  ORS source: govt health post                     391    1    N    I    1    0   No   No
+                               0  No
+                               1  Govt. health post
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424D                  ORS source: mobile clinic                        392    1    N    I    1    0   No   No
+                               0  No
+                               1  Public mobile clinic
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424E                  ORS source: comm.health worker                   393    1    N    I    1    0   No   No
+                               0  No
+                               1  Community health wrk
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424F                  ORS source: CS public sec - NA                   394    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V424G                  ORS source: CS public sec - NA                   395    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V424H                  ORS source: CS public sec - NA                   396    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V424I                  ORS source: CS public sec - NA                   397    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V424J                  ORS source: private hosp/clin.                   398    1    N    I    1    0   No   No
+                               0  No
+                               1  Private hosp./clinic
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424K                  ORS source: private pharmacy                     399    1    N    I    1    0   No   No
+                               0  No
+                               1  Private pharmacy
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424L                  ORS source: private doctor                       400    1    N    I    1    0   No   No
+                               0  No
+                               1  Private doctor
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424M                  ORS source: private mobile cln                   401    1    N    I    1    0   No   No
+                               0  No
+                               1  Private mobile clin.
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424N                  ORS source: comm.health worker                   402    1    N    I    1    0   No   No
+                               0  No
+                               1  Community health wrk
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424O                  ORS source: CS med.priv s - NA                   403    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V424P                  ORS source: CS med.priv s - NA                   404    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V424Q                  ORS source: CS med.priv s - NA                   405    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V424R                  ORS source: CS med.priv s - NA                   406    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V424S                  ORS source: shop                                 407    1    N    I    1    0   No   No
+                               0  No
+                               1  Shop
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424T                  ORS source: traditional pract.                   408    1    N    I    1    0   No   No
+                               0  No
+                               1  Traditional pract.
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424U                  ORS source: CS oth.priv s - NA                   409    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V424V                  ORS source: CS oth.priv s - NA                   410    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V424W                  ORS source: CS oth.priv s - NA                   411    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V424X                  ORS source: Other                                412    1    N    I    1    0   No   No
+                               0  No
+                               1  Other
+                           (m) 9  Missing
+                          (na)    NotAppl
+V424Y                  ORS source: Unknown       - NA                   413    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V425                   Home fluid preparation teacher                   414    2    N    I    1    0   No   No
+                               10     PUBLIC SECTOR
+                               11     Govt. hospital
+                               12     Govt.health center
+                               13     Govt. health post
+                               14     Mobile clinic
+                               15     Community health wrk
+                               16:19  
+                               20     MEDICAL PRIVATE SECT
+                               21     Pvt. hospital/clinic
+                               22     Pharmacy
+                               23     Private doctor
+                               24     Mobile clinic
+                               25     Community health wrk
+                               26:29  
+                               30     OTHER PRIVATE SECTOR
+                               31     Shop
+                               32     Trad. practitioner
+                               33:39  
+                               40     OTHERS
+                               41     Other
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+V426                   When child put to breast                         416    3    N    I    1    0   No   No
+                               0        Immediately
+                               101      Hours, 1
+                               102:198  
+                               199      Hours, missing
+                               201      Days, 1
+                               202:298  
+                               299      Days, missing
+                           (m) 999      Missing
+                          (na)          NotAppl
+V427                   Duration breastfeeding pr - NA                   419    2    N    I    1    0   No   No
+                               0:60   
+                               94     
+                               97:98  
+                          (na)        NotAppl
+V428                   Months breastfeeding pre  - NA                   421    3    N    I    1    0   No   No
+                               0:120    
+                               994      
+                               997:998  
+                          (na)          NotAppl
+V429                   Flag for breastfeeding pr-  NA                   424    1    N    I    1    0   No   No
+                               0:4  
+                          (na)      NotAppl
+V430                   Duration of amenorrhea pr - NA                   425    2    N    I    1    0   No   No
+                               0:60   
+                               96:98  
+                          (na)        NotAppl
+V431                   Months of amenorrhea pre  - NA                   427    3    N    I    1    0   No   No
+                               0:120    
+                               997:998  
+                          (na)          NotAppl
+V432                   Flag for amenorrhea pre 90- NA                   430    1    N    I    1    0   No   No
+                               0:2  
+                          (na)      NotAppl
+V433                   Duration of abstinence pr - NA                   431    2    N    I    1    0   No   No
+                               0:60   
+                               96:98  
+                          (na)        NotAppl
+V434                   Months of abstinence pre  - NA                   433    3    N    I    1    0   No   No
+                               0:120    
+                               997:998  
+                          (na)          NotAppl
+V435                   Flag for abstinence pre 8 - NA                   436    1    N    I    1    0   No   No
+                               0:3  
+                          (na)      NotAppl
+V436                   Arm circumference (cms-1d)                       437    3    N    I    1    0   No   No
+                           (m) 999  Missing
+                          (na)      NotAppl
+V437                   Respondent's weight (kilos-1d)                   440    4    N    I    1    0   No   No
+                           (m) 9999  Missing
+                          (na)       NotAppl
+V438                   Respondent's height (cms-1d)                     444    4    N    I    1    0   No   No
+                           (m) 9999  Missing
+                          (na)       NotAppl
+V439                   Ht/A Percentile (resp.)                          448    4    N    I    1    0   No   No
+                               9998  Flagged cases
+                           (m) 9999  Missing
+                          (na)       NotAppl
+V440                   Ht/A Standard deviations (resp                   452    4    N    I    1    0   No   No
+                               9998  Flagged cases
+                           (m) 9999  Missing
+                          (na)       NotAppl
+V441                   Ht/A Percent ref. median (resp                   456    5    N    I    1    0   No   No
+                               99998  Flagged cases
+                           (m) 99999  Missing
+                          (na)        NotAppl
+V442                   Wt/Ht Percent ref. median (DHS                   461    5    N    I    1    0   No   No
+                               99998  Flagged cases
+                           (m) 99999  Missing
+                          (na)        NotAppl
+V443                   Wt/Ht Percent ref. median (Fog                   466    5    N    I    1    0   No   No
+                               99998  Flagged cases
+                           (m) 99999  Missing
+                          (na)        NotAppl
+V444                   Wt/Ht Percent ref. median (WHO                   471    5    N    I    1    0   No   No
+                               99998  Flagged cases
+                           (m) 99999  Missing
+                          (na)        NotAppl
+V445                   Body mass index for respondent                   476    4    N    I    1    0   No   No
+                           (m) 9999  Missing
+                          (na)       NotAppl
+V446                   Rohrer's index for respondent                    480    4    N    I    1    0   No   No
+                           (m) 9999  Missing
+                          (na)       NotAppl
+V447                   Result of measurement of resp.                   484    1    N    I    1    0   No   No
+                               0  Measured
+                               3  Not present
+                               4  Refused
+                               6  Other
+                           (m) 9  Missing
+                          (na)    NotAppl
+V501                   Current marital status                           485    1    N    I    1    0   No   No
+                               0  Never married
+                               1  Married
+                               2  Living together
+                               3  Widowed
+                               4  Divorced
+                               5  Not living together
+                           (m) 9  Missing
+V502                   Currently/formerly/never marr.                   486    1    N    I    1    0   No   No
+                               0  Never married
+                               1  Currently married
+                               2  Formerly married
+                           (m) 9  Missing
+V503                   Number of unions                                 487    1    N    I    1    0   No   No
+                               1  Once
+                               2  More than once
+                           (m) 9  Missing
+                          (na)    NotAppl
+V504                   Husband lives in house                           488    1    N    I    1    0   No   No
+                               1  Living with her
+                               2  Staying elsewhere
+                           (m) 9  Missing
+                          (na)    NotAppl
+V505                   Number of other wives                            489    2    N    I    1    0   No   No
+                               0     No other wives
+                               1:20  
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       NotAppl
+V506                   Wife rank number                                 491    2    N    I    1    0   No   No
+                               1:20  
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       NotAppl
+V507                   Month of first marriage                          493    2    N    I    1    0   No   No
+                               1:12  
+                          (na)       NotAppl
+V508                   Year of first marriage                           495    2    N    I    1    0   No   No
+                               44:93  
+                          (na)        NotAppl
+V509                   Date of first marriage (CMC)                     497    4    N    I    1    0   No   No
+                          (na)       NotAppl
+V510                   Completeness of date inform.                     501    1    N    I    1    0   No   No
+                               1  Month and year
+                               2  Month and age- y imp
+                               3  Year and age - m imp
+                               4  Year & age - y ignor
+                               5  Year - a, m imp
+                               6  Age - y, m imp
+                               7  Month - a, y imp
+                               8  None - all imp.
+                          (na)    NotAppl
+V511                   Age at first marriage                            502    2    N    I    1    0   No   No
+                               8:49  
+                          (na)       NotAppl
+V512                   Years since first marriage                       504    2    N    I    1    0   No   No
+                               0:39  
+                          (na)       NotAppl
+V513                   Marital duration (grouped)                       506    1    N    I    1    0   No   No
+                               0  Never married
+                               1  0-4
+                               2  5-9
+                               3  10-14
+                               4  15-19
+                               5  20-24
+                               6  25-29
+                               7  30+
+V525                   Age at first intercourse                         507    2    N    I    1    0   No   No
+                               0     Not had intercourse
+                               1:49  
+                               96    At first union
+                               97    Inconsistent
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       NotAppl
+V526                   Frequency of intercourse                         509    2    N    I    1    0   No   No
+                               0     No intercourse
+                               1:90  
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       NotAppl
+V527                   Time since last intercourse                      511    3    N    I    1    0   No   No
+                               100  Days, 0
+                               199  Days, missing
+                               201  Weeks, 1
+                               301  Months, 1
+                               401  Years, 1
+                               995  Within last 4 weeks
+                               996  Before last birth
+                               998  Don't know
+                           (m) 999  Missing
+                          (na)      NotAppl
+V528                   Time since last intercourse(g)                   514    2    N    I    1    0   No   No
+                               0:30  
+                               31    31+ days
+                               95    Within last 4 weeks
+                               96    Before last birth
+                               97    
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       NotAppl
+V529                   Time since last intercourse(im                   516    3    N    I    1    0   No   No
+                               0:500  
+                               995    Within last 4 weeks
+                               996    Before last birth
+                               997    Inconsistent
+                               998    Don't know
+                           (m) 999    Missing
+                          (na)        NotAppl
+V530                   Flag for V529                                    519    1    N    I    1    0   No   No
+                               0  No flag
+                               1  N > int. since birth
+                               2  N + abst. > interval
+                               3  N, but sex not res.
+                               4  96, but no birth
+                               5  96, but curr.preg.
+                               6  96, but resumed sex
+                               7  N, last sex bef preg
+                               8  N, inconsis 4 weeks
+                               9  N, sex bef last birt
+                          (na)    NotAppl
+V531                   Age at first intercourse (imp)                   520    2    N    I    1    0   No   No
+                               0     Not had intercourse
+                               1:49  
+                               97    Inconsistent
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       NotAppl
+V532                   Flag for V531                                    522    1    N    I    1    0   No   No
+                               0  No flag
+                               1  After interview
+                               2  After concep >= 1 yr
+                               3  After concep < 1 yr
+                               4  At marr, never marr
+                               5  At marr,after concep
+                               6  After marriage
+                          (na)    NotAppl
+V533                   Usual frequency of intercourse                   523    2    N    I    1    0   No   No
+                               0     No intercourse
+                               1:90  
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       NotAppl
+V602                   Fertility preference                             525    1    N    I    1    0   No   No
+                               1  Have another
+                               2  Undecided
+                               3  No more
+                               4  Sterilized
+                               5  Declared infecund
+                           (m) 9  Missing
+                          (na)    NotAppl
+V603                   Preferred waiting time                           526    3    N    I    1    0   No   No
+                               100:199  
+                               200:299  
+                               994      Soon, now
+                               995      
+                               996      Other, Non-numeric
+                               997      Inconsistent
+                               998      Don't know
+                           (m) 999      Missing
+                          (na)          NotAppl
+V604                   Preferred waiting time (grpd)                    529    1    N    I    1    0   No   No
+                               0  <12 months
+                               1  1 year
+                               2  2 years
+                               3  3 years
+                               4  4 years
+                               5  5 years
+                               6  6+ years
+                               7  Non-numeric
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+V605                   Desire for more children                         530    1    N    I    1    0   No   No
+                               1  Wants within 2 years
+                               2  Wants after 2+ years
+                               3  Wants, unsure timing
+                               4  Undecided
+                               5  Wants no more
+                               6  Sterilized
+                               7  Declared infecund
+                           (m) 9  Missing
+                          (na)    NotAppl
+V608                   Ideal post-partum abst. period                   531    3    N    I    1    0   No   No
+                               100  Less than 1 month
+                               101  Months, 1
+                               201  Years, 1
+                               996  Non-numeric response
+                               998  DK
+                           (m) 999  Missing
+                          (na)      NotAppl
+V609                   Sex while breastfeeding                          534    1    N    I    1    0   No   No
+                               1  Wait
+                               2  Doesn't matter
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+V610                   Husband approves FP                              535    1    N    I    1    0   No   No
+                               0  Disapproves
+                               1  Approves
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+V611                   Discussed FP with partner                        536    1    N    I    1    0   No   No
+                               0  Never
+                               1  Once or twice
+                               2  More often
+                           (m) 9  Missing
+                          (na)    NotAppl
+V612                   Respondent approves FP                           537    1    N    I    1    0   No   No
+                               0  Disapproves
+                               1  Approves
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+V613                   Ideal number of children                         538    2    N    I    1    0   No   No
+                               0:25  
+                               94    Up to God
+                               95    Doesn't want childr.
+                               96    Non-numeric response
+                               98    DK
+                           (m) 99    Missing
+V614                   Ideal number of children (grp)                   540    1    N    I    1    0   No   No
+                               0:5  
+                               6    6+
+                               7    Non-numeric response
+V615                   Best birth interval                              541    3    N    I    1    0   No   No
+                               100      
+                               101      Months, 1
+                               102:199  
+                               200      Less than 1 year
+                               201      Years, 1
+                               202:223  
+                               996      Other
+                               998      DK
+                           (m) 999      Missing
+                          (na)          NotAppl
+V616                   Time for future birth                            544    3    N    I    1    0   No   No
+                               100:299  
+                               994      Soon/now
+                               995      Can't get pregnant
+                               996      Other
+                               998      DK
+                           (m) 999      Missing
+                          (na)          NotAppl
+V617                   Age youngest at future birth                     547    2    N    I    1    0   No   No
+                               0:20  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+V618                   Reason regrets sterilization                     549    1    N    I    1    0   No   No
+                               0  No regret
+                               1  Resp. wants another
+                               2  Part. wants another
+                               3  Side effects
+                               4  Other reason
+                           (m) 9  Missing
+                          (na)    NotAppl
+V619                   Think would have sterilization                   550    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V620                   Discussed number of children                     551    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V621                   Husbands desire for children                     552    1    N    I    1    0   No   No
+                               1  Both want same
+                               2  Husband wants more
+                               3  Husband wants fewer
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+V623                   Exposure                                         553    1    N    I    1    0   No   No
+                               0  Fecund
+                               1  Pregnant
+                               2  Amenorrheic
+                               3  Infecund, menopausal
+                           (m) 9  Missing
+                          (na)    NotAppl
+V624                   Unmet need                                       554    1    N    I    1    0   No   No
+                               1  Unmet need to space
+                               2  Unmet need to limit
+                               3  Using to space
+                               4  Using to limit
+                               5  Spacing failure
+                               6  Limiting failure
+                               7  Desire birth < 2 yrs
+                               8  Infecund, menopausal
+                           (m) 9  Missing
+                          (na)    NotAppl
+V625                   Exposure (definition 2)                          555    1    N    I    1    0   No   No
+                               0  Fecund
+                               1  Pregnant
+                               2  Amenorrheic
+                               3  Infecund, menopausal
+                           (m) 9  Missing
+                          (na)    NotAppl
+V626                   Unmet need (definition 2)                        556    1    N    I    1    0   No   No
+                               1  Unmet need to space
+                               2  Unmet need to limit
+                               3  Using to space
+                               4  Using to limit
+                               5  Spacing failure
+                               6  Limiting failure
+                               7  Desire birth < 2 yrs
+                               8  Infecund, menopausal
+                           (m) 9  Missing
+                          (na)    NotAppl
+V701                   Partner's education level                        557    1    N    I    1    0   No   No
+                               0  No education
+                               1  Primary
+                               2  Secondary
+                               3  Higher
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+V702                   Highest year of education                        558    2    N    I    1    0   No   No
+                               0:90  
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       NotAppl
+V704                   Partner's occupation                             560    3    N    I    1    0   No   No
+                               0:97  
+                               98    DK
+                           (m) 999   Missing
+                          (na)       NotAppl
+V705                   Partner's occupation                             563    2    N    I    1    0   No   No
+                               0   Never worked
+                               1   Prof., Tech., Manag.
+                               2   Clerical
+                               3   Sales
+                               4   Agric-self employed
+                               5   Agric-employee
+                               6   Household & domestic
+                               7   Services
+                               8   Skilled manual
+                               9   Unskilled manual
+                               98  Don't know
+                           (m) 99  Missing
+                          (na)     NotAppl
+V707                   Type of land where works                         565    1    N    I    1    0   No   No
+                               1  His/family land
+                               2  Someone else's land
+                               3  Rented land
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+V714                   Respondent currently working                     566    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V715                   Husbands education-single yrs                    567    2    N    I    1    0   No   No
+                               0:19  
+                               20    20 or more
+                               97    Inconsistent
+                               98    Don't know
+                           (m) 99    Missing
+                          (na)       NotAppl
+V716                   Respondent's occupation                          569    3    N    I    1    0   No   No
+                               0    Not working
+                           (m) 999  Missing
+                          (na)      NotAppl
+V717                   Respondent's occupation                          572    2    N    I    1    0   No   No
+                               0   Not working
+                               1   Prof., Tech., Manag.
+                               2   Clerical
+                               3   Sales
+                               4   Agric-self employed
+                               5   Agric-employee
+                               6   Household & domestic
+                               7   Services
+                               8   Skilled manual
+                               9   Unskilled manual
+                               98  Don't know
+                           (m) 99  Missing
+                          (na)     NotAppl
+V718                   Current type of employment                       574    1    N    I    1    0   No   No
+                               0  Did not work
+                               1  Paid employee, away
+                               2  Paid employee, home
+                               3  Self-employed, away
+                               4  Self-employed, home
+                               5  Unpaid worker, away
+                               6  Unpaid worker, home
+                           (m) 9  Missing
+                          (na)    NotAppl
+V719                   Work for family, others, self                    575    1    N    I    1    0   No   No
+                               1  For family member
+                               2  For someone else
+                               3  Self-employed
+                           (m) 9  Missing
+                          (na)    NotAppl
+V720                   Earns cash for work                              576    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+V721                   Works at home or away                            577    1    N    I    1    0   No   No
+                               1  At home
+                               2  Away
+                           (m) 9  Missing
+                          (na)    NotAppl
+V722                   Child with resp. at work                         578    1    N    I    1    0   No   No
+                               1  Usually
+                               2  Sometimes
+                               3  Never
+                           (m) 9  Missing
+                          (na)    NotAppl
+V723                   Child minder                                     579    2    N    I    1    0   No   No
+                               0   Respondent
+                               1   Husband/partner
+                               2   Older children
+                               3   Other relatives
+                               4   Neighbors
+                               5   Friends
+                               6   Servants/hired help
+                               7   Child is in school
+                               8   Institutional care
+                               9   Other
+                           (m) 99  Missing
+                          (na)     NotAppl
+V724                   Ever worked since Jan. 19 - NA                   581    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+V725                   Date started work before  - NA                   582    2    N    I    1    0   No   No
+                               1:12  
+                               98    
+                          (na)       NotAppl
+V726                   Date started work before  - NA                   584    2    N    I    1    0   No   No
+                               50:88  
+                               98     
+                          (na)        NotAppl
+V727                   Month job prior to 8? end - NA                   586    2    N    I    1    0   No   No
+                               0:12  
+                               98    
+                          (na)       NotAppl
+V728                   Year job prior to 8? ende - NA                   588    2    N    I    1    0   No   No
+                               0      
+                               50:87  
+                               98     
+                          (na)        NotAppl
+V729                   Partner's educational attainm.                   590    1    N    I    1    0   No   No
+                               0  No education
+                               1  Incomplete primary
+                               2  Complete primary
+                               3  Incomplete secondary
+                               4  Complete secondary
+                               5  Higher
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+BORD                   Birth order number                               591    2    N    I    1    0   No   No
+                               1:20  
+B0                     Child is twin                                    593    1    N    I    1    0   No   No
+                               0  Single birth
+                               1  1st of multiple
+                               2  2nd of multiple
+                               3  3rd of multiple
+                               4  4th of multiple
+                               5  5th of multiple
+B1                     Month of birth                                   594    2    N    I    1    0   No   No
+                               1:12  
+B2                     Year of birth                                    596    2    N    I    1    0   No   No
+                               50:94  
+B3                     Date of birth (CMC)                              598    4    N    I    1    0   No   No
+B4                     Sex of child                                     602    1    N    I    1    0   No   No
+                               1  Male
+                               2  Female
+B5                     Child is alive                                   603    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+B6                     Age at death                                     604    3    N    I    1    0   No   No
+                               997  Inconsistent
+                               998  Don't know
+                           (m) 999  Missing
+                          (na)      NotAppl
+B7                     Age at death (months-imputed)                    607    3    N    I    1    0   No   No
+                               0:420  
+                          (na)        NotAppl
+B8                     Current age of child                             610    2    N    I    1    0   No   No
+                               0:40  
+                          (na)       NotAppl
+B9                     Who child lives with                             612    1    N    I    1    0   No   No
+                               0  Respondent
+                               1  Father
+                               2  Other relative
+                               3  Someone else
+                               4  15+ & live elsewhere
+                           (m) 9  Missing
+                          (na)    NotAppl
+B10                    Completeness of information                      613    1    N    I    1    0   No   No
+                               1  Month and year
+                               2  Month and age -y imp
+                               3  Year and age - m imp
+                               4  Y & age - y ignored
+                               5  Year - a, m imp
+                               6  Age - y, m imp
+                               7  Month - a, y imp
+                               8  None - all imp
+B11                    Preceding birth interval                         614    3    N    I    1    0   No   No
+                          (na)      NotAppl
+B12                    Succeeding birth interval                        617    3    N    I    1    0   No   No
+                          (na)      NotAppl
+B13                    Flag for age at death                            620    1    N    I    1    0   No   No
+                               0  No flag
+                               1  > interview
+                               2  < breastfeeding
+                               3  < age supplemented
+                               4  < first breastfed
+                               5  < last vaccination
+                               6  Outside range
+                               7  Imputed, units given
+                               8  Imputed, no units
+                          (na)    NotAppl
+MIDX                   Index to birth history                           621    1    N    I    1    0   No   No
+                               1:6  
+M1                     Tetanus injections bef. birth                    622    1    N    I    1    0   No   No
+                               0    Received no inject.
+                               1:6  
+                               7    7+
+                               8    Don't know
+                           (m) 9    Missing
+                          (na)      NotAppl
+M2A                    Prenatal: doctor                                 623    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: doctor
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2B                    Prenatal: nurse                                  624    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: nurse
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2C                    Prenatal: midwife                                625    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: midwife
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2D                    Prenatal: CS health profession                   626    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: CS health prof.
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2E                    Prenatal: CS health profession                   627    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: CS health prof.
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2F                    Prenatal: trained birth att.                     628    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: trained birth A
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2G                    Prenatal: trad.birth attendant                   629    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: trad.birth att.
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2H                    Prenatal: relative                               630    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: relative
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2I                    Prenatal: CS other person                        631    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: CS other person
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2J                    Prenatal: CS other person                        632    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: CS other person
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2K                    Prenatal: other resp (uncoded)                   633    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: other responses
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2L                    Prenatal: CS other                               634    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: CS other
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2M                    Prenatal: CS other                               635    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: CS other
+                           (m) 9  Missing
+                          (na)    NotAppl
+M2N                    Prenatal: no one                                 636    1    N    I    1    0   No   No
+                               0  No: some care
+                               1  Yes: no one
+                           (m) 9  Missing
+                          (na)    NotAppl
+M3A                    Assistance: doctor                               637    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: doctor
+                           (m) 9  Missing
+                          (na)    NotAppl
+M3B                    Assistance: nurse                                638    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: nurse
+                           (m) 9  Missing
+                          (na)    NotAppl
+M3C                    Assistance: midwife                              639    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: midwife
+                           (m) 9  Missing
+                          (na)    NotAppl
+M3D                    Assistance: CS health pro - NA                   640    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+M3E                    Assistance: CS health pro - NA                   641    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+M3F                    Assistance: trained birth att.                   642    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: trained birth A
+                           (m) 9  Missing
+                          (na)    NotAppl
+M3G                    Assistance: trad.birth attend.                   643    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: trad.birth att.
+                           (m) 9  Missing
+                          (na)    NotAppl
+M3H                    Assistance: relative                             644    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: relative
+                           (m) 9  Missing
+                          (na)    NotAppl
+M3I                    Assistance: CS other pers - NA                   645    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+M3J                    Assistance: CS other pers - NA                   646    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+M3K                    Assistance: other resp (uncod)                   647    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: other responses
+                           (m) 9  Missing
+                          (na)    NotAppl
+M3L                    Assistance: CS other      - NA                   648    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+M3M                    Assistance: CS other      - NA                   649    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+M3N                    Assistance: no one                               650    1    N    I    1    0   No   No
+                               0  No: some assistance
+                               1  Yes: no one
+                           (m) 9  Missing
+                          (na)    NotAppl
+M4                     Duration of breastfeeding                        651    2    N    I    1    0   No   No
+                               0:59  
+                               94    Never breastfed
+                               95    Still breastfeeding
+                               96    Breastfed until died
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+M5                     Months of breastfeeding                          653    2    N    I    1    0   No   No
+                               0:59   
+                               94     Never breastfed
+                               95:96  
+                               97     Inconsistent
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+M6                     Duration of amenorrhea                           655    2    N    I    1    0   No   No
+                               0:59  
+                               96    Period not returned
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+M7                     Months of amenorrhea                             657    2    N    I    1    0   No   No
+                               0:59  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+M8                     Duration of abstinence                           659    2    N    I    1    0   No   No
+                               0:59  
+                               96    Still abstaining
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+M9                     Months of abstinence                             661    2    N    I    1    0   No   No
+                               0:59  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+M10                    Time wanted pregnancy                            663    1    N    I    1    0   No   No
+                               1  Then
+                               2  Later
+                               3  No more
+                           (m) 9  Missing
+                          (na)    NotAppl
+M11                    Time would have waited                           664    3    N    I    1    0   No   No
+                               101:190  
+                               201:220  
+                               998      DK
+                           (m) 999      Missing
+                          (na)          NotAppl
+M12                    Antenatal card for pregnancy                     667    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+M13                    Timing of 1st antenatal check                    668    2    N    I    1    0   No   No
+                               0:9  
+                               98   DK
+                           (m) 99   Missing
+                          (na)      NotAppl
+M14                    Antenatal visits for pregnancy                   670    2    N    I    1    0   No   No
+                               0     No antenatal visits
+                               1:19  
+                               20    20+
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+M15                    Place of delivery                                672    2    N    I    1    0   No   No
+                               10     HOMES
+                               11     Respondents home
+                               12     Other home
+                               13     TBA's home
+                               14:19  
+                               20     PUBLIC SECTOR
+                               21     Govt. hospital
+                               22     Govt. health center
+                               23     Govt. health post
+                               24:29  
+                               30     PRIVATE SECTOR
+                               31     Private hosp/clinic
+                               32     Maternity home
+                               33:39  
+                               40     OTHERS
+                               41     Other
+                           (m) 99     Missing
+                          (na)        NotAppl
+M16                    Premature birth                                  674    1    N    I    1    0   No   No
+                               0  On time
+                               1  Premature
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+M17                    Delivery by caesarian section                    675    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+M18                    Size of child at birth                           676    1    N    I    1    0   No   No
+                               1  Very large
+                               2  Larger than average
+                               3  Average
+                               4  Smaller than average
+                               5  Very small
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+M19                    Birth weight (kilos - 3 dec.)                    677    4    N    I    1    0   No   No
+                               500:9000  
+                               9996      Not weighed at birth
+                               9997      
+                               9998      DK
+                           (m) 9999      Missing
+                          (na)           NotAppl
+M20                    Reason did not breastfeed                        681    2    N    I    1    0   No   No
+                               1   Mother ill, weak
+                               2   Child ill, weak
+                               3   Child died
+                               4   Nipple, breast prob.
+                               5   Insufficient milk
+                               6   Mother working
+                               7   Child refused
+                               8   Other
+                           (m) 99  Missing
+                          (na)     NotAppl
+M21                    Reason stopped breastfeeding                     683    2    N    I    1    0   No   No
+                               1   Mother ill, weak
+                               2   Child ill, weak
+                               3   Child died
+                               4   Nipple, breast prob.
+                               5   Insufficient milk
+                               6   Working
+                               7   Child refused
+                               8   Weaning age
+                               9   Became pregnant
+                               10  Started using method
+                               11  Other
+                               97  Missing ever breastf
+                           (m) 99  Missing
+                          (na)     NotAppl
+M22                    Child given other food                           685    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+M23                    Age for formula or other milk                    686    2    N    I    1    0   No   No
+                               0:60  
+                               96    Not given
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+M24                    Age for plain water                              688    2    N    I    1    0   No   No
+                               0:60  
+                               96    Not given
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+M25                    Age for other liquids                            690    2    N    I    1    0   No   No
+                               0:60  
+                               96    Not given
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+M26                    Age for solid or mushy food                      692    2    N    I    1    0   No   No
+                               0:60  
+                               96    Not given
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+M27                    Flag for breastfeeding                           694    1    N    I    1    0   No   No
+                               0  No flag
+                               1  > interval
+                               2  > interval by 1 mnth
+                               3  > age at death
+                               4  During preg in cal.
+                          (na)    NotAppl
+M28                    Flag for amenorrhea                              695    1    N    I    1    0   No   No
+                               0  No flag
+                               1  > interval
+                               2  > interval by 1 mnth
+                               3  
+                               4  During preg in cal.
+                          (na)    NotAppl
+M29                    Flag for abstinence                              696    1    N    I    1    0   No   No
+                               0  No flag
+                               1  > interval
+                               2  > interval by 1 mnth
+                               3  
+                               4  During preg in cal.
+                          (na)    NotAppl
+HIDX                   Index to birth history                           697    1    N    I    1    0   No   No
+                               1:6  
+H1                     Has health card                                  698    1    N    I    1    0   No   No
+                               0  No card
+                               1  Yes, seen
+                               2  Yes, not seen
+                               3  No longer has card
+                           (m) 9  Missing
+                          (na)    NotAppl
+H2                     Received BCG                                     699    1    N    I    1    0   No   No
+                               0  No
+                               1  Vacc. date on card
+                               2  Reported by mother
+                               3  Vacc. marked on card
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H2D                    BCG day                                          700    2    N    I    1    0   No   No
+                               1:31  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H2M                    BCG month                                        702    2    N    I    1    0   No   No
+                               1:12  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H2Y                    BCG year                                         704    2    N    I    1    0   No   No
+                               85:94  
+                               97     Inconsistent
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+H3                     Received DPT 1                                   706    1    N    I    1    0   No   No
+                               0  No
+                               1  Vacc. date on card
+                               2  Reported by mother
+                               3  Vacc. marked on card
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H3D                    DPT 1 day                                        707    2    N    I    1    0   No   No
+                               1:31  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H3M                    DPT 1 month                                      709    2    N    I    1    0   No   No
+                               1:12  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H3Y                    DPT 1 year                                       711    2    N    I    1    0   No   No
+                               85:94  
+                               97     Inconsistent
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+H4                     Received POLIO 1                                 713    1    N    I    1    0   No   No
+                               0  No
+                               1  Vacc. date on card
+                               2  Reported by mother
+                               3  Vacc. marked on card
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H4D                    POLIO 1 day                                      714    2    N    I    1    0   No   No
+                               1:31  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H4M                    POLIO 1 month                                    716    2    N    I    1    0   No   No
+                               1:12  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H4Y                    POLIO 1 year                                     718    2    N    I    1    0   No   No
+                               85:94  
+                               97     Inconsistent
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+H5                     Received DPT 2                                   720    1    N    I    1    0   No   No
+                               0  No
+                               1  Vacc. date on card
+                               2  Reported by mother
+                               3  Vacc. marked on card
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H5D                    DPT 2 day                                        721    2    N    I    1    0   No   No
+                               1:31  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H5M                    DPT 2 month                                      723    2    N    I    1    0   No   No
+                               1:12  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H5Y                    DPT 2 year                                       725    2    N    I    1    0   No   No
+                               85:94  
+                               97     Inconsistent
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+H6                     Received POLIO 2                                 727    1    N    I    1    0   No   No
+                               0  No
+                               1  Vacc. date on card
+                               2  Reported by mother
+                               3  Vacc. marked on card
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H6D                    POLIO 2 day                                      728    2    N    I    1    0   No   No
+                               1:31  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H6M                    POLIO 2 month                                    730    2    N    I    1    0   No   No
+                               1:12  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H6Y                    POLIO 2 year                                     732    2    N    I    1    0   No   No
+                               85:94  
+                               97     Inconsistent
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+H7                     Received DPT 3                                   734    1    N    I    1    0   No   No
+                               0  No
+                               1  Vacc. date on card
+                               2  Reported by mother
+                               3  Vacc. marked on card
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H7D                    DPT 3 day                                        735    2    N    I    1    0   No   No
+                               1:31  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H7M                    DPT 3 month                                      737    2    N    I    1    0   No   No
+                               1:12  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H7Y                    DPT 3 year                                       739    2    N    I    1    0   No   No
+                               85:94  
+                               97     Inconsistent
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+H8                     Received POLIO 3                                 741    1    N    I    1    0   No   No
+                               0  No
+                               1  Vacc. date on card
+                               2  Reported by mother
+                               3  Vacc. marked on card
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H8D                    POLIO 3 day                                      742    2    N    I    1    0   No   No
+                               1:31  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H8M                    POLIO 3 month                                    744    2    N    I    1    0   No   No
+                               1:12  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H8Y                    POLIO 3 year                                     746    2    N    I    1    0   No   No
+                               85:94  
+                               97     Inconsistent
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+H9                     Received MEASLES                                 748    1    N    I    1    0   No   No
+                               0  No
+                               1  Vacc. date on card
+                               2  Reported by mother
+                               3  Vacc. marked on card
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H9D                    MEASLES day                                      749    2    N    I    1    0   No   No
+                               1:31  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H9M                    MEASLES month                                    751    2    N    I    1    0   No   No
+                               1:12  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H9Y                    MEASLES year                                     753    2    N    I    1    0   No   No
+                               85:94  
+                               97     Inconsistent
+                               98     DK
+                           (m) 99     Missing
+                          (na)        NotAppl
+H10                    Ever had vaccination                             755    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+H11                    Had diarrhea recently                            756    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes, last 24 hours
+                               2  Yes, last 2-14 days
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+H11A                   How long diarrhea lasted                         757    2    N    I    1    0   No   No
+                               0     Less than 1 day
+                               1:89  
+                               90    90+
+                           (m) 99    Missing
+                          (na)       NotAppl
+H11B                   Blood in the stools                              759    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12A                   Diarrhea: government hosp.                       760    1    N    I    1    0   No   No
+                               0  No
+                               1  Government hospital
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12B                   Diarrhea: govt health center                     761    1    N    I    1    0   No   No
+                               0  No
+                               1  Govt. health center
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12C                   Diarrhea: govt health post                       762    1    N    I    1    0   No   No
+                               0  No
+                               1  Govt. health post
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12D                   Diarrhea: mobile clinic                          763    1    N    I    1    0   No   No
+                               0  No
+                               1  Public mobile clinic
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12E                   Diarrhea: comm.health worker                     764    1    N    I    1    0   No   No
+                               0  No
+                               1  Community health wrk
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12F                   Diarrhea: CS public secto - NA                   765    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H12G                   Diarrhea: CS public secto - NA                   766    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H12H                   Diarrhea: CS public secto - NA                   767    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H12I                   Diarrhea: CS public secto - NA                   768    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H12J                   Diarrhea: private hosp/clin.                     769    1    N    I    1    0   No   No
+                               0  No
+                               1  Private hosp./clinic
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12K                   Diarrhea: private pharmacy                       770    1    N    I    1    0   No   No
+                               0  No
+                               1  Private pharmacy
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12L                   Diarrhea: private doctor                         771    1    N    I    1    0   No   No
+                               0  No
+                               1  Private doctor
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12M                   Diarrhea: private mobile cln                     772    1    N    I    1    0   No   No
+                               0  No
+                               1  Private mobile clin.
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12N                   Diarrhea: comm.health worker                     773    1    N    I    1    0   No   No
+                               0  No
+                               1  Community health wrk
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12O                   Diarrhea: CS med.priv sec - NA                   774    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H12P                   Diarrhea: CS med.priv sec - NA                   775    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H12Q                   Diarrhea: CS med.priv sec - NA                   776    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H12R                   Diarrhea: CS med.priv sec - NA                   777    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H12S                   Diarrhea: shop                                   778    1    N    I    1    0   No   No
+                               0  No
+                               1  Shop
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12T                   Diarrhea: traditional pract.                     779    1    N    I    1    0   No   No
+                               0  No
+                               1  Traditional pract.
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12U                   Diarrhea: CS oth.priv sec - NA                   780    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H12V                   Diarrhea: CS oth.priv sec - NA                   781    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H12W                   Diarrhea: CS oth.priv sec - NA                   782    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H12X                   Diarrhea: Other                                  783    1    N    I    1    0   No   No
+                               0  No
+                               1  Other
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12Y                   Diarrhea: no treatment                           784    1    N    I    1    0   No   No
+                               0  No: received treatm.
+                               1  Yes: no treatment
+                           (m) 9  Missing
+                          (na)    NotAppl
+H12Z                   Diarrhea: medical treatment                      785    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: medical treatm.
+                           (m) 9  Missing
+                          (na)    NotAppl
+H13                    Given oral rehydration                           786    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: ORS - spontan.
+                               2  Yes: ORS - probed
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+H13A                   Days given ORS                                   787    2    N    I    1    0   No   No
+                               0:20  
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H14                    Given recommend. home solution                   789    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: RHS - spontan.
+                               2  Yes: RHS - probed
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+H14A                   Days given fluid                                 790    2    N    I    1    0   No   No
+                               0:20  
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+H15                    Given other pills or syrups                      792    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: oth pill, syrup
+                           (m) 9  Missing
+                          (na)    NotAppl
+H15A                   Given antibiotics                                793    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: antibiotics
+                           (m) 9  Missing
+                          (na)    NotAppl
+H15B                   Given an injection                               794    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: injection
+                           (m) 9  Missing
+                          (na)    NotAppl
+H15C                   Given an intravenous (IV)                        795    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: intravenous (IV
+                           (m) 9  Missing
+                          (na)    NotAppl
+H15D                   Given home remedy, herbal med.                   796    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: home rem, herb.
+                           (m) 9  Missing
+                          (na)    NotAppl
+H15E                   Given CS other treatment  - NA                   797    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H15F                   Given CS other treatment  - NA                   798    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H15G                   Given CS other treatment  - NA                   799    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H15H                   Given CS other treatment  - NA                   800    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H16                    Increase or decrease fluids                      801    1    N    I    1    0   No   No
+                               0  Same
+                               1  Increase
+                               2  Decrease
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H18                    Increase or decrease foods- NA                   802    1    N    I    1    0   No   No
+                               0  
+                          (na)    NotAppl
+H18A                   Breastfeeding change                             803    1    N    I    1    0   No   No
+                               0  Unchanged
+                               1  Increased
+                               2  Reduced
+                               3  Stopped completely
+                           (m) 9  Missing
+                          (na)    NotAppl
+H20                    Given other treatment                            804    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+H21A                   Given no treatment                               805    1    N    I    1    0   No   No
+                               0  No: received treatm.
+                               1  Yes: no treatment
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H21                    Received any treatment                           806    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+H22                    Had fever in last two weeks                      807    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H31                    Had cough in last two weeks                      808    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes, last 24 hours
+                               2  Yes, last 2-14 days
+                               8  Don't know
+                           (m) 9  Missing
+                          (na)    NotAppl
+H31A                   How long cough lasted                            809    2    N    I    1    0   No   No
+                               0     Less than 1 day
+                               1:89  
+                               90    90+
+                           (m) 99    Missing
+                          (na)       NotAppl
+H31B                   Short, rapid breaths                             811    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32A                   Fever/cough: government hosp.                    812    1    N    I    1    0   No   No
+                               0  No
+                               1  Government hospital
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32B                   Fever/cough: govt health cntr                    813    1    N    I    1    0   No   No
+                               0  No
+                               1  Govt. health center
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32C                   Fever/cough: govt health post                    814    1    N    I    1    0   No   No
+                               0  No
+                               1  Govt. health post
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32D                   Fever/cough: mobile clinic                       815    1    N    I    1    0   No   No
+                               0  No
+                               1  Public mobile clinic
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32E                   Fever/cough: comm.health wrkr                    816    1    N    I    1    0   No   No
+                               0  No
+                               1  Community health wrk
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32F                   Fever/cough: CS public se - NA                   817    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H32G                   Fever/cough: CS public se - NA                   818    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H32H                   Fever/cough: CS public se - NA                   819    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H32I                   Fever/cough: CS public se - NA                   820    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H32J                   Fever/cough: private hosp/clin                   821    1    N    I    1    0   No   No
+                               0  No
+                               1  Private hosp./clinic
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32K                   Fever/cough: private pharmacy                    822    1    N    I    1    0   No   No
+                               0  No
+                               1  Private pharmacy
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32L                   Fever/cough: private doctor                      823    1    N    I    1    0   No   No
+                               0  No
+                               1  Private doctor
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32M                   Fever/cough: private mobile cl                   824    1    N    I    1    0   No   No
+                               0  No
+                               1  Private mobile clin.
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32N                   Fever/cough: comm.health wrkr                    825    1    N    I    1    0   No   No
+                               0  No
+                               1  Community health wrk
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32O                   Fever/cough: CS med.priv  - NA                   826    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H32P                   Fever/cough: CS med.priv  - NA                   827    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H32Q                   Fever/cough: CS med.priv  - NA                   828    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H32R                   Fever/cough: CS med.priv  - NA                   829    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H32S                   Fever/cough: shop                                830    1    N    I    1    0   No   No
+                               0  No
+                               1  Shop
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32T                   Fever/cough: traditional pract                   831    1    N    I    1    0   No   No
+                               0  No
+                               1  Traditional pract.
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32U                   Fever/cough: CS oth.priv  - NA                   832    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H32V                   Fever/cough: CS oth.priv  - NA                   833    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H32W                   Fever/cough: CS oth.priv  - NA                   834    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H32X                   Fever/cough: Other                               835    1    N    I    1    0   No   No
+                               0  No
+                               1  Other
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32Y                   Fever/cough: no treatment                        836    1    N    I    1    0   No   No
+                               0  No: received treatm.
+                               1  Yes: no treatment
+                           (m) 9  Missing
+                          (na)    NotAppl
+H32Z                   Fever/cough: medical treatment                   837    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: medical treatm.
+                           (m) 9  Missing
+                          (na)    NotAppl
+H33                    Given antibiotics                                838    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: antibiotics
+                           (m) 9  Missing
+                          (na)    NotAppl
+H33A                   Given antimalarials                              839    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: antimalarials
+                           (m) 9  Missing
+                          (na)    NotAppl
+H34                    Given cough syrup                                840    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: cough syrup
+                           (m) 9  Missing
+                          (na)    NotAppl
+H35                    Given other pills or syrups                      841    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: oth pill, syrup
+                           (m) 9  Missing
+                          (na)    NotAppl
+H35A                   Given unknown pills or syrups                    842    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: unkn.pill,syrup
+                           (m) 9  Missing
+                          (na)    NotAppl
+H36                    Given injection                                  843    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: injection
+                           (m) 9  Missing
+                          (na)    NotAppl
+H36A                   Given home remedy, herbal med.                   844    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: home rem, herb.
+                           (m) 9  Missing
+                          (na)    NotAppl
+H37A                   Given CS other treatment  - NA                   845    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H37B                   Given CS other treatment  - NA                   846    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H37C                   Given CS other treatment  - NA                   847    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H37D                   Given CS other treatment  - NA                   848    1    N    I    1    0   No   No
+                               0:1  
+                          (na)      NotAppl
+H37                    Other treatment for cough                        849    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes: other treatment
+                           (m) 9  Missing
+                          (na)    NotAppl
+H38A                   Given no treatment                               850    1    N    I    1    0   No   No
+                               0  No: received treatm.
+                               1  Yes: no treatment
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+H38                    Given any treatment for cough                    851    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+HWIDX                  Index to birth history                           852    1    N    I    1    0   No   No
+                               1:6  
+HW1                    Age in months                                    853    2    N    I    1    0   No   No
+                          (na)     NotAppl
+HW2                    Weight in kilograms (1 dec.)                     855    3    N    I    1    0   No   No
+                           (m) 999  Missing
+                          (na)      NotAppl
+HW3                    Height in centimetres (1 dec.)                   858    4    N    I    1    0   No   No
+                           (m) 9999  Missing
+                          (na)       NotAppl
+HW4                    Ht/A Percentile                                  862    4    N    I    1    0   No   No
+                               9998  Flagged cases
+                           (m) 9999  Missing
+                          (na)       NotAppl
+HW5                    Ht/A Standard deviations                         866    4    N    I    1    0   No   No
+                               9998  Flagged cases
+                           (m) 9999  Missing
+                          (na)       NotAppl
+HW6                    Ht/A Percent of ref. median                      870    5    N    I    1    0   No   No
+                               99998  Flagged cases
+                           (m) 99999  Missing
+                          (na)        NotAppl
+HW7                    Wt/A Percentile                                  875    4    N    I    1    0   No   No
+                               9998  Flagged cases
+                           (m) 9999  Missing
+                          (na)       NotAppl
+HW8                    Wt/A Standard deviations                         879    4    N    I    1    0   No   No
+                               9998  Flagged cases
+                           (m) 9999  Missing
+                          (na)       NotAppl
+HW9                    Wt/A Percent of ref. median                      883    5    N    I    1    0   No   No
+                               99998  Flagged cases
+                           (m) 99999  Missing
+                          (na)        NotAppl
+HW10                   Wt/Ht Percentile                                 888    4    N    I    1    0   No   No
+                               9998  Flagged cases
+                           (m) 9999  Missing
+                          (na)       NotAppl
+HW11                   Wt/Ht Standard deviations                        892    4    N    I    1    0   No   No
+                               9998  Flagged cases
+                           (m) 9999  Missing
+                          (na)       NotAppl
+HW12                   Wt/Ht Percent of ref. median                     896    5    N    I    1    0   No   No
+                               99998  Flagged cases
+                           (m) 99999  Missing
+                          (na)        NotAppl
+HW13                   Reason not measured                              901    1    N    I    1    0   No   No
+                               0  Measured
+                               1  Dead
+                               2  Sick
+                               3  Not present
+                               4  Refused
+                               5  Mother refused
+                               6  Other
+                           (m) 9  Missing
+HW14                   BCG scar on arm or shoulder                      902    1    N    I    1    0   No   No
+                               0  No scar
+                               1  Scar seen
+                           (m) 9  Missing
+                          (na)    NotAppl
+HW15                   Height: lying or standing                        903    1    N    I    1    0   No   No
+                               1  Lying
+                               2  Standing
+                           (m) 9  Missing
+                          (na)    NotAppl
+HW16                   Day of birth of child                            904    2    N    I    1    0   No   No
+                               1:31  
+                               97    Inconsistent
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+HW17                   Date measured (day)                              906    2    N    I    1    0   No   No
+                               1:31  
+                          (na)       NotAppl
+HW18                   Date measured (month)                            908    2    N    I    1    0   No   No
+                               1:12  
+                          (na)       NotAppl
+HW19                   Date measured (year)                             910    2    N    I    1    0   No   No
+                               90:94  
+                          (na)        NotAppl
+HW20                   Arm circumference (cms - 1d)                     912    3    N    I    1    0   No   No
+                           (m) 999  Missing
+                          (na)      NotAppl
+HW21                   Arm circ/A Percentile                            915    4    N    I    1    0   No   No
+                               9998  Flagged cases
+                           (m) 9999  Missing
+                          (na)       NotAppl
+HW22                   Arm circ/A Standard deviations                   919    4    N    I    1    0   No   No
+                               9998  Flagged cases
+                           (m) 9999  Missing
+                          (na)       NotAppl
+HW23                   Arm c/A Percent of ref. median                   923    5    N    I    1    0   No   No
+                               99998  Flagged cases
+                           (m) 99999  Missing
+                          (na)        NotAppl
+HW24                   Arm circ/Ht Percentile                           928    4    N    I    1    0   No   No
+                               9998  Flagged cases
+                           (m) 9999  Missing
+                          (na)       NotAppl
+HW25                   Arm cir/Ht Standard deviations                   932    4    N    I    1    0   No   No
+                               9998  Flagged cases
+                           (m) 9999  Missing
+                          (na)       NotAppl
+HW26                   Arm cir/Ht Percent ref. median                   936    5    N    I    1    0   No   No
+                               99998  Flagged cases
+                           (m) 99999  Missing
+                          (na)        NotAppl
+SSPOUSE                Line no. of 1st husband                          941    2    N    I    1    0   No   No
+                               0:50  
+                               98    Not married
+                               99    Not member household
+                          (na)       NotAppl
+SSTRUCT                Household level structure no.                    943    3    N    I    1    0   No   No
+                               1:500  
+S108                   Highest educational level                        946    1    N    I    1    0   No   No
+                               0  None
+                               1  Primary
+                               2  Middle/JSS
+                               3  SSS/Comm./Voc/Tech
+                               4  Post.sec/nurse/polyt
+                               5  Higher
+                          (na)    NotAppl
+S109                   Highest grade at that level                      947    2    N    I    1    0   No   No
+                               0:12  
+                           (m) 99    Missing
+                          (na)       NotAppl
+S115                   Religion                                         949    2    N    I    1    0   No   No
+                               1   Catholic
+                               2   Anglican
+                               3   Methodist
+                               4   Presbyterian
+                               5   Pentecostal
+                               6   Spiritualist
+                               7   Other Christian
+                               8   Moslem
+                               9   Traditional
+                               10  No religion
+                               96  Other
+S119                   Usual region of residence                        951    2    N    I    1    0   No   No
+                               1   Western
+                               2   Central
+                               3   Greater Accra
+                               4   Volta
+                               5   Eastern
+                               6   Ashanti
+                               7   Brong-Ahafo
+                               8   Northern
+                               9   Upper West
+                               10  Upper East
+                               11  Outside Ghana
+                               98  Don't know
+                           (m) 99  Missing
+                          (na)     NotAppl
+S124                   Time to dnkg water &back(mins)                   953    3    N    I    1    0   No   No
+                               0:900  
+                               996    On premises
+                           (m) 999    Missing
+                          (na)        NotAppl
+S126E                  Video                                            956    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S129D                  A tractor                                        957    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S129E                  Horse/cart                                       958    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S222                   Births since January 1990                        959    1    N    I    1    0   No   No
+                               0:6  
+                          (na)      NotAppl
+S223                   Currently pregnant                               960    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  Unsure
+                           (m) 9  Missing
+S609                   Why regrets sterilization                        961    1    N    I    1    0   No   No
+                               1  Resp.wants an.child
+                               2  Ptnr wants an.child
+                               3  Both want an.child
+                               4  Side effects
+                               6  Other
+                           (m) 9  Missing
+                          (na)    NotAppl
+S616B                  Who thinks should decide methd                   962    2    N    I    1    0   No   No
+                               1   Self
+                               2   Spouse
+                               3   Both of us
+                               4   Health professional
+                               5   Relative
+                               6   Friend
+                               96  Other
+                               98  DK
+                           (m) 99  Missing
+                          (na)     NotAppl
+S618AB                 How many boys                                    964    2    N    I    1    0   No   No
+                               0:30  
+                               95    Up to God
+                               96    Other
+                               98    DK
+                          (na)       NotAppl
+S618AG                 How many girls                                   966    2    N    I    1    0   No   No
+                               0:30  
+                               95    Up to God
+                               96    Other
+                               98    DK
+                          (na)       NotAppl
+S618AE                 How many of either sex                           968    2    N    I    1    0   No   No
+                               0:30  
+                               95    Up to God
+                               96    Other
+                               98    DK
+                           (m) 99    Missing
+                          (na)       NotAppl
+S620                   Daughters mother gave birth to                   970    2    N    I    1    0   No   No
+                               1:20  
+                           (m) 99    Missing
+                          (na)       NotAppl
+S621                   Daughters who reached 12 years                   972    2    N    I    1    0   No   No
+                               1:20  
+                          (na)       NotAppl
+S622                   Daughters alive now                              974    2    N    I    1    0   No   No
+                               1:20  
+                          (na)       NotAppl
+S623                   Sisters dead now                                 976    2    N    I    1    0   No   No
+                               0:20  
+                          (na)       NotAppl
+S624                   Sisters who died in pregnancy                    978    2    N    I    1    0   No   No
+                               0:20  
+                          (na)       NotAppl
+S625                   Sisters who died in childbirth                   980    2    N    I    1    0   No   No
+                               0:20  
+                          (na)       NotAppl
+S626                   Sisters died 6 wks after prgcy                   982    2    N    I    1    0   No   No
+                               0:20  
+                          (na)       NotAppl
+S627                   Sum maternal deaths                              984    2    N    I    1    0   No   No
+                           (m) 99  Missing
+                          (na)     NotAppl
+S703                   Partners level of education                      986    1    N    I    1    0   No   No
+                               1  Primary
+                               2  Middle/JSS
+                               3  SSS/Comm./Voc/Tech
+                               4  Post.sec/nurse/polyt
+                               5  Higher
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+S704                   Partners highest standard/form                   987    2    N    I    1    0   No   No
+                               0:8  
+                               98   DK
+                           (m) 99   Missing
+                          (na)      NotAppl
+S707                   Works on own land                                989    1    N    I    1    0   No   No
+                               1  His/family land
+                               2  Rented land
+                               3  Someone else's land
+                           (m) 9  Missing
+                          (na)    NotAppl
+S708                   Currently working                                990    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+S709                   Currently working: probed                        991    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S801                   Respondents own language                         992    2    N    I    1    0   No   No
+                               1   Twi
+                               2   Fanti
+                               3   Ga-Adangbe
+                               4   Ewe
+                               5   Nzeme
+                               6   Dagbani
+                               7   Hausa
+                               8   English
+                               96  Other
+                           (m) 99  Missing
+                          (na)     NotAppl
+S802                   Language of interview                            994    2    N    I    1    0   No   No
+                               1   Twi
+                               2   Fanti
+                               3   Ga-Adangbe
+                               4   Ewe
+                               5   Nzeme
+                               6   Dagbani
+                               7   Hausa
+                               8   English
+                               96  Other
+                           (m) 99  Missing
+                          (na)     NotAppl
+S803                   Use of 3rd party interpreter                     996    1    N    I    1    0   No   No
+                               1  None of interview
+                               2  A small portion
+                               3  Most of interview
+                               4  All of interview
+                           (m) 9  Missing
+                          (na)    NotAppl
+S804                   Sex and approx.age of interptr                   997    1    N    I    1    0   No   No
+                               1  Adult female
+                               2  Teenage female
+                               3  Adult male
+                               4  Teenage male
+                               5  Child
+                           (m) 9  Missing
+                          (na)    NotAppl
+IDX94                  Index to birth history                           998    1    N    I    1    0   No   No
+                               1:6  
+S403                   Time wanted pregnancy                            999    1    N    I    1    0   No   No
+                               1  Then
+                               2  Later
+                               3  No more
+                           (m) 9  Missing
+S404                   Time would have waited                          1000    3    N    I    1    0   No   No
+                               998  DK
+                           (m) 999  Missing
+                          (na)      NotAppl
+S409                   Tetanus injection in pregnancy                  1003    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  DK
+                           (m) 9  Missing
+S410                   Number of injections                            1004    1    N    I    1    0   No   No
+                               1:6  
+                               8    DK
+                           (m) 9    Missing
+                          (na)      NotAppl
+S417B                  Rec'd PN care 6 wks after del.                  1005    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S417CA                 PN care by : doctor                             1006    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S417CB                 PN care by : nurse                              1007    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S417CC                 PN care by : midwife                            1008    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S417CD                 PN care by : TBA (trained)                      1009    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S417CE                 PN care by : TBA (not trained)                  1010    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S417CF                 PN care by : relative                           1011    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S417CG                 PN care by : other person                       1012    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S429                   Times breastfed during night                    1013    2    N    I    1    0   No   No
+                               1:30  
+                           (m) 99    Missing
+                          (na)       NotAppl
+S430                   Times breastfed during day                      1015    2    N    I    1    0   No   No
+                               0:30  
+                           (m) 99    Missing
+                          (na)       NotAppl
+IDX95                  Index to birth history                          1017    1    N    I    1    0   No   No
+                               1:6  
+S451                   Anything to treat fever                         1018    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+S452A                  Fever treated w. injection                      1019    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S452B                  Fever treated w. antibiotic                     1020    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S452C                  Fever treated w. antimalarial                   1021    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S452D                  Fever treated w. cough syrup                    1022    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S452E                  Fever treated w.oth.pill/syrup                  1023    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S452F                  Fever treated w.unk.pill/syrup                  1024    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S452G                  Fever treated w.home remedy                     1025    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S452H                  Fever treated w.other trtment                   1026    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S453                   Seek advice/treatment                           1027    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454A                  Fvr trtmt source : gvt hosp.                    1028    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454B                  Fvr trtmt source: Gvt.hlth.ctr                  1029    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454C                  Fvr trtmt source:Gvt.hlth.post                  1030    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454D                  Fvr trtmt source:mobile clinic                  1031    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454E                  Fvr trtmt source:cmmty.H.workr                  1032    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454F                  Fvr trtmt source:private hosp.                  1033    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454G                  Fvr trtmt source:pharmacy                       1034    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454H                  Fvr trtmt source:priv.doctor                    1035    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454I                  Fvr trtmt source:mobile clinic                  1036    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454J                  Fvr trtmt source:comm.hlth.wkr                  1037    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454K                  Fvr trtmt source:shop                           1038    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454L                  Fvr trtmt source:trad.pract'er                  1039    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S454M                  Fvr trtmt source:other                          1040    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459A                  Anything to treat fever/cough                   1041    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459BA                 Cough treated w. injection                      1042    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459BB                 Cough treated w. antibiotic                     1043    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459BC                 Cough treated w. antimalarial                   1044    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459BD                 Cough treated w. cough syrup                    1045    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459BE                 Cough treated w.oth.pill/syrup                  1046    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459BF                 Cough treated w.unk.pill/syrup                  1047    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459BG                 Cough treated w.home remedy                     1048    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459BH                 Cough treated w.other trtment                   1049    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459C                  Seek advice/treatment                           1050    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DA                 Cough trtmt source : gvt hosp.                  1051    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DB                 Cgh trtmt source: Gvt.hlth.ctr                  1052    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DC                 Cgh trtmt source:Gvt.hlth.post                  1053    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DD                 Cgh trtmt source:mobile clinic                  1054    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DE                 Cgh trtmt source:cmmty.H.workr                  1055    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DF                 Cgh trtmt source:private hosp.                  1056    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DG                 Cgh trtmt source:pharmacy                       1057    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DH                 Cgh trtmt source:priv.doctor                    1058    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DI                 Cgh trtmt source:mobile clinic                  1059    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DJ                 Cgh trtmt source:comm.hlth.wkr                  1060    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DK                 Cgh trtmt source:shop                           1061    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DL                 Cgh trtmt source:trad.pract'er                  1062    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S459DM                 Cgh trtmt source:other                          1063    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                           (m) 9  Missing
+                          (na)    NotAppl
+S474                   Given ORS : Phermerol                           1064    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+S475A                  Given ORS : other ORS solution                  1065    1    N    I    1    0   No   No
+                               0  No
+                               1  Yes
+                               8  DK
+                           (m) 9  Missing
+                          (na)    NotAppl
+--------------------------------------------------------------------------------------------------------------
+Relation Name         Primary               Linked by             Secondary             Linked by
+--------------------------------------------------------------------------------------------------------------
