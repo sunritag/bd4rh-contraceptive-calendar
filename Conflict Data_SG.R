@@ -15,6 +15,17 @@ conflict <- conflict %>%
             source_headline, source_original, where_coordinates,
             where_description))
 
+##renaming countries to match the data matching file
+conflict <- conflict %>%
+  mutate(country = case_when(
+    country == "DR Congo (Zaire)" ~ "Congo Democratic Republic", 
+    country == "Ivory Coast" ~ "Cote d'Ivoire",
+    country == "Kingdom of eSwatini (Swaziland)" ~ "Eswatini",
+    country == "Madagascar (Malagasy)" ~ "Madagascar",
+    country == "Zimbabwe (Rhodesia)" ~ "Zimbabwe",
+    TRUE ~ country
+  ))
+
 #cleaning data matching file
 data <- data %>%
   separate(Country.Year, c("country", "year"),"\\s[0-9]")
@@ -26,6 +37,8 @@ data <- data %>%
     SPA.Datasets = ifelse(SPA.Datasets == "Download", 1, 0))
 
 #combining the two
+
+##makes a vector of all countries in the data matching file
 countries_dhs <- data %>%
   distinct(country) %>%
   pull()
@@ -33,6 +46,7 @@ countries_dhs <- data %>%
 conflict <- conflict %>%
   filter(country %in% countries_dhs)
 
+##makes a vector of all countries in the conflict data
 countries_conflict <- conflict %>%
   distinct(country) %>%
   pull()
@@ -42,14 +56,38 @@ conflict_pivot <- conflict %>%
   group_by(country) %>%
   distinct(year)
 
-country_conflict_dates <- paste(c(conflict_pivot$year)[data$country=="Angola"], collapse=", ")
+##countries not in conflict data but in dhs data
+'%!in%' <- function(x,y)!('%in%'(x,y))
+conflict_free <- data %>%
+  filter(country %!in% countries_conflict) %>%
+  distinct(country) %>%
+  pull()
 
 data_matched_conflict <- data %>%
   filter(Type == "Standard DHS") %>%
-  mutate(in_conflict = ifelse(country %in% countries_conflict == TRUE, "Yes", "No"))
+  filter(country %in% countries_conflict)
 
-#mutate(conflict_years = case_when(
- # (in_conflict == "Yes") ~ paste(c(conflict_pivot$year)[conflict_pivot$country==country], collapse=", "),
-  #(in_conflict == "No") ~ "NA"
+data_matched_conflict <- data_matched_conflict %>%
+  mutate(year = str_replace_all(year, "\\d\\d[-]", ""))
+
+#countries with the most data
+most_data <- data_matched_conflict %>%
+  count(country)
+
+#conflict and data years
+data_years <- data_matched_conflict %>%
+  group_by(country) %>%
+  summarise(first_year_data = min(as.numeric(year)),
+            last_year_data = max(as.numeric(year)))
+conflict_years <- conflict_pivot %>%
+  group_by(country) %>%
+  summarise(first_year_conflict = min(as.numeric(year)),
+            last_year_conflict = max(as.numeric(year)))
+years <- left_join(data_years, conflict_years)
+years <- years %>%
+  mutate(use = ifelse((first_year_data - 4 <= first_year_conflict) & 
+           (last_year_conflict <= last_year_data), "Yes", "No"))
+  
+
   
 
