@@ -18,7 +18,7 @@ get_file_strings <- function(country, year) {
 
 get_file_strings("Ghana", "2014")
 
-GHBR72FL <- read_dta(file = "2014/GHBR72DT/GHBR72FL.DTA")
+GHBR72FL <- read_dta(file = "DHS_data/Ghana/2014/GHBR72DT/GHBR72FL.DTA")
 GHCR71FL <- read_dta(file = "2014/GHCR71DT/GHCR71FL.DTA")
 GHHR72FL <- read_dta(file = "2014/GHHR72DT/GHHR72FL.DTA")
 GHIR72FL <- read_dta(file = "2014/GHIR72DT/GHIR72FL.DTA")

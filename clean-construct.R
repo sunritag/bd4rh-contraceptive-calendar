@@ -23,6 +23,7 @@ library(tidyverse)
 library(magrittr)
 library(stringr)
 library(reshape2)
+library(haven)
 
 
 # functions ===================================================================
@@ -35,16 +36,16 @@ rd3 <- function(y) sprintf("%.3f", round(y, 3))
 
 
 # read in data ===============================================================
-BOX_PATH <- "C:/Users/amyfi/Box/"
-
+#BOX_PATH <- "C:/Users/amyfi/Box/"
 
 ### CHANGE - file name (Country) and country name
-country <- "UGIR7H"
-countryName <- "Uganda"
+country <- "GHIR4B"
+countryName <- "Ghana"
 
 # read in the IR data file from your country of interest
-dhs <- read.dta(unzip(paste0(BOX_PATH, "/bd4rh-data/RawZIPFiles/", country, "DT.ZIP"),
-                        files = paste0(country, "FL.DTA")))
+# dhs <- read.dta(unzip(paste0(BOX_PATH, "/bd4rh-data/RawZIPFiles/", country, "DT.ZIP"),
+#                         files = paste0(country, "FL.DTA")))
+dhs <- read_dta(paste0("DHS_data/", countryName, "/", country, "FL.DTA"))
 
 dhs$vcal_2=str_pad(dhs$vcal_2, width=80, side="right") # make reasons 80 char
 
@@ -243,6 +244,5 @@ datL$Country.Name <- countryName
 
 # save cleaned data
 rm(ch, cLong, dems, dh, dLong)
- saveRDS(datL, file=paste0(BOX_PATH, "/bd4rh-data/CountrySpecific/", 
-                           countryName, "/", country, "FL.RDS"))
+saveRDS(datL, file=paste0("DHS_data/", countryName, "/", country, "FL.RDS"))
 
