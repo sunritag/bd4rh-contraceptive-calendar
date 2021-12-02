@@ -1,0 +1,22 @@
+email sent March 2012
+
+
+Dear DHS GPS Data User,
+
+We are contacting you because you downloaded a previous version of the Namibia 2006 DHS GPS data.  
+The dataset NMGE51FL had 2 clusters with incorrect urban/rural definitions and 55 clusters with 
+missing urban/rural definitions.   
+
+
+The following cluster's urban_rural values have been changed from rural to urban: 338, 339
+
+Clusters 183-238 now have urban/rural definitions.
+
+
+These issues have been resolved in the newly issued dataset NMGE52FL.  Please use these data 
+for any analyses and disregard the previous data file.  We apologize for any confusion this may 
+cause you.   
+
+MEASURE DHS
+GIS Team
+gpsrequests@measuredhs.com

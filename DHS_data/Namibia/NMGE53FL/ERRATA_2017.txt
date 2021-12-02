@@ -1,0 +1,18 @@
+email sent January 2017
+Dear DHS GPS Data User,
+
+We are contacting you because you downloaded a previous version of the Namibia 2006 DHS GPS data.  
+The dataset NMGE52FL had 9 clusters with incorrect DHSID fields, all other fields were correct.
+These 9 rows all had field name NM200600000500 instead of the DHSID that corresponded to the individual DHSCLUST.
+This applies to DHSCLUST 150, 151, 184, 185, 227, 368, 414, 475, and 479.    
+
+
+
+These issues have been resolved in the newly issued dataset NMGE53FL.  Please use these data 
+for any analyses and disregard the previous data file.  We apologize for any confusion this may 
+cause you.   
+
+The DHS Program
+Geospatial Team
+gpsrequests@dhsprogram.com
+
