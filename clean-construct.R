@@ -39,7 +39,7 @@ rd3 <- function(y) sprintf("%.3f", round(y, 3))
 #BOX_PATH <- "C:/Users/amyfi/Box/"
 
 ### CHANGE - file name (Country) and country name
-country <- "ZMIR71"
+country <- "ZMIR61"
 countryName <- "Zambia"
 
 # read in the IR data file from your country of interest
