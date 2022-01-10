@@ -39,8 +39,8 @@ rd3 <- function(y) sprintf("%.3f", round(y, 3))
 #BOX_PATH <- "C:/Users/amyfi/Box/"
 
 ### CHANGE - file name (Country) and country name
-country <- "ZMIR61"
-countryName <- "Zambia"
+country <- "GHIR72FL"
+countryName <- "Ghana"
 
 # read in the IR data file from your country of interest
 # dhs <- read.dta(unzip(paste0(BOX_PATH, "/bd4rh-data/RawZIPFiles/", country, "DT.ZIP"),
@@ -57,6 +57,7 @@ dems <-
   dhs %>%
   select(caseid, # id
          v000, # country code
+         v001, # cluster location
          v005, # weight
          v007, # year of interview
          v008, # cmc date of interview
