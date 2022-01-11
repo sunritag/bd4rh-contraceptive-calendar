@@ -55,7 +55,7 @@ dhs$vcal_2=str_pad(dhs$vcal_2, width=80, side="right") # make reasons 80 char
 
 dems <- 
   dhs %>%
-  select(caseid, # id
+  select(caseid, # id 
          v000, # country code
          v001, # cluster location
          v005, # weight
