@@ -7,8 +7,8 @@ library(lubridate)
 conflict <- read.csv(file = 'conflict_coordinates.csv')
 
 #load dhs and gps data
-country <- "NMIR61"
-gpscode <- "NMGE61"
+country <- "nmir51"
+gpscode <- "NMGE53"
 countryName <- "Namibia"
 
 dhs <- readRDS(paste0("DHS_data/", countryName, "/", country, "FL.RDS"))
@@ -75,6 +75,6 @@ dhs_join <- dhs_join %>%
 #save final joined data
 saveRDS(dhs_join, file=paste0("DHS_data/", countryName, "/", country, "FL_joined.RDS"))
 
-  
-
-
+dhs_join_filtered <- dhs_join %>%
+  select(month, year, caseid, Country.Name, ADM1FIPS, LATNUM, LONGNUM)
+write.csv(dhs_join_filtered, file=paste0("DHS_data/", countryName, "/", country, "FL_joined.csv"), row.names = FALSE)
