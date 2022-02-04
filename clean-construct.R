@@ -39,8 +39,8 @@ rd3 <- function(y) sprintf("%.3f", round(y, 3))
 #BOX_PATH <- "C:/Users/amyfi/Box/"
 
 ### CHANGE - file name (Country) and country name
-country <- "NGIR7B"
-countryName <- "Nigeria"
+country <- "ZWIR42"
+countryName <- "Zimbabwe"
 
 # read in the IR data file from your country of interest
 # dhs <- read.dta(unzip(paste0(BOX_PATH, "/bd4rh-data/RawZIPFiles/", country, "DT.ZIP"),
