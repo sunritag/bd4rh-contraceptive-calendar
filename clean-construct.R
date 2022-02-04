@@ -39,8 +39,8 @@ rd3 <- function(y) sprintf("%.3f", round(y, 3))
 #BOX_PATH <- "C:/Users/amyfi/Box/"
 
 ### CHANGE - file name (Country) and country name
-country <- "NMIR61"
-countryName <- "Namibia"
+country <- "MLIR41"
+countryName <- "Mali"
 
 # read in the IR data file from your country of interest
 # dhs <- read.dta(unzip(paste0(BOX_PATH, "/bd4rh-data/RawZIPFiles/", country, "DT.ZIP"),
@@ -70,7 +70,7 @@ dems <-
          v024, # province
          v025, # urban/rural
          v149, # ed brackets
-         v190, # wealth quintile
+         #v190, # wealth quintile
          v211, # cmc of first birth to woman
          v212, # age of resp at first birth
          v501, # current marital status
