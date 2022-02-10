@@ -24,7 +24,8 @@ conflict <- conflict %>%
     country == "Madagascar (Malagasy)" ~ "Madagascar",
     country == "Zimbabwe (Rhodesia)" ~ "Zimbabwe",
     TRUE ~ country
-  ))
+  )) %>%
+  arrange(year)
 
 #cleaning data matching file
 data <- data %>%
@@ -45,6 +46,8 @@ countries_dhs <- data %>%
 
 conflict <- conflict %>%
   filter(country %in% countries_dhs)
+
+write.csv(conflict, "Conflict_Full_Africa.csv")
 
 ##makes a vector of all countries in the conflict data
 countries_conflict <- conflict %>%
@@ -87,7 +90,12 @@ years <- left_join(data_years, conflict_years)
 years <- years %>%
   mutate(use = ifelse((first_year_data - 4 <= first_year_conflict) & 
            (last_year_conflict <= last_year_data), "Yes", "No"))
-  
 
-  
+#country conflict episodes
+conflict_by_country <- conflict %>%
+  group_by(country) %>%
+  summarize(year_list = list(year)) %>%
+  mutate(year_list = as.character(year_list))
+
+write.csv(conflict_by_country, "Conflict Years by Country.csv")
 
