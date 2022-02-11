@@ -1,0 +1,12 @@
+The previous version of the Mali 2001 DHS GPS data named MLGE41FL had 1 cluster with 
+incorrect urban/rural definition.   
+
+The following cluster's urban_rural values have been changed from rural to urban: 335
+
+These issues have been resolved in the newly issued data file MLGE42FL.  Please use these data 
+for any analyses and disregard the previous data file.  We apologize for any confusion this may 
+cause you.   
+
+MEASURE DHS
+GIS Team
+gpsrequests@measuredhs.com

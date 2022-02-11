@@ -7,9 +7,9 @@ library(lubridate)
 conflict <- read.csv(file = 'conflict_coordinates.csv')
 
 #load dhs and gps data
-country <- "nmir51"
-gpscode <- "NMGE53"
-countryName <- "Namibia"
+country <- "ZWIR72"
+gpscode <- "ZWGE72"
+countryName <- "Zimbabwe"
 
 dhs <- readRDS(paste0("DHS_data/", countryName, "/", country, "FL.RDS"))
 gps <- st_read(paste0("DHS_data/", countryName, "/", gpscode, "FL/", gpscode, "FL.shp"))
@@ -17,11 +17,13 @@ gps <- st_read(paste0("DHS_data/", countryName, "/", gpscode, "FL/", gpscode, "F
 dhs_join <- left_join(dhs, gps, by = c("v001" = "DHSCLUST"))
 
 #load regions
-##namibia_regions <- st_read("DHS_data/Namibia/region_shps/sdr_subnational_boundaries.shp")
-##ghana_regions <- st_read("DHS_data/Ghana/region_shps/sdr_subnational_boundaries.shp")
+##nigeria_regions <- st_read("DHS_data/Namibia/region_shps/sdr_subnational_boundaries.shp")
+##mali_regions <- st_read("DHS_data/Ghana/region_shps/sdr_subnational_boundaries.shp")
+zimbabwe_regions <- st_read("DHS_data/Zimbabwe/shps/sdr_subnational_boundaries.shp")
 
 #clean conflict data
 conflict <- conflict %>%
+  filter(country == "Zimbabwe" & year %in% c(2007, 2008, 2009)) %>%
   mutate(conflict_region = case_when(
     country == "Ghana" & latitude > 10.5 ~ "Upper East",
     country == "Ghana" & latitude < 10.5 ~ "Northern",
