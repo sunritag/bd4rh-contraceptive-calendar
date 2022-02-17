@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r message = FALSE, warning = FALSE}
 library(tidyverse)
+library(sf)
 ```
 
 
@@ -31,18 +32,158 @@ zimbabwe <- rbind(df1, df2, df3)
 ```
 
 ```{r}
-
+# filtering for observations within 3 years before to 4 years after conflict
+zimbabwe <- zimbabwe %>%
+  filter(year >= 2004 & year <= 2013)
 ```
-
 
 
 ## Sample size (number of women) by region and cluster
 
 ```{r}
-ZWIR52FL_joined %>%
+zimbabwe %>%
   group_by(v024, v001) %>%#v024 is region, v001 is cluster
   summarise(n = n_distinct(caseid))
 ```
+
+## Proportion of exposed respondents
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_reg) %>%
+  summarise(n = n()) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_10) %>%
+  summarise(n = n()) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_20) %>%
+  summarise(n = n()) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_50) %>%
+  summarise(n = n()) %>%
+  mutate(proportion = n/sum(n))
+```
+
+## Exposure by demographic segments
+
+### Age in 5 year groups
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_reg, v013) %>% #age in 5 year groups
+  summarise(n = n())
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_10, v013) %>% #age in 5 year groups
+  summarise(n = n())
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_20, v013) %>% #age in 5 year groups
+  summarise(n = n())
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_50, v013) %>% #age in 5 year groups
+  summarise(n = n())
+```
+### Type of place of residence
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_reg, v025) %>% # type of place of residence
+  summarise(n = n())
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_10, v025) %>% # type of place of residence
+  summarise(n = n())
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_20, v025) %>% # type of place of residence
+  summarise(n = n())
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_50, v025) %>% # type of place of residence
+  summarise(n = n())
+```
+
+
+### Educational Attainment 
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_reg, v149) %>% 
+  summarise(n = n())
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_10, v149) %>% 
+  summarise(n = n())
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_20, v149) %>%
+  summarise(n = n())
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_50, v149) %>% 
+  summarise(n = n())
+```
+
+
+### Wealth Index
+
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_reg, v190) %>% 
+  summarise(n = n())
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_10, v190) %>% 
+  summarise(n = n())
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_20, v190) %>%
+  summarise(n = n())
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_50, v190) %>% 
+  summarise(n = n())
+```
+
 
 # Mali
 
