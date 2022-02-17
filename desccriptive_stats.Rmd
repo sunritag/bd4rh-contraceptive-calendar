@@ -20,6 +20,21 @@ library(tidyverse)
 
 ## Creating final Zimbabwe dataset
 
+```{r}
+df1 <- readRDS("DHS_data/Zimbabwe/ZWIR52FL_joined.RDS")
+df2 <- readRDS("DHS_data/Zimbabwe/ZWIR62FL_joined.RDS")
+df3 <- readRDS("DHS_data/Zimbabwe/ZWIR72FL_joined.RDS")
+```
+
+```{r}
+zimbabwe <- rbind(df1, df2, df3)
+```
+
+```{r}
+
+```
+
+
 
 ## Sample size (number of women) by region and cluster
 
