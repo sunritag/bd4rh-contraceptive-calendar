@@ -1,0 +1,34 @@
+---
+title: "descriptive_stats"
+author: "Shari Tian"
+date: "2/11/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load Packages
+
+```{r message = FALSE, warning = FALSE}
+library(tidyverse)
+```
+
+
+# Zimbabwe
+
+## Creating final Zimbabwe dataset
+
+
+## Sample size (number of women) by region and cluster
+
+```{r}
+ZWIR52FL_joined %>%
+  group_by(v024, v001) %>%#v024 is region, v001 is cluster
+  summarise(n = n_distinct(caseid))
+```
+
+# Mali
+
+# Nigeria
