@@ -38,6 +38,16 @@ zimbabwe <- zimbabwe %>%
 ```
 
 
+exposed_reg = 1 if the area the observation is in was exposed to conflict using region as the geographical unit
+
+exposed_10 = 1 if the area the observation is in was exposed to conflict using circles centered at a DHS cluster with a 10 km radius as the geographical unit
+
+exposed_20 = 1 if the area the observation is in was exposed to conflict using circles centered at a dhs cluster with a 20 km radius as the geographical unit
+
+exposed_50 = 1 if the area the observation is in was exposed to conflict using circles centered at a dhs cluster with a 50 km radius as the geographical unit
+
+
+
 ## Sample size (number of women) by region and cluster
 
 ```{r}
@@ -51,28 +61,28 @@ zimbabwe %>%
 ```{r}
 zimbabwe %>%
   group_by(exposed_reg) %>%
-  summarise(n = n()) %>%
+  summarise(n = n_distinct(caseid)) %>%
   mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_10) %>%
-  summarise(n = n()) %>%
+  summarise(n = n_distinct(caseid)) %>%
   mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_20) %>%
-  summarise(n = n()) %>%
+  summarise(n = n_distinct(caseid)) %>%
   mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_50) %>%
-  summarise(n = n()) %>%
+  summarise(n = n_distinct(caseid)) %>%
   mutate(proportion = n/sum(n))
 ```
 
@@ -83,50 +93,67 @@ zimbabwe %>%
 ```{r}
 zimbabwe %>%
   group_by(exposed_reg, v013) %>% #age in 5 year groups
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_10, v013) %>% #age in 5 year groups
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_20, v013) %>% #age in 5 year groups
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_50, v013) %>% #age in 5 year groups
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
 ```
 ### Type of place of residence
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_reg, v025) %>% # type of place of residence
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
 ```
+
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_10, v025) %>% # type of place of residence
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_20, v025) %>% # type of place of residence
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_50, v025) %>% # type of place of residence
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 
@@ -135,25 +162,33 @@ zimbabwe %>%
 ```{r}
 zimbabwe %>%
   group_by(exposed_reg, v149) %>% 
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_10, v149) %>% 
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_20, v149) %>%
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_50, v149) %>% 
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 
@@ -163,26 +198,49 @@ zimbabwe %>%
 ```{r}
 zimbabwe %>%
   group_by(exposed_reg, v190) %>% 
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_10, v190) %>% 
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_20, v190) %>%
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
 ```
 
 ```{r}
 zimbabwe %>%
   group_by(exposed_50, v190) %>% 
-  summarise(n = n())
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
 ```
+
+Notes:
+- could collapse categories into larger groups for 10 and 20
+- may need to control for urban/rural during inference and modeling 
+
+
+Next steps:
+- figure out what each level represents (age, wealth index, urban/rural, education)
+- descriptive stats for mali and nigeria 
+- decide on exposure level 
+  - too much overlap with 50
+  - 10 or 20
+  - could create exposure_15 variable 
+- timing analysis
+  - indicate before, during, after instead of exposure variable
 
 
 # Mali
