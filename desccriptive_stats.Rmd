@@ -241,6 +241,7 @@ Next steps:
   - could create exposure_15 variable 
 - timing analysis
   - indicate before, during, after instead of exposure variable
+- download foreign aid data and create an intensity score variable
 
 
 # Mali
