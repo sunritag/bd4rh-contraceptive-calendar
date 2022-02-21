@@ -22,19 +22,24 @@ library(sf)
 ## Creating final Zimbabwe dataset
 
 ```{r}
-df1 <- readRDS("DHS_data/Zimbabwe/ZWIR52FL_joined.RDS")
-df2 <- readRDS("DHS_data/Zimbabwe/ZWIR62FL_joined.RDS")
-df3 <- readRDS("DHS_data/Zimbabwe/ZWIR72FL_joined.RDS")
-```
-
-```{r}
-zimbabwe <- rbind(df1, df2, df3)
+z1 <- readRDS("DHS_data/Zimbabwe/ZWIR52FL_joined.RDS")
+z2 <- readRDS("DHS_data/Zimbabwe/ZWIR62FL_joined.RDS")
+z3 <- readRDS("DHS_data/Zimbabwe/ZWIR72FL_joined.RDS")
 ```
 
 ```{r}
 # filtering for observations within 3 years before to 4 years after conflict
-zimbabwe <- zimbabwe %>%
+z1 <- z1 %>%
   filter(is.na(time) == FALSE)
+z2 <- z2 %>%
+  filter(is.na(time) == FALSE)
+z3 <- z3 %>%
+  filter(is.na(time) == FALSE)
+```
+
+
+```{r}
+zimbabwe <- rbind(z1, z2, z3)
 ```
 
 
@@ -284,9 +289,12 @@ zimbabwe %>%
 
 ```{r}
 zimbabwe %>%
-  group_by(time) %>%#v024 is region, v001 is cluster
+  group_by(time) %>% 
   summarise(n = n_distinct(caseid))
 ```
+
+may need to collapse during end and onset?
+figure out why doesnt divide perfectly by 72
 
 ## Sample size (number of women) by region and cluster
 
@@ -411,6 +419,11 @@ zimbabwe %>%
 
 ### Educational Attainment 
 
+0, 1, 2 = primary or less
+3, 4
+5
+
+
 0 No education
 1 Incomplete primary
 2 Complete primary
@@ -496,25 +509,36 @@ zimbabwe %>%
 
 # Mali
 
+looking at 2004 onward
+
 ```{r}
-m1 <- readRDS("DHS_data/Mali/MLIR41FL_joined.RDS")
 m2 <- readRDS("DHS_data/Mali/MLIR53FL_joined.RDS")
 m3 <- readRDS("DHS_data/Mali/MLIR6AFL_joined.RDS")
 m4 <- readRDS("DHS_data/Mali/MLIR7AFL_joined.RDS")
 ```
 
 ```{r}
-mali <- rbind(m1, m2, m3, m4)
+m2 <- m2 %>%
+  filter(is.na(time) == FALSE)
+m3 <- m3 %>%
+  filter(is.na(time) == FALSE)
+m4 <- m4 %>%
+  filter(is.na(time) == FALSE)
+```
+
+
+```{r}
+mali <- rbind(m2, m3, m4)
 ```
 
 # Nigeria
 
 ```{r}
-n1 <- readRDS("DHS_data/Nigeria/NGIR53FL_joined.RDS")
-n2 <- readRDS("DHS_data/Nigeria/NGIR6AFL_joined.RDS")
-n3 <- readRDS("DHS_data/Nigeria/NGIR7BFL_joined.RDS")
+# n1 <- readRDS("DHS_data/Nigeria/NGIR53FL_joined.RDS")
+# n2 <- readRDS("DHS_data/Nigeria/NGIR6AFL_joined.RDS")
+# n3 <- readRDS("DHS_data/Nigeria/NGIR7BFL_joined.RDS")
 ```
 
 ```{r}
-nigeria <- rbind(n1, n2, n3)
+# nigeria <- rbind(n1, n2, n3)
 ```
