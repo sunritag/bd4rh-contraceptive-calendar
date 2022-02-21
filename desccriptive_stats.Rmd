@@ -34,7 +34,7 @@ zimbabwe <- rbind(df1, df2, df3)
 ```{r}
 # filtering for observations within 3 years before to 4 years after conflict
 zimbabwe <- zimbabwe %>%
-  filter(year >= 2004 & year <= 2013)
+  filter(is.na(time) == FALSE)
 ```
 
 
@@ -42,9 +42,9 @@ exposed_reg = 1 if the area the observation is in was exposed to conflict using 
 
 exposed_10 = 1 if the area the observation is in was exposed to conflict using circles centered at a DHS cluster with a 10 km radius as the geographical unit
 
-exposed_20 = 1 if the area the observation is in was exposed to conflict using circles centered at a dhs cluster with a 20 km radius as the geographical unit
+exposed_20 = 1 if the area the observation is in was exposed to conflict using circles centered at a DHS cluster with a 20 km radius as the geographical unit
 
-exposed_50 = 1 if the area the observation is in was exposed to conflict using circles centered at a dhs cluster with a 50 km radius as the geographical unit
+exposed_50 = 1 if the area the observation is in was exposed to conflict using circles centered at a DHS cluster with a 50 km radius as the geographical unit
 
 
 
@@ -52,7 +52,7 @@ exposed_50 = 1 if the area the observation is in was exposed to conflict using c
 
 ```{r}
 zimbabwe %>%
-  group_by(v024, v001) %>%#v024 is region, v001 is cluster
+  group_by(v024) %>%#v024 is region, v001 is cluster
   summarise(n = n_distinct(caseid))
 ```
 
@@ -81,7 +81,7 @@ zimbabwe %>%
 
 ```{r}
 zimbabwe %>%
-  group_by(exposed_50) %>%
+  group_by(exposed_15) %>%
   summarise(n = n_distinct(caseid)) %>%
   mutate(proportion = n/sum(n))
 ```
@@ -89,6 +89,14 @@ zimbabwe %>%
 ## Exposure by demographic segments
 
 ### Age in 5 year groups
+
+1 15-19
+2 20-24
+3 25-29
+4 30-34
+5 35-39
+6 40-44
+7 45-49
 
 ```{r}
 zimbabwe %>%
@@ -116,12 +124,17 @@ zimbabwe %>%
 
 ```{r}
 zimbabwe %>%
-  group_by(exposed_50, v013) %>% #age in 5 year groups
+  group_by(exposed_15, v013) %>% #age in 5 year groups
   summarise(n = n_distinct(caseid)) %>%
   group_by(v013) %>%
   mutate(proportion = n/sum(n))
 ```
+
+
 ### Type of place of residence
+
+1 Urban
+2 Rural
 
 ```{r}
 zimbabwe %>%
@@ -150,7 +163,7 @@ zimbabwe %>%
 
 ```{r}
 zimbabwe %>%
-  group_by(exposed_50, v025) %>% # type of place of residence
+  group_by(exposed_15, v025) %>% # type of place of residence
   summarise(n = n_distinct(caseid)) %>%
   group_by(v025) %>%
   mutate(proportion = n/sum(n))
@@ -158,6 +171,14 @@ zimbabwe %>%
 
 
 ### Educational Attainment 
+
+0 No education
+1 Incomplete primary
+2 Complete primary
+3 Incomplete secondary
+4 Complete secondary
+5 Higher
+9 Missing
 
 ```{r}
 zimbabwe %>%
@@ -185,7 +206,7 @@ zimbabwe %>%
 
 ```{r}
 zimbabwe %>%
-  group_by(exposed_50, v149) %>% 
+  group_by(exposed_15, v149) %>% 
   summarise(n = n_distinct(caseid)) %>%
   group_by(v149) %>%
   mutate(proportion = n/sum(n))
@@ -193,6 +214,12 @@ zimbabwe %>%
 
 
 ### Wealth Index
+
+1 Poorest
+2 Poorer
+3 Middle
+4 Richer
+5 Richest
 
 
 ```{r}
@@ -221,7 +248,7 @@ zimbabwe %>%
 
 ```{r}
 zimbabwe %>%
-  group_by(exposed_50, v190) %>% 
+  group_by(exposed_15, v190) %>% 
   summarise(n = n_distinct(caseid)) %>%
   group_by(v190) %>%
   mutate(proportion = n/sum(n))
@@ -242,8 +269,252 @@ Next steps:
 - timing analysis
   - indicate before, during, after instead of exposure variable
 - download foreign aid data and create an intensity score variable
+  - https://www.aiddata.org/data/nigeria-aims-geocoded-research-release-level-1-v1-3-1
+
+
+# Timing Analysis
+
+```{r}
+zimbabwe %>%
+  filter(year == 2006) %>%
+  group_by(time) %>%
+  summarise(n = n_distinct(caseid))
+```
+
+
+```{r}
+zimbabwe %>%
+  group_by(time) %>%#v024 is region, v001 is cluster
+  summarise(n = n_distinct(caseid))
+```
+
+## Sample size (number of women) by region and cluster
+
+```{r}
+zimbabwe %>%
+  group_by(v024, time) %>%#v024 is region, v001 is cluster
+  summarise(n = n_distinct(caseid))
+```
+
+## Proportion of exposed respondents
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_reg, time) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_10, time) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_20, time) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_15, time) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+## Exposure by demographic segments
+
+### Age in 5 year groups
+
+1 15-19
+2 20-24
+3 25-29
+4 30-34
+5 35-39
+6 40-44
+7 45-49
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_reg, v013, time) %>% #age in 5 year groups
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_10, v013, time) %>% #age in 5 year groups
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_20, v013, time) %>% #age in 5 year groups
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_15, v013, time) %>% #age in 5 year groups
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
+```
+
+### Type of place of residence
+
+1 Urban
+2 Rural
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_reg, v025, time) %>% # type of place of residence
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
+```
+
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_10, v025, time) %>% # type of place of residence
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_20, v025, time) %>% # type of place of residence
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_15, v025, time) %>% # type of place of residence
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
+```
+
+
+### Educational Attainment 
+
+0 No education
+1 Incomplete primary
+2 Complete primary
+3 Incomplete secondary
+4 Complete secondary
+5 Higher
+9 Missing
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_reg, v149, time) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_10, v149, time) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_20, v149, time) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_15, v149, time) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
+```
+
+
+### Wealth Index
+
+1 Poorest
+2 Poorer
+3 Middle
+4 Richer
+5 Richest
+
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_reg, v190, time) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_10, v190, time) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_20, v190, time) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_15, v190, time) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
+```
 
 
 # Mali
 
+```{r}
+m1 <- readRDS("DHS_data/Mali/MLIR41FL_joined.RDS")
+m2 <- readRDS("DHS_data/Mali/MLIR53FL_joined.RDS")
+m3 <- readRDS("DHS_data/Mali/MLIR6AFL_joined.RDS")
+m4 <- readRDS("DHS_data/Mali/MLIR7AFL_joined.RDS")
+```
+
+```{r}
+mali <- rbind(m1, m2, m3, m4)
+```
+
 # Nigeria
+
+```{r}
+n1 <- readRDS("DHS_data/Nigeria/NGIR53FL_joined.RDS")
+n2 <- readRDS("DHS_data/Nigeria/NGIR6AFL_joined.RDS")
+n3 <- readRDS("DHS_data/Nigeria/NGIR7BFL_joined.RDS")
+```
+
+```{r}
+nigeria <- rbind(n1, n2, n3)
+```
