@@ -7,8 +7,8 @@ library(lubridate)
 conflict <- read.csv(file = 'conflict_coordinates.csv')
 
 #load dhs and gps data
-country <- "ZWIR42"
-gpscode <- "ZWGE42"
+country <- "ZWIR72"
+gpscode <- "ZWGE72"
 countryName <- "Zimbabwe"
 
 dhs <- readRDS(paste0("DHS_data/", countryName, "/", country, "FL.RDS"))
@@ -21,11 +21,10 @@ zimbabwe_regions <- st_read("DHS_data/Zimbabwe/shps/sdr_subnational_boundaries.s
 
 #clean conflict data
 conflict <- conflict %>%
-  filter(country == "Zimbabwe" & year %in% c(2007, 2008, 2009))
-#conflict <- st_as_sf(conflict, coords = c('latitude', 'longitude'), crs = st_crs(gps))
-conflict_coords <- conflict %>%
+  filter(country == "Zimbabwe" & year %in% c(2007, 2008, 2009)) %>%   
   mutate(month_start = month(date_start),
-         month_end = month(date_end)) %>%
+         month_end = month(date_end))
+conflict_coords <- conflict %>%
   select(longitude, latitude)
 ##Zimbabwe started 4/2007 and ended 8/2009
 
@@ -61,6 +60,18 @@ dhs_join <- dhs_join %>%
          four_yr_after = ifelse((year %in% c(2010:2012) & month %in% c(9:12)) | (year %in% c(2011:2013) & month %in% c(1:8)),
                                 1, 0))
 
+#creating one time variable by combining
+dhs_join <- dhs_join %>%
+  mutate(time = case_when(
+    three_yr_before == 1 ~ "3 years before",
+    one_yr_before == 1 ~ "1 year before",
+    onset == 1 ~ "Onset",
+    during == 1 ~ "During",
+    end == 1 ~ "End", 
+    one_yr_after == 1 ~ "1 year after",
+    four_yr_after == 1 ~ "4 year after"
+  ))
+
 #replicating for 10 km buffers
 gps_10 <- st_transform(gps, 29902)
 gps_10 <- st_buffer(gps_10, 10000)
@@ -79,21 +90,27 @@ conflict_coords$cluster_20 <- apply(st_intersects(gps_20_trans, conflict_trans, 
                                    gps_20_trans[which(col), ]$DHSCLUST
                                  })
 
-#replicating for 50 km buffers
-gps_50 <- st_transform(gps, 29902)
-gps_50 <- st_buffer(gps_50, 50000)
-gps_50_trans <- st_transform(gps_50, 2163)      # apply transformation to polygons sf
-conflict_coords$cluster_50 <- apply(st_intersects(gps_50_trans, conflict_trans, sparse = FALSE), 2, 
+#replicating for 15 km buffers
+gps_15 <- st_transform(gps, 29902)
+gps_15 <- st_buffer(gps_15, 15000)
+gps_15_trans <- st_transform(gps_15, 2163)      # apply transformation to polygons sf
+conflict_coords$cluster_15 <- apply(st_intersects(gps_15_trans, conflict_trans, sparse = FALSE), 2, 
                                     function(col) { 
-                                      gps_50_trans[which(col), ]$DHSCLUST
+                                      gps_15_trans[which(col), ]$DHSCLUST
                                     })
 
 dhs_join <- dhs_join %>%
   mutate(exposed_10 = ifelse(v001 %in% unique(unlist(conflict_coords$cluster_10)), 1, 0),
-         exposed_20 = ifelse(v001 %in% unique(unlist(conflict_coords$cluster_20)), 1, 0),
-         exposed_50 = ifelse(v001 %in% unique(unlist(conflict_coords$cluster_50)), 1, 0),
+         exposed_15 = ifelse(v001 %in% unique(unlist(conflict_coords$cluster_15)), 1, 0),
+         exposed_20 = ifelse(v001 %in% unique(unlist(conflict_coords$cluster_20)), 1, 0)
   )
 
+#create intensity variable
+conflict_intensity <- conflict %>%
+  group_by(year, month_start) %>%
+  summarise(deaths = sum(best)) %>%
+  rename(month = month_start)
+left_join(dhs_join, conflict_intensity, by = c("year", "month"))
 
 #save final joined data
 saveRDS(dhs_join, file=paste0("DHS_data/", countryName, "/", country, "FL_joined.RDS"))

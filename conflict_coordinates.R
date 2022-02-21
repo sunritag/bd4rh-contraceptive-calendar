@@ -26,7 +26,7 @@ conflict <- conflict %>%
     TRUE ~ country
   )) %>%
   select(year, type_of_violence, latitude, longitude, 
-         geom_wkt, country, date_start, date_end) %>%
+         geom_wkt, country, date_start, date_end, best) %>%
   filter(country %in% c("Nigeria", "Mali", "Zimbabwe"))
 
 write.csv(conflict, file= "conflict_coordinates.csv")
