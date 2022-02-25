@@ -509,6 +509,8 @@ zimbabwe %>%
 
 # Mali
 
+## Creating final Mali Dataset
+
 looking at 2004 onward
 
 ```{r}
@@ -531,12 +533,469 @@ m4 <- m4 %>%
 mali <- rbind(m2, m3, m4)
 ```
 
+
+exposed_reg = 1 if the area the observation is in was exposed to conflict using region as the geographical unit
+
+exposed_10 = 1 if the area the observation is in was exposed to conflict using circles centered at a DHS cluster with a 10 km radius as the geographical unit
+
+exposed_20 = 1 if the area the observation is in was exposed to conflict using circles centered at a DHS cluster with a 20 km radius as the geographical unit
+
+exposed_50 = 1 if the area the observation is in was exposed to conflict using circles centered at a DHS cluster with a 50 km radius as the geographical unit
+
+
+
+## Sample size (number of women) by region and cluster
+
+```{r}
+mali %>%
+  group_by(v024) %>%#v024 is region, v001 is cluster
+  summarise(n = n_distinct(caseid))
+```
+
+## Proportion of exposed respondents
+
+```{r}
+mali %>%
+  group_by(exposed) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_10) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_20) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_15) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+## Exposure by demographic segments
+
+### Age in 5 year groups
+
+1 15-19
+2 20-24
+3 25-29
+4 30-34
+5 35-39
+6 40-44
+7 45-49
+
+```{r}
+mali %>%
+  group_by(exposed, v013) %>% #age in 5 year groups
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_10, v013) %>% #age in 5 year groups
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_20, v013) %>% #age in 5 year groups
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_15, v013) %>% #age in 5 year groups
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
+```
+
+
+### Type of place of residence
+
+1 Urban
+2 Rural
+
+```{r}
+mali %>%
+  group_by(exposed, v025) %>% # type of place of residence
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
+```
+
+
+```{r}
+mali %>%
+  group_by(exposed_10, v025) %>% # type of place of residence
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_20, v025) %>% # type of place of residence
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_15, v025) %>% # type of place of residence
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
+```
+
+
+### Educational Attainment 
+
+0 No education
+1 Incomplete primary
+2 Complete primary
+3 Incomplete secondary
+4 Complete secondary
+5 Higher
+9 Missing
+
+```{r}
+mali %>%
+  group_by(exposed, v149) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_10, v149) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_20, v149) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_15, v149) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
+```
+
+
+### Wealth Index
+
+1 Poorest
+2 Poorer
+3 Middle
+4 Richer
+5 Richest
+
+
+```{r}
+mali %>%
+  group_by(exposed, v190) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_10, v190) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_20, v190) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_15, v190) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
+```
+
+
+# Timing Analysis
+
+```{r}
+mali %>%
+  filter(year == 2006) %>%
+  group_by(time) %>%
+  summarise(n = n_distinct(caseid))
+```
+
+
+```{r}
+mali %>%
+  group_by(time) %>% 
+  summarise(n = n_distinct(caseid))
+```
+
+
+## Sample size (number of women) by region and cluster
+
+```{r}
+mali %>%
+  group_by(v024, time) %>%#v024 is region, v001 is cluster
+  summarise(n = n_distinct(caseid))
+```
+
+## Proportion of exposed respondents
+
+```{r}
+mali %>%
+  group_by(exposed, time) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_10, time) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_20, time) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_15, time) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+## Exposure by demographic segments
+
+### Age in 5 year groups
+
+1 15-19
+2 20-24
+3 25-29
+4 30-34
+5 35-39
+6 40-44
+7 45-49
+
+```{r}
+mali %>%
+  group_by(exposed, v013, time) %>% #age in 5 year groups
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_10, v013, time) %>% #age in 5 year groups
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_20, v013, time) %>% #age in 5 year groups
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_15, v013, time) %>% #age in 5 year groups
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v013) %>%
+  mutate(proportion = n/sum(n))
+```
+
+### Type of place of residence
+
+1 Urban
+2 Rural
+
+```{r}
+mali %>%
+  group_by(exposed, v025, time) %>% # type of place of residence
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
+```
+
+
+```{r}
+mali %>%
+  group_by(exposed_10, v025, time) %>% # type of place of residence
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_20, v025, time) %>% # type of place of residence
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_15, v025, time) %>% # type of place of residence
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v025) %>%
+  mutate(proportion = n/sum(n))
+```
+
+
+### Educational Attainment 
+
+0, 1, 2 = primary or less
+3, 4
+5
+
+
+0 No education
+1 Incomplete primary
+2 Complete primary
+3 Incomplete secondary
+4 Complete secondary
+5 Higher
+9 Missing
+
+```{r}
+mali %>%
+  group_by(exposed, v149, time) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_10, v149, time) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_20, v149, time) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_15, v149, time) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v149) %>%
+  mutate(proportion = n/sum(n))
+```
+
+
+### Wealth Index
+
+1 Poorest
+2 Poorer
+3 Middle
+4 Richer
+5 Richest
+
+
+```{r}
+mali %>%
+  group_by(exposed, v190, time) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_10, v190, time) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_20, v190, time) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(exposed_15, v190, time) %>% 
+  summarise(n = n_distinct(caseid)) %>%
+  group_by(v190) %>%
+  mutate(proportion = n/sum(n))
+```
+
+
+
+
 # Nigeria
 
 ```{r}
 # n1 <- readRDS("DHS_data/Nigeria/NGIR53FL_joined.RDS")
 # n2 <- readRDS("DHS_data/Nigeria/NGIR6AFL_joined.RDS")
 # n3 <- readRDS("DHS_data/Nigeria/NGIR7BFL_joined.RDS")
+```
+
+```{r}
+# n1 <- n1 %>%
+#   filter(is.na(time) == FALSE)
+# n2 <- n2 %>%
+#   filter(is.na(time) == FALSE)
+# n3 <- n3 %>%
+#   filter(is.na(time) == FALSE)
 ```
 
 ```{r}
