@@ -29,33 +29,38 @@ zimbabwe <- readRDS("DHS_data/Zimbabwe/Zimbabwe_final.RDS")
 
 ```{r}
 models <- function(outcome, country){
-  df <- readRDS(paste0("DHS_data/", country, "/", country, "_final.RDS"))
+  df <- readRDS(paste0("DHS_data/", country, "/", country, "_final.RDS")) 
   outcomes <- c("abortion", "conception", "start", "start_modern", "start_traditional",
                   "start_short", "start_long", "shortLong_switch", "longShort_switch", "modTrad_switch",
                   "tradMod_switch", "discontinuation")
   model_tibble <- tibble(model = list())
   for(outcome in outcomes){
-    model <- lm(outcome ~ exposed_15 + time*exposed_15 + v001 + deaths + foreign_aid
+    model <- lm(outcome ~ time*exposed_15 + as.character(v001) + deaths + foreign_aid 
                   + v501 + v013 + v025 + v149 + v190, data = df)
     model_tibble <- model_tibble %>% add_row(model = model)
   }
-}
+} 
+
 ```
+
+TODO:
+- append the wave of survey to cluster variable in join data file in order to uniquely identify the cluster based on wave
+- only interpret time exposed
+- make a line graph showing coefficient for each time period - marginal effects (https://cran.r-project.org/web/packages/margins/vignettes/Introduction.html)
+  - add confidence intervals on graph
+  - for nigeria, x is year, baseline is first year 
+  - for mali and zimbabwe, time is x and have one value for exposed and unexposed 
+- make all time coefficients relative to the during period
+- for nigeria, have year*exposed_15 instead of time*exposed_15
+
 
 
 ```{r}
-zim_model <- lm(abortion ~ exposed_15 + time*exposed_15 + v001 + #deaths
-                foreign_aid + v501 + v013 + v025 + v149 + v190, 
+zim_model <- lm(abortion ~ fct_relevel(time, ref = "During")*exposed_15,
                 data = zimbabwe)
 
 tidy(zim_model)
 ```
 
-```{r}
-zim_model2 <- plm(abortion ~ exposed_15,
-                  data = zimbabwe, 
-                  index = c("v001", "caseid"),
-                  model = "within")
-tidy(zim_model2)
-```
+
 

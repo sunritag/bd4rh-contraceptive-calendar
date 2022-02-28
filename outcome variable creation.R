@@ -101,5 +101,17 @@ dhs <- dhs %>%
   filter(is.na(time) == FALSE) %>%
   filter(c != " ")
 
+
+#adding foreign aid variable
+
+foreign_aid <- read_csv("foreign_aid_data.csv")
+
+dhs <- foreign_aid %>% 
+  filter(Country == country) %>% 
+  select(-Country) %>%
+  right_join(dhs, by = c("Year" = "year")) %>%
+  rename(foreign_aid = Value)
+
+
 #save final joined data
 saveRDS(dhs, file=paste0("DHS_data/", countryName, "/", countryName, "_final.RDS"))

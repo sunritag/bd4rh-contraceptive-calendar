@@ -991,11 +991,11 @@ mali %>%
 
 ```{r}
 # n1 <- n1 %>%
-#   filter(is.na(time) == FALSE)
+#  filter(is.na(time) == FALSE) 
 # n2 <- n2 %>%
-#   filter(is.na(time) == FALSE)
+#  filter(is.na(time) == FALSE)
 # n3 <- n3 %>%
-#   filter(is.na(time) == FALSE)
+#  filter(is.na(time) == FALSE)
 ```
 
 ```{r}

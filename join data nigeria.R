@@ -7,8 +7,8 @@ library(lubridate)
 conflict <- read.csv(file = 'conflict_coordinates.csv')
 
 #load dhs and gps data
-country <- "NGIR53"
-gpscode <- "NGGE52"
+country <- "NGIR6A"
+gpscode <- "NGGE6A"
 countryName <- "Nigeria"
 
 dhs <- readRDS(paste0("DHS_data/", countryName, "/", country, "FL.RDS"))
@@ -84,7 +84,7 @@ conflict_intensity <- conflict %>%
   group_by(year, month_start) %>%
   summarise(deaths = sum(best)) %>%
   rename(month = month_start)
-left_join(dhs_join, conflict_intensity, by = c("year", "month"))
+dhs_join <- left_join(dhs_join, conflict_intensity, by = c("year", "month"))
 
 #save final joined data
 saveRDS(dhs_join, file=paste0("DHS_data/", countryName, "/", country, "FL_joined.RDS"))

@@ -1,13 +1,13 @@
 library(tidyverse)
 library(sf)
 
-foreign_aid <- read_csv("foreign_aid_data.csv")
+foreign_aid <- read_csv("foreign_aid_data.csv") #copy
 
 # Zimbabwe
 
 zim <- readRDS("DHS_data/Zimbabwe/Zimbabwe_final.RDS")
 
-zim_foreign <- foreign_aid %>%
+zim_foreign <- foreign_aid %>% #copy, change zim_foreign to dhs and zim to dhs
   filter(Country == "Zimbabwe") %>% 
   select(-Country) %>%
   right_join(zim, by = c("Year" = "year")) %>%
