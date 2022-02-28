@@ -1,0 +1,44 @@
+---
+title: "data_analysis"
+author: "Shari Tian"
+date: "2/28/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Load Packages
+
+```{r}
+library(tidyverse)
+library(broom)
+library(plm)
+```
+
+
+# Model
+
+## Zimbabwe
+
+```{r}
+zimbabwe <- readRDS("DHS_data/Zimbabwe/Zimbabwe_final.RDS")
+```
+
+```{r}
+zim_model <- lm(abortion ~ exposed_15 + time*exposed_15 + v001 + #deaths
+                foreign_aid + v501 +  v013 + v025 + v149 + v190, 
+                data = zimbabwe)
+
+tidy(zim_model)
+```
+
+```{r}
+zim_model2 <- plm(abortion ~ exposed_15,
+                  data = zimbabwe, 
+                  index = c("v001", "caseid"),
+                  model = "within")
+tidy(zim_model2)
+```
+
