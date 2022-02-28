@@ -46,12 +46,15 @@ models <- function(outcome, country){
 TODO:
 - append the wave of survey to cluster variable in join data file in order to uniquely identify the cluster based on wave
 - only interpret time exposed
+- make all time coefficients relative to the during period
+- for nigeria, have year*exposed_15 instead of time*exposed_15
+- save and export each model output as csv in github, then group them by country
+- put together table of estimates for just the interaction terms 
 - make a line graph showing coefficient for each time period - marginal effects (https://cran.r-project.org/web/packages/margins/vignettes/Introduction.html)
   - add confidence intervals on graph
   - for nigeria, x is year, baseline is first year 
   - for mali and zimbabwe, time is x and have one value for exposed and unexposed 
-- make all time coefficients relative to the during period
-- for nigeria, have year*exposed_15 instead of time*exposed_15
+
 
 
 

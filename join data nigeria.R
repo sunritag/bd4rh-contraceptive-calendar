@@ -86,5 +86,14 @@ conflict_intensity <- conflict %>%
   rename(month = month_start)
 dhs_join <- left_join(dhs_join, conflict_intensity, by = c("year", "month"))
 
+#merging cluster and wave
+dhs_join <- mutate(dhs_join, cluster_unique = paste(v001, v000))
+
+
+#selecting out unnecessary variables
+dhs_join <- dhs_join %>%
+  select(-c(Country.Name:DATUM))
+
+
 #save final joined data
 saveRDS(dhs_join, file=paste0("DHS_data/", countryName, "/", country, "FL_joined.RDS"))
