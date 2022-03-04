@@ -17,6 +17,42 @@ library(broom)
 library(sf)
 ```
 
+# Model for Zimbabwe
+
+## Loading data
+
+```{r}
+zimbabwe <- readRDS("DHS_data/Zimbabwe/Zimbabwe_final.RDS")
+zimbabwe <- zimbabwe %>%
+  select(c(abortion, conception, start, start_modern, start_trad, 
+           start_short, start_long, shortLong_switch, longShort_switch, 
+           modTrad_switch, tradMod_switch, discontinuation, time, Year, 
+           exposed_15, v001, deaths, foreign_aid, v501, v013, v025, v149, 
+           v190, cluster_unique)) %>%
+  mutate(time = fct_relevel(time, ref = "During"),
+         deaths = ifelse(is.na(deaths) == TRUE, 0, deaths))
+```
+
+## Running models
+
+```{r}
+outcomes <- c("abortion", "conception", "start", "start_modern", 
+              "start_trad", "start_short", "start_long", 
+              "shortLong_switch", "longShort_switch", "modTrad_switch",
+              "tradMod_switch", "discontinuation")
+
+for (i in 1:length(outcomes)) {
+  country <- "zimbabwe"
+  model <- tidy(lm(paste(outcomes[i], " ~ time*exposed_15 + cluster_unique + 
+                       foreign_aid + as.character(v501) + as.character(v013) + 
+                       as.character(v025) + as.character(v149) + deaths + 
+                       as.character(v190)"), data = zimbabwe))
+  model <- model %>%
+  filter(str_detect(term, "time") == TRUE)
+  write.csv(model, file = paste0("Results/", country, "_", outcomes[i], ".csv"))
+}
+```
+
 
 # Model for Mali
 
@@ -30,7 +66,8 @@ mali <- mali %>%
            modTrad_switch, tradMod_switch, discontinuation, time, Year, 
            exposed_15, v001, deaths, foreign_aid, v501, v013, v025, v149, 
            v190, cluster_unique)) %>%
-  mutate(time = fct_relevel(time, ref = "During"))
+  mutate(time = fct_relevel(time, ref = "During"),
+         deaths = ifelse(is.na(deaths) == TRUE, 0, deaths))
 ```
 
 ## Running models
@@ -66,7 +103,8 @@ nigeria <- nigeria %>%
            modTrad_switch, tradMod_switch, discontinuation, Year, 
            exposed_15, v001, deaths, foreign_aid, v501, v013, v025, v149, 
            v190, cluster_unique)) %>%
-  mutate(time = fct_relevel(time, ref = "During"))
+  mutate(time = fct_relevel(time, ref = "During"),
+         deaths = ifelse(is.na(deaths) == TRUE, 0, deaths))
 ```
 
 ## Running models
@@ -83,7 +121,7 @@ for (i in 1:length(outcomes)) {
                        cluster_unique + foreign_aid + as.character(v501) +
                        as.character(v013) + as.character(v025) + 
                        as.character(v149) + deaths + as.character(v190)"), 
-                       data = mali))
+                       data = nigeria))
   model <- model %>%
   filter(str_detect(term, "time") == TRUE)
   write.csv(model, file = paste0("Results/", country, "_", outcomes[i], ".csv"))
