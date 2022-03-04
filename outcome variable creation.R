@@ -3,10 +3,10 @@ library(sf)
 
 # Creating final datasets
 
-country1 <- "NGIR7BFL_joined"
-country2 <- "NGIR6AFL_joined"
-country3 <- "NGIR53FL_joined"
-countryName <- "Nigeria"
+country1 <- "MLIR53FL_joined"
+country2 <- "MLIR6AFL_joined"
+country3 <- "MLIR7AFL_joined"
+countryName <- "Mali"
 
 dhs1 <- readRDS(paste0("DHS_data/", countryName, "/", country1, ".RDS"))
 dhs2 <- readRDS(paste0("DHS_data/", countryName, "/", country2, ".RDS"))
@@ -104,13 +104,13 @@ dhs <- dhs %>%
 
 #adding foreign aid variable
 
-foreign_aid <- read_csv("foreign_aid_data.csv")
-
-dhs <- foreign_aid %>% 
-  filter(Country == country) %>% 
-  select(-Country) %>%
-  right_join(dhs, by = c("Year" = "year")) %>%
-  rename(foreign_aid = Value)
+# foreign_aid <- read_csv("foreign_aid_data.csv")
+# 
+# dhs <- foreign_aid %>% 
+#   filter(Country == country) %>% 
+#   select(-Country) %>%
+#   right_join(dhs, by = c("Year" = "year")) %>%
+#   rename(foreign_aid = Value)
 
 
 #save final joined data

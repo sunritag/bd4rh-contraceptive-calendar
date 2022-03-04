@@ -7,8 +7,8 @@ library(lubridate)
 conflict <- read.csv(file = 'conflict_coordinates.csv')
 
 #load dhs and gps data
-country <- "NGIR6A"
-gpscode <- "NGGE6A"
+country <- "NGIR7B"
+gpscode <- "NGGE7B"
 countryName <- "Nigeria"
 
 dhs <- readRDS(paste0("DHS_data/", countryName, "/", country, "FL.RDS"))

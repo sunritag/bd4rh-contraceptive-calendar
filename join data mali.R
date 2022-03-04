@@ -8,7 +8,7 @@ conflict <- read.csv(file = 'conflict_coordinates.csv')
 
 #load dhs and gps data
 country <- "MLIR7A"
-gpscode <- "MLGE7B"
+gpscode <- "MLGE7A"
 countryName <- "Mali"
 
 dhs <- readRDS(paste0("DHS_data/", countryName, "/", country, "FL.RDS"))
