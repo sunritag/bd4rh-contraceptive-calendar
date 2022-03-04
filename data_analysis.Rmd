@@ -25,22 +25,31 @@ library(sf)
 
 ```{r}
 zimbabwe <- readRDS("DHS_data/Zimbabwe/Zimbabwe_final.RDS")
+zimbabwe <- zimbabwe %>%
+  select(c(abortion, conception, start, start_modern, start_trad, 
+           start_short, start_long, shortLong_switch, longShort_switch, 
+           modTrad_switch, tradMod_switch, discontinuation, time, Year, 
+           exposed_15, v001, deaths, foreign_aid, v501, v013, v025, v149, 
+           v190, cluster_unique))
 ```
 
 ```{r}
 models <- function(outcome, country){
   df <- readRDS(paste0("DHS_data/", country, "/", country, "_final.RDS")) 
-  outcomes <- c("abortion", "conception", "start", "start_modern", "start_traditional",
-                  "start_short", "start_long", "shortLong_switch", "longShort_switch", "modTrad_switch",
-                  "tradMod_switch", "discontinuation")
+  outcomes <- c("abortion", "conception", "start", "start_modern", 
+                "start_trad", "start_short", "start_long", 
+                "shortLong_switch", "longShort_switch", "modTrad_switch",
+                "tradMod_switch", "discontinuation")
   model_tibble <- tibble(model = list())
   for(outcome in outcomes){
-    model <- lm(outcome ~ time*exposed_15 + as.character(v001) + deaths + foreign_aid 
-                  + v501 + v013 + v025 + v149 + v190, data = df)
-    model_tibble <- model_tibble %>% add_row(model = model)
+    model <- lm(outcome ~ time*exposed_15 + cluster_unique + deaths + 
+                  foreign_aid + as.character(v501) + as.character(v013) + 
+                  as.character(v025) + as.character(v149) + 
+                  as.character(v190), data = df)
+    model_tibble <- model_tibble %>% 
+      add_row(model = model)
   }
 } 
-
 ```
 
 TODO:
@@ -59,11 +68,19 @@ TODO:
 
 
 ```{r}
-zim_model <- lm(abortion ~ fct_relevel(time, ref = "During")*exposed_15,
-                data = zimbabwe)
+outcomes <- c("abortion", "conception", "start", "start_modern", 
+              "start_trad", "start_short", "start_long", 
+              "shortLong_switch", "longShort_switch", "modTrad_switch",
+              "tradMod_switch", "discontinuation")
 
-tidy(zim_model)
+for (i in 1:length(outcomes)) {
+  country <- "zimbabwe"
+  model <- tidy(lm(paste(outcomes[i], " ~ time*exposed_15 + cluster_unique + 
+                       foreign_aid + as.character(v501) + as.character(v013) + 
+                       as.character(v025) + as.character(v149) + deaths + 
+                       as.character(v190)"), data = zimbabwe))
+  model <- model %>%
+  filter(str_detect(term, "time") == TRUE)
+  write.csv(model, file = paste0("Results/", country, "_", outcomes[i], ".csv"))
+}
 ```
-
-
-
