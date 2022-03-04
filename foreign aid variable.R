@@ -29,3 +29,12 @@ saveRDS(mal_foreign, file=paste0("DHS_data/Mali/Mali_final.RDS"))
 
 # Nigeria
 
+nig <- readRDS("DHS_data/Nigeria/Nigeria_final.RDS")
+
+nig_foreign <- foreign_aid %>%
+  filter(Country == "Nigeria") %>% 
+  select(-Country) %>%
+  right_join(nig, by = c("Year" = "year")) %>%
+  rename(foreign_aid = Value)
+
+saveRDS(nig_foreign, file=paste0("DHS_data/Nigeria/Nigeria_final.RDS"))

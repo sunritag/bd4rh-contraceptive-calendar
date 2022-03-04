@@ -3,16 +3,16 @@ library(sf)
 
 # Creating final datasets
 
-country1 <- "MLIR53FL_joined"
-country2 <- "MLIR6AFL_joined"
-country3 <- "MLIR7AFL_joined"
-countryName <- "Mali"
+country1 <- "NGIR6AFL_joined"
+country2 <- "NGIR7BFL_joined"
+#country3 <- "MLIR7AFL_joined"
+countryName <- "Nigeria"
 
 dhs1 <- readRDS(paste0("DHS_data/", countryName, "/", country1, ".RDS"))
 dhs2 <- readRDS(paste0("DHS_data/", countryName, "/", country2, ".RDS"))
-dhs3 <- readRDS(paste0("DHS_data/", countryName, "/", country3, ".RDS"))
+#dhs3 <- readRDS(paste0("DHS_data/", countryName, "/", country3, ".RDS"))
 
-dhs <- rbind(dhs1, dhs2, dhs3)
+dhs <- rbind(dhs1, dhs2)#, dhs3)
 
 # Creating outcome variables
 '%!in%' <- function(x,y)!('%in%'(x,y))
