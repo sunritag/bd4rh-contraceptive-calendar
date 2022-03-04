@@ -14,14 +14,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(tidyverse)
 library(broom)
-library(plm)
 library(sf)
 ```
 
 
-# Model
+# Model for Mali
 
-## Data
+## Loading data
 
 ```{r}
 mali <- readRDS("DHS_data/Mali/Mali_final.RDS")
@@ -34,18 +33,7 @@ mali <- mali %>%
   mutate(time = fct_relevel(time, ref = "During"))
 ```
 
-TODO:
-- append the wave of survey to cluster variable in join data file in order to uniquely identify the cluster based on wave
-- only interpret time exposed
-- make all time coefficients relative to the during period
-- for nigeria, have year*exposed_15 instead of time*exposed_15
-- save and export each model output as csv in github, then group them by country
-- put together table of estimates for just the interaction terms 
-- make a line graph showing coefficient for each time period - marginal effects (https://cran.r-project.org/web/packages/margins/vignettes/Introduction.html)
-  - add confidence intervals on graph
-  - for nigeria, x is year, baseline is first year 
-  - for mali and zimbabwe, time is x and have one value for exposed and unexposed 
-
+## Running models
 
 ```{r}
 outcomes <- c("abortion", "conception", "start", "start_modern", 
@@ -64,3 +52,52 @@ for (i in 1:length(outcomes)) {
   write.csv(model, file = paste0("Results/", country, "_", outcomes[i], ".csv"))
 }
 ```
+
+
+# Model for Nigeria
+
+## Loading data
+
+```{r}
+nigeria <- readRDS("DHS_data/Nigeria/Nigeria_final.RDS")
+nigeria <- nigeria %>%
+  select(c(abortion, conception, start, start_modern, start_trad, 
+           start_short, start_long, shortLong_switch, longShort_switch, 
+           modTrad_switch, tradMod_switch, discontinuation, Year, 
+           exposed_15, v001, deaths, foreign_aid, v501, v013, v025, v149, 
+           v190, cluster_unique)) %>%
+  mutate(time = fct_relevel(time, ref = "During"))
+```
+
+## Running models
+
+```{r}
+outcomes <- c("abortion", "conception", "start", "start_modern", 
+              "start_trad", "start_short", "start_long", 
+              "shortLong_switch", "longShort_switch", "modTrad_switch",
+              "tradMod_switch", "discontinuation")
+
+for (i in 1:length(outcomes)) {
+  country <- "nigeria"
+  model <- tidy(lm(paste(outcomes[i], " ~ as.character(Year)*exposed_15 + 
+                       cluster_unique + foreign_aid + as.character(v501) +
+                       as.character(v013) + as.character(v025) + 
+                       as.character(v149) + deaths + as.character(v190)"), 
+                       data = mali))
+  model <- model %>%
+  filter(str_detect(term, "time") == TRUE)
+  write.csv(model, file = paste0("Results/", country, "_", outcomes[i], ".csv"))
+}
+```
+
+TODO:
+- append the wave of survey to cluster variable in join data file in order to uniquely identify the cluster based on wave
+- only interpret time exposed
+- make all time coefficients relative to the during period
+- for nigeria, have year*exposed_15 instead of time*exposed_15
+- save and export each model output as csv in github, then group them by country
+- put together table of estimates for just the interaction terms 
+- make a line graph showing coefficient for each time period - marginal effects (https://cran.r-project.org/web/packages/margins/vignettes/Introduction.html)
+  - add confidence intervals on graph
+  - for nigeria, x is year, baseline is first year 
+  - for mali and zimbabwe, time is x and have one value for exposed and unexposed 
