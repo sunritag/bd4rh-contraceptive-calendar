@@ -15,6 +15,12 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(broom)
 library(sf)
+library(lme4)
+library(stargazer)
+library(estimatr)
+
+exponentiate <- function(x) exp(x) 
+
 ```
 
 # Model for Zimbabwe
@@ -29,6 +35,11 @@ zimbabwe <- zimbabwe %>%
            modTrad_switch, tradMod_switch, discontinuation, time, Year, 
            exposed_15, v001, deaths, foreign_aid, v501, v013, v025, v149, 
            v190, cluster_unique)) %>%
+  mutate(v501=as.character(v501),
+         v013=as.character(v013),
+         v025=as.character(v025),
+         v149=as.character(v149),
+         v190=as.character(v190)) %>%
   mutate(time = fct_relevel(time, ref = "During"),
          deaths = ifelse(is.na(deaths) == TRUE, 0, deaths))
 ```
@@ -43,14 +54,42 @@ outcomes <- c("abortion", "conception", "start", "start_modern",
 
 for (i in 1:length(outcomes)) {
   country <- "zimbabwe"
-  model <- tidy(lm(paste(outcomes[i], " ~ time*exposed_15 + cluster_unique + 
-                       foreign_aid + as.character(v501) + as.character(v013) + 
-                       as.character(v025) + as.character(v149) + deaths + 
-                       as.character(v190)"), data = zimbabwe))
+  zimbabwe$outcome <- zimbabwe[[outcomes[i]]]
+  print(paste0("Running...", outcomes[i]))
+  model <- tidy(lm(outcome ~ 
+            time*exposed_15 + 
+            #cluster_unique +
+            foreign_aid + 
+            v501 + 
+            v013 + 
+            v025 + 
+            v149 + 
+            deaths + 
+            v190, 
+            data = zimbabwe))
+    # model_glm <- lmer(outcome ~ 
+    #         time*exposed_15 + 
+    #         foreign_aid + 
+    #         v501 + 
+    #         v013 + 
+    #         v025 + 
+    #         v149 + 
+    #         deaths + 
+    #         v190 +
+    #         (1|cluster_unique), 
+    #         data = zimbabwe)
   model <- model %>%
   filter(str_detect(term, "time") == TRUE)
   write.csv(model, file = paste0("Results/", country, "_", outcomes[i], ".csv"))
 }
+
+# stargazer(model_glm,
+#           type="text",
+#           ci=T,
+#           apply.coef = exponentiate,
+#           apply.ci = exponentiate)
+
+
 ```
 
 
@@ -66,6 +105,11 @@ mali <- mali %>%
            modTrad_switch, tradMod_switch, discontinuation, time, Year, 
            exposed_15, v001, deaths, foreign_aid, v501, v013, v025, v149, 
            v190, cluster_unique)) %>%
+    mutate(v501=as.character(v501),
+         v013=as.character(v013),
+         v025=as.character(v025),
+         v149=as.character(v149),
+         v190=as.character(v190)) %>%
   mutate(time = fct_relevel(time, ref = "During"),
          deaths = ifelse(is.na(deaths) == TRUE, 0, deaths))
 ```
@@ -80,10 +124,30 @@ outcomes <- c("abortion", "conception", "start", "start_modern",
 
 for (i in 1:length(outcomes)) {
   country <- "mali"
-  model <- tidy(lm(paste(outcomes[i], " ~ time*exposed_15 + cluster_unique + 
-                       foreign_aid + as.character(v501) + as.character(v013) + 
-                       as.character(v025) + as.character(v149) + deaths + 
-                       as.character(v190)"), data = mali))
+  mali$outcome <- mali[[outcomes[i]]]
+  print(paste0("Running...", outcomes[i]))
+  model <- tidy(lm(outcome ~ 
+            time*exposed_15 + 
+            #cluster_unique +
+            foreign_aid + 
+            v501 + 
+            v013 + 
+            v025 + 
+            v149 + 
+            deaths + 
+            v190, 
+            data = mali))
+    # model_glm <- lmer(outcome ~ 
+    #         time*exposed_15 + 
+    #         foreign_aid + 
+    #         v501 + 
+    #         v013 + 
+    #         v025 + 
+    #         v149 + 
+    #         deaths + 
+    #         v190 +
+    #         (1|cluster_unique), 
+    #         data = mali)
   model <- model %>%
   filter(str_detect(term, "time") == TRUE)
   write.csv(model, file = paste0("Results/", country, "_", outcomes[i], ".csv"))
@@ -103,8 +167,13 @@ nigeria <- nigeria %>%
            modTrad_switch, tradMod_switch, discontinuation, Year, 
            exposed_15, v001, deaths, foreign_aid, v501, v013, v025, v149, 
            v190, cluster_unique)) %>%
-  mutate(time = fct_relevel(time, ref = "During"),
-         deaths = ifelse(is.na(deaths) == TRUE, 0, deaths))
+    mutate(v501=as.character(v501),
+         v013=as.character(v013),
+         v025=as.character(v025),
+         v149=as.character(v149),
+         v190=as.character(v190),
+         YearChar=as.character(Year)) %>%
+  mutate(deaths = ifelse(is.na(deaths) == TRUE, 0, deaths))
 ```
 
 ## Running models
@@ -117,13 +186,32 @@ outcomes <- c("abortion", "conception", "start", "start_modern",
 
 for (i in 1:length(outcomes)) {
   country <- "nigeria"
-  model <- tidy(lm(paste(outcomes[i], " ~ as.character(Year)*exposed_15 + 
-                       cluster_unique + foreign_aid + as.character(v501) +
-                       as.character(v013) + as.character(v025) + 
-                       as.character(v149) + deaths + as.character(v190)"), 
-                       data = nigeria))
+  nigeria$outcome <- nigeria[[outcomes[i]]]
+  print(paste0("Running...", outcomes[i]))
+  model <- tidy(lm(outcome ~ 
+            YearChar*exposed_15 + 
+            #cluster_unique +
+            foreign_aid + 
+            v501 + 
+            v013 + 
+            v025 + 
+            v149 + 
+            deaths + 
+            v190, 
+            data = nigeria))
+    # model_glm <- lmer(outcome ~ 
+    #         Year*exposed_15 + 
+    #         foreign_aid + 
+    #         v501 + 
+    #         v013 + 
+    #         v025 + 
+    #         v149 + 
+    #         deaths + 
+    #         v190 +
+    #         (1|cluster_unique), 
+    #         data = nigeria)
   model <- model %>%
-  filter(str_detect(term, "time") == TRUE)
+  filter(str_detect(term, "Year") == TRUE)
   write.csv(model, file = paste0("Results/", country, "_", outcomes[i], ".csv"))
 }
 ```
