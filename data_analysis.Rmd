@@ -16,8 +16,6 @@ library(tidyverse)
 library(broom)
 library(sf)
 library(lme4)
-library(stargazer)
-library(estimatr)
 
 exponentiate <- function(x) exp(x) 
 
@@ -226,4 +224,98 @@ TODO:
 - make a line graph showing coefficient for each time period - marginal effects (https://cran.r-project.org/web/packages/margins/vignettes/Introduction.html)
   - add confidence intervals on graph
   - for nigeria, x is year, baseline is first year 
-  - for mali and zimbabwe, time is x and have one value for exposed and unexposed 
+  - for mali and zimbabwe, time is x and have one value for exposed and unexposed
+  
+  
+# Graphs
+
+```{r}
+library(coefplot)
+```
+
+
+```{r}
+zim_model <- lm(start ~ 
+            time*exposed_15 +
+            foreign_aid + 
+            v501 + 
+            v013 + 
+            v025 + 
+            v149 + 
+            deaths + 
+            v190, 
+            data = zimbabwe)
+
+```
+
+```{r}
+library(ggplot2)
+png(filename = "Results/Zimbabwe_file.png")
+coefplot(zim_model, 
+         coefficients = c("time3 years before:exposed_15", "time1 year before:exposed_15", "timeOnset:exposed_15", "timeEnd:exposed_15", "time1 year after:exposed_15", "time4 year after:exposed_15"), 
+         title = "Contraceptive Uptake: Zimbabwe", 
+         innerCI = 1.65, 
+         outerCI = 2
+         ) +
+  scale_y_discrete(labels = c("Onset", "End", "4 years after", "3 years before", "1 year before", "1 year after")) + 
+  scale_x_continuous(limits = c(-0.005, 0.0025)) +
+  labs(subtitle = "Relative to During Conflict")
+dev.off()
+```
+
+
+```{r}
+mal_model <- lm(start ~ 
+            time*exposed_15 +
+            foreign_aid + 
+            v501 + 
+            v013 + 
+            v025 + 
+            v149 + 
+            deaths + 
+            v190, 
+            data = mali)
+```
+
+```{r}
+png(filename = "Results/Mali_file.png")
+coefplot(mal_model, 
+         coefficients = c("time3 years before:exposed_15", "time1 year before:exposed_15", "timeOnset:exposed_15"),
+         title = "Contraceptive Uptake: Mali", 
+         innerCI = 1.65, 
+         outerCI = 2
+         ) +
+  scale_y_discrete(labels = c("Onset", "3 years before", "1 year before")) +
+  scale_x_continuous(limits = c(-0.005, 0.0025)) +
+  labs(subtitle = "Relative to During Conflict") 
+dev.off()
+```
+
+```{r}
+png(filename = "Results/Mali_file.png")
+nig_model <- lm(start ~ 
+            YearChar*exposed_15 + 
+            foreign_aid + 
+            v501 + 
+            v013 + 
+            v025 + 
+            v149 + 
+            deaths + 
+            v190, 
+            data = nigeria)
+```
+
+```{r}
+coefplot(nig_model,
+         coefficients = c("YearChar2009:exposed_15", "YearChar2010:exposed_15", "YearChar2011:exposed_15", "YearChar2012:exposed_15", "YearChar2013:exposed_15", "YearChar2014:exposed_15", "YearChar2015:exposed_15", "YearChar2016:exposed_15", "YearChar2017:exposed_15", "YearChar2018:exposed_15"),
+         title = "Contraceptive Uptake: Mali", 
+         innerCI = 1.65, 
+         outerCI = 2
+         ) +
+  scale_y_discrete(labels = c("2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018")) +
+  scale_x_continuous(limits = c(-0.005, 0.0025)) +
+  labs(subtitle = "Relative to 2008") 
+dev.off()
+```
+
+  
