@@ -1,0 +1,72 @@
+---
+title: "tables_for_manuscript"
+author: "Shari Tian"
+date: "4/11/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+# Zimbabwe
+
+```{r}
+zimbabwe <- readRDS("DHS_data/Zimbabwe/Zimbabwe_final.RDS")
+```
+
+```{r}
+zimbabwe %>%
+  group_by(exposed_15) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+zimbabwe %>%
+  group_by(time) %>% 
+  summarise(n = n_distinct(caseid))
+```
+
+# Mali
+
+```{r}
+mali <- readRDS("DHS_data/Mali/Mali_final.RDS")
+```
+
+```{r}
+mali %>%
+  group_by(exposed_15) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+mali %>%
+  group_by(time) %>% 
+  summarise(n = n_distinct(caseid))
+```
+
+# Nigeria
+
+```{r}
+nigeria <- readRDS("DHS_data/Nigeria/Nigeria_final.RDS")
+```
+
+```{r}
+nigeria %>%
+  group_by(exposed_15) %>%
+  summarise(n = n_distinct(caseid)) %>%
+  mutate(proportion = n/sum(n))
+```
+
+```{r}
+nigeria %>%
+  group_by(time) %>% 
+  summarise(n = n_distinct(caseid))
+```
+
